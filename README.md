@@ -12,7 +12,13 @@ Trois modes sont disponibles :
 
 La langue choisie peut être le français, l’anglais ou l’ukrainien. Les citations anglaises, noms propres, formules et sigles restent conservés. Le lexique garde sa colonne de référence anglaise. Les boutons EN / UK donnent toujours une aide ponctuelle sans modifier les préférences générales. Le bouton **Préférences** permet de changer le mode ; FR / EN / UK change la langue de compréhension. Ces modifications conservent la progression, la question de quiz et les réglages du micro-lab.
 
-## Configurer Firebase
+## Configuration Firebase active
+
+Le site utilise désormais le projet [Global challenges](https://console.firebase.google.com/project/global-challenges-a04c4/overview), ID `global-challenges-a04c4`. L’application Web est **Ellingsen Study Guide**. Google et email/mot de passe sont activés ; `localhost` est autorisé. La base Firestore `(default)` est en édition Standard, région **Stockholm (`europe-north2`)**, avec le quota gratuit. Les règles de `firestore.rules` ont été publiées. Le site lui-même n’est pas hébergé publiquement.
+
+`firebase-config.js` contient la configuration Web publique réelle. Le modèle vide à remplir pour un autre projet est conservé dans `firebase-config.example.js`. Aucun secret administrateur ni compte de service n’est nécessaire.
+
+## Configurer un autre projet Firebase
 
 1. Dans la [console Firebase](https://console.firebase.google.com/), créer un projet et ajouter une application **Web**.
 2. Dans **Authentication → Sign-in method**, activer **Email/Password** et **Google**. Pour Google, choisir l’adresse d’assistance.
@@ -71,6 +77,14 @@ La fiche s’ouvre seulement une fois le profil chargé et les préférences enr
 
 Les anciennes clés `ioe-done` et `ioe-cards` sont conservées pour importer une progression créée avant l’obligation de compte. Une empreinte empêche de réimporter les mêmes données dans plusieurs comptes. Les nouvelles progressions passent exclusivement par Firestore. `ioe-lang` mémorise la langue d’interface du navigateur ; le profil connecté fait autorité. Tous les accès à localStorage sont protégés par `try/catch`.
 
+Les règles peuvent être republiées depuis ce dossier avec une CLI Firebase authentifiée :
+
+```sh
+firebase deploy --only firestore:rules --project global-challenges-a04c4
+```
+
+`firebase.json` ne contient que le déploiement des règles, et `.firebaserc` pointe sur ce projet. Cette commande ne publie aucun fichier du site.
+
 Les identifiants des cartes restent fondés sur leurs questions ou termes de référence d’origine. Les modes de révision changent uniquement l’affichage, sans modifier les scores ni les données des jeux.
 
 ## Vérifications
@@ -81,7 +95,7 @@ npm test
 
 Les tests serveur vérifient les accès anonymes, les catalogues privés, les fichiers non servis, les jetons invalides/expirés, l’origine des opérations de session, les cookies et les réponses authentifiées. Le vérificateur Firebase y est simulé pour des tests déterministes.
 
-Les contrôles navigateur ont couvert l’accès obligatoire, l’inscription et Google simulés, les préférences, leur restauration, les trois modes, les treize chapitres dans les trois langues, les corrections du quiz, le maintien de l’état des outils, les erreurs Firestore et les écrans mobile/ordinateur. La configuration réelle et la connexion Google doivent être testées après ajout de votre projet Firebase ; aucun projet ni hébergement n’a été créé ou publié automatiquement.
+Les contrôles navigateur ont couvert l’accès obligatoire, l’inscription et Google simulés, les préférences, leur restauration, les trois modes, les treize chapitres dans les trois langues, les corrections du quiz, le maintien de l’état des outils, les erreurs Firestore et les écrans mobile/ordinateur. La configuration réelle a également été vérifiée : Firebase génère une URL de connexion Google (HTTP 200), autorise `localhost`, et Firestore refuse les requêtes anonymes. Le parcours réel Google a également réussi dans le navigateur : création de session protégée, enregistrement des préférences, sauvegarde d’un chapitre étudié dans Firestore et restauration après rechargement. Le chapitre utilisé pour ce contrôle a été remis dans son état initial. Aucun hébergement public du site n’est déployé.
 
 Les traductions restent des objets JavaScript indexés par identifiants numériques, dans deux scripts classiques. Les **1 974 blocs** de l’extraction initiale sont conservés ; les catalogues comptent désormais **3 755 entrées** chacun. Balises, entités, liens, hash et données des matrices/arbres ont été comparés automatiquement. Les outils contiennent **213 termes**, **304 cartes** et **90 questions**.
 
@@ -93,4 +107,4 @@ python3 -I i18n/extract.py ellingsen.html i18n/tagged.html i18n/blocks.json
 
 Le texte distingue les chapitres 1–10 du livre et la reconstruction des chapitres 11–13 depuis les supports de cours. Les indications d’incertitude et les formules originales sont conservées, y compris le libellé du triangle au chapitre 7 (`u1 + u2 = 2` pour la frontière, l’intérieur satisfaisant `≤ 2`).
 
-Le projet est versionné dans le dépôt privé [derka1385/ellingsen-study-guide](https://github.com/derka1385/ellingsen-study-guide). Les commits locaux ont été poussés sur `main` avec l’autorisation de l’utilisateur. Ce dépôt contient le code source ; aucun hébergement du site n’est encore déployé. La connexion Google nécessite toujours la création du projet Firebase et l’activation du fournisseur Google comme décrit ci-dessus.
+Le projet est versionné dans le dépôt privé [derka1385/ellingsen-study-guide](https://github.com/derka1385/ellingsen-study-guide). Les commits locaux ont été poussés sur `main` avec l’autorisation de l’utilisateur. Ce dépôt contient le code source ; aucun hébergement du site n’est encore déployé. La connexion Google est maintenant activée dans le projet Firebase Global challenges. Pour l’utiliser, lancer le serveur local ci-dessus ou héberger ce serveur derrière HTTPS ; une page GitHub de code source ne sert pas le site.
