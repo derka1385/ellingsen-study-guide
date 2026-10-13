@@ -1,4 +1,4 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Ellingsen — compte</title><style>[hidden]{display:none!important}:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Ellingsen — compte</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Schibsted+Grotesk:wght@500;600;700&display=swap"><style>[hidden]{display:none!important}:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
 
 /* Layout: sticky chapter rail beside a ~70ch reading column. Signature: payoff matrices where Rowena (row, 1st number) is blue,
    Colin (column, 2nd number) is orange, best responses are underlined and Nash equilibria sit under a highlighter. */
@@ -333,56 +333,123 @@ button:disabled{opacity:.6;cursor:wait}.option-row{display:flex;align-items:cent
 @media(max-width:880px){.app{grid-template-columns:minmax(0,1fr)}.rail{max-width:100%}.rail nav{max-width:100%}.brand+.i18n-help{display:none}}
 
 
-/* Account access uses the sheet's existing typography and reading palette. */
+/* Account access: the book's reading palette, with Google first. */
 .app[hidden]{display:none!important}
-.access-gate{min-height:100svh;padding:clamp(24px,6vw,64px) 20px;background:var(--paper)}
-.access-wrap{max-width:36rem;margin:0 auto}
-.access-brand{font:700 22px/1.25 var(--display);margin-bottom:24px}
-.access-language,.access-tabs,.access-actions{display:flex;flex-wrap:wrap;gap:8px;margin-block:16px}
-.access-language button{background:transparent;color:var(--ink-2);border:1px solid var(--rule);border-radius:4px;padding:8px 12px;font:500 14px var(--display);cursor:pointer}
-.access-language button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
-.access-gate h1{font:700 clamp(28px,6vw,38px)/1.18 var(--display);letter-spacing:-.025em;margin:28px 0 12px;text-wrap:balance}
-.access-gate h2{font:600 24px/1.3 var(--display);margin:24px 0 16px}
-.access-gate p{max-width:65ch}.access-gate .btn{min-height:44px}
-#preferences-form{display:grid;gap:12px}#preferences-form label,#preferences-form legend{font:600 15px/1.45 var(--display)}
-#preferences-form select{min-height:44px;background:var(--sheet);padding:8px;border:1px solid var(--rule);border-radius:4px;width:100%}
+.access-gate{min-height:100svh;background:var(--paper);padding:0}
+.access-wrap{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;max-width:1440px;margin:0 auto}
+.access-book{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:64px clamp(32px,6vw,88px);position:relative;isolation:isolate}
+.access-book-mark{color:var(--ink);margin-bottom:32px}
+.access-brand{font:600 clamp(38px,4.4vw,64px)/1.12 var(--body);letter-spacing:-.035em;margin:0;text-wrap:balance}
+.access-brand em{font-weight:400;font-style:italic;position:relative}
+.access-brand em::after{content:"";position:absolute;z-index:-1;inset:67% -3px 5%;background:var(--eq-bg)}
+.access-author{font:500 15px/1.5 var(--display);color:var(--ink-2);margin:24px 0 40px}
+.access-book-note{font:400 20px/1.6 var(--body);max-width:26ch;margin:0;color:var(--ink-2);text-wrap:pretty}
+.access-book-footer{font:500 12px/1.6 var(--display);color:var(--ink-2);margin:48px 0 0;padding-top:24px;border-top:1px solid var(--rule);width:100%}
+.access-content{background:var(--sheet);border-inline-start:1px solid var(--rule);padding:48px clamp(24px,4.5vw,64px);display:flex;align-items:center;justify-content:center}
+.access-content-inner{width:100%;max-width:400px;min-width:0}
+.access-language{display:flex;gap:4px;flex-wrap:wrap;margin:0 0 36px}
+.access-language button{appearance:none;background:transparent;color:var(--ink-2);border:0;border-radius:5px;padding:9px 10px;min-height:38px;font:500 13px/1.4 var(--display);cursor:pointer}
+.access-language button[aria-pressed="true"]{color:var(--ink);background:var(--paper);font-weight:700}
+.access-language button:hover{background:var(--paper);color:var(--ink)}
+.access-gate h1{font:700 30px/1.25 var(--display);letter-spacing:-.025em;margin:0 0 12px;text-wrap:balance}
+.access-gate #access-intro{font:400 15px/1.65 var(--body);color:var(--ink-2);margin:0 0 24px;text-wrap:pretty}
+.access-gate .btn{min-height:46px;border-radius:7px;font:600 14px/1.4 var(--display)}
+.access-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--paper);border-radius:8px;padding:4px;margin:0 0 22px}
+.access-tabs .btn{min-height:38px;border:0;background:transparent;color:var(--ink-2);font-size:13px;padding:8px}
+.access-tabs .btn.on{background:var(--sheet);color:var(--ink);box-shadow:0 1px 3px rgb(0 0 0 / .08)}
+#auth-hint{font:400 12px/1.5 var(--display);color:var(--ink-2);margin:0 0 14px}
+#auth-form{display:grid;gap:18px}
+#auth-form .auth-field{display:grid;gap:8px}
+#auth-form label{font:600 14px/1.5 var(--display)}
+#auth-form input{width:100%;min-width:0;min-height:48px;padding:12px 14px;border:1px solid var(--rule);border-radius:7px;background:var(--sheet);font:400 16px/1.4 var(--display);transition:border-color .18s}
+#auth-form input:hover{border-color:var(--ink-2)}
+#auth-form input:focus{outline:2px solid var(--row);outline-offset:2px;border-color:var(--row)}
+#auth-form input::placeholder{color:var(--ink-2);opacity:1;font-size:14px}
+#auth-form .google-button{display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;color:#1f1f1f;border:1px solid #747775;min-height:48px;padding:12px 16px;font:500 14px/1.4 var(--display);border-radius:7px}
+#auth-form .google-button:hover{background:#f7f8f8;border-color:#1f1f1f}
+.google-mark{flex:0 0 18px;width:18px;height:18px}
+.auth-divider{display:flex;align-items:center;gap:14px;color:var(--ink-2);font:400 12px/1.5 var(--display);margin:0}
+.auth-divider::before,.auth-divider::after{content:"";height:1px;background:var(--rule);flex:1}
+.password-hint{margin:0;color:var(--ink-2);font:400 12px/1.5 var(--display)}
+#auth-error:empty,#preferences-error:empty,#gate-status:empty,.access-actions:has(>button[hidden]:only-child){display:none}
+#auth-error{font:400 13px/1.55 var(--display)}
+#auth-submit{margin-top:2px;background:var(--ink);color:var(--sheet);border-color:var(--ink)}
+#auth-submit:hover{opacity:.88}
+.access-actions{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}
+.access-actions:not(:has(button:not([hidden]))){display:none}
+#gate-status{font:400 13px/1.55 var(--display);overflow-wrap:anywhere;color:var(--ink-2)}
+.access-gate.preferences-open .access-content-inner{max-width:480px}
+#preferences-form{display:grid;gap:12px}#preferences-form label,#preferences-form legend{font:600 14px/1.45 var(--display)}
+#preferences-form select{min-height:46px;background:var(--sheet);padding:10px 12px;border:1px solid var(--rule);border-radius:7px;width:100%}
 #preferences-form fieldset{border:0;padding:0;margin:16px 0 0;min-width:0}
 #preferences-form legend{margin-bottom:12px}
 .mode-choice{display:flex;align-items:flex-start;gap:12px;padding:16px 0;border-top:1px solid var(--rule);cursor:pointer}
 .mode-choice input{flex-shrink:0;margin:4px 0 0;accent-color:var(--row);width:18px;height:18px}
-.mode-choice strong{display:block;font-weight:600}.mode-choice small{display:block;font:400 15px/1.5 var(--body);color:var(--ink-2);margin-top:5px}
-#preferences-error{color:var(--bad);margin:0}#gate-status{overflow-wrap:anywhere;color:var(--ink-2)}
+.mode-choice strong{display:block;font-weight:600}.mode-choice small{display:block;font:400 14px/1.55 var(--body);color:var(--ink-2);margin-top:5px}
+#preferences-form>p{font:400 13px/1.55 var(--body)}
+#preferences-error{color:var(--bad);margin:0}
+@media(max-width:800px){
+ .access-wrap{grid-template-columns:1fr;min-height:100svh}
+ .access-book{padding:28px 24px 24px;display:block;border-bottom:1px solid var(--rule)}
+ .access-book-mark{width:28px;height:28px;margin:0 0 14px}
+ .access-brand{font-size:27px;line-height:1.2;letter-spacing:-.025em;max-width:25ch}
+ .access-brand br{display:none}.access-brand br::after{content:" "}
+ .access-author{font-size:12px;margin:12px 0 0}
+ .access-book-note,.access-book-footer{display:none}
+ .access-content{border:0;padding:28px 24px 36px;align-items:flex-start}
+ .access-language{margin-bottom:24px}.access-gate h1{font-size:26px}
+ .access-gate #access-intro{font-size:14px;margin-bottom:20px}
+ .access-gate.preferences-open .access-book{display:none}
+}
+@media(max-width:380px){.access-content{padding-inline:20px}.access-book{padding-inline:20px}.access-language button{padding-inline:8px}}
 @media print{body:has(.app[hidden]) .app{display:none!important}}
 </style></head><body><section id="access-gate" class="access-gate" aria-labelledby="access-title">
   <div class="access-wrap">
-    <header class="access-brand">Institutional &amp;<br>Organizational Economics</header>
-    <div id="access-language" class="access-language" role="group" aria-label="Interface language">
+    <header class="access-book">
+      <svg class="access-book-mark" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true" focusable="false"><path d="M5 7h10a6 6 0 0 1 6 6v17a8 8 0 0 0-6-3H5V7Zm26 0h-5a5 5 0 0 0-5 5v18a8 8 0 0 1 6-3h4V7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 13h5m-5 5h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <p class="access-brand">Institutional &amp;<br> Organizational<br> <em>Economics</em></p>
+      <p class="access-author">Tore Ellingsen</p>
+      <p class="access-book-note" data-ui="Comprendre les institutions. Préparer l’examen.">Comprendre les institutions. Préparer l’examen.</p>
+      <p class="access-book-footer" data-ui="13 chapitres · Lexique · Flashcards · Quiz">13 chapitres · Lexique · Flashcards · Quiz</p>
+    </header>
+    <div class="access-content">
+    <div class="access-content-inner">
+    <div id="access-language" class="access-language" role="group" aria-label="Interface language" data-ui-attr='{"aria-label":"Interface language"}'>
       <button type="button" data-lang="fr" lang="fr">Français</button><button type="button" data-lang="en" lang="en">English</button><button type="button" data-lang="uk" lang="uk">Українська</button>
     </div>
     <h1 id="access-title" data-ui="Ton espace de révision">Ton espace de révision</h1>
     <p id="access-intro" data-ui="Crée un compte pour retrouver ta progression et préparer l’examen dans les langues qui te conviennent.">Crée un compte pour retrouver ta progression et préparer l’examen dans les langues qui te conviennent.</p>
-    <section id="auth-dialog" aria-label="Compte">
+    <section id="auth-dialog" aria-label="Compte" data-ui-attr='{"aria-label":"Compte"}'>
       <div class="access-tabs" role="group"><button class="btn on" id="auth-signup-tab" type="button" data-ui="Créer un compte">Créer un compte</button><button class="btn" id="auth-signin-tab" type="button" data-ui="Se connecter">Se connecter</button></div>
       <p id="auth-hint" class="muted" role="status"></p>
       <form id="auth-form">
-        <label for="auth-email" data-ui="Adresse email">Adresse email</label>
-        <input id="auth-email" type="email" autocomplete="email" required maxlength="254">
-        <label for="auth-password" data-ui="Mot de passe">Mot de passe</label>
-        <input id="auth-password" type="password" autocomplete="new-password" required minlength="6">
+        <button class="btn google-button" type="button" id="auth-google"><svg viewBox="0 0 18 18" width="18" height="18" class="google-mark" aria-hidden="true" focusable="false">
+    <path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.62z" />
+    <path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.54-1.84.86-3.04.86-2.34 0-4.32-1.58-5.03-3.7H.96v2.33A9 9 0 0 0 9 18z" />
+    <path fill="#FBBC05" d="M3.97 10.72A5.4 5.4 0 0 1 3.68 9c0-.6.1-1.18.29-1.72V4.95H.96A9 9 0 0 0 0 9c0 1.45.35 2.83.96 4.05l3.01-2.33z" />
+    <path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58A9 9 0 0 0 .96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z" />
+  </svg><span data-ui="Continuer avec Google">Continuer avec Google</span></button>
+        <div class="auth-divider"><span data-ui="ou avec ton adresse email">ou avec ton adresse email</span></div>
+        <div class="auth-field"><label for="auth-email" data-ui="Adresse email">Adresse email</label>
+        <input id="auth-email" type="email" autocomplete="email" required maxlength="254" placeholder="nom@exemple.com" data-ui-attr='{"placeholder":"nom@exemple.com"}'></div>
+        <div class="auth-field"><label for="auth-password" data-ui="Mot de passe">Mot de passe</label>
+        <input id="auth-password" type="password" autocomplete="new-password" required minlength="6" aria-describedby="password-hint"><p id="password-hint" class="password-hint" data-ui="Au moins 6 caractères">Au moins 6 caractères</p></div>
         <p id="auth-error" role="alert"></p>
         <button class="btn on" id="auth-submit" type="submit" data-action="signup" data-ui="Créer un compte">Créer un compte</button>
-        <button class="btn" type="button" id="auth-google" data-ui="Continuer avec Google">Continuer avec Google</button>
+
       </form>
     </section>
     
     <p id="gate-status" role="status" aria-live="polite"></p>
     <div class="access-actions"><button class="btn" id="gate-retry" type="button" hidden data-ui="Réessayer">Réessayer</button></div>
+    </div>
+    </div>
     <noscript>JavaScript doit être activé pour se connecter et accéder à la fiche.</noscript>
   </div>
 </section>
 <script src="firebase-config.js"></script><script>(() => {
 'use strict';
-const messages = {"Vérifie le format de l’adresse email.": {"en": "Check the email address format.", "uk": "Перевірте формат електронної адреси."}, "Mot de passe": {"en": "Password", "uk": "Пароль"}, "Ce domaine doit être ajouté aux domaines autorisés de Firebase Authentication.": {"en": "Add this domain to the authorized domains in Firebase Authentication.", "uk": "Додайте цей домен до списку дозволених доменів у Firebase Authentication."}, "Adresse email": {"en": "Email address", "uk": "Електронна адреса"}, "Continuer avec Google": {"en": "Continue with Google", "uk": "Продовжити з Google"}, "Réessayer": {"en": "Try again", "uk": "Спробувати ще раз"}, "Connexion réseau indisponible. Vérifie la connexion et réessaie.": {"en": "Network unavailable. Check your connection and try again.", "uk": "Немає доступу до мережі. Перевірте з’єднання й повторіть спробу."}, "Utilise un mot de passe d’au moins six caractères.": {"en": "Use a password with at least six characters.", "uk": "Використайте пароль щонайменше із шести символів."}, "Connexion nécessaire pour accéder à la fiche.": {"en": "Sign in to access the study guide.", "uk": "Увійди, щоб відкрити навчальний матеріал."}, "Ton espace de révision": {"en": "Your study space", "uk": "Твій простір для навчання"}, "Se connecter": {"en": "Sign in", "uk": "Увійти"}, "Connexion au serveur impossible. Vérifie ta connexion et réessaie.": {"en": "Could not connect to the server. Check your connection and try again.", "uk": "Не вдалося підключитися до сервера. Перевір з’єднання й спробуй ще раз."}, "Autorise la fenêtre Google dans ton navigateur, puis réessaie.": {"en": "Allow the Google popup in your browser, then try again.", "uk": "Дозвольте спливне вікно Google у браузері й повторіть спробу."}, "Créer un compte": {"en": "Create an account", "uk": "Створити обліковий запис"}, "Les comptes doivent être configurés pour ouvrir la fiche. Renseigne firebase-config.js, puis lance le serveur indiqué dans le README.": {"en": "Accounts must be configured before you can open the study guide. Fill in firebase-config.js, then start the server described in the README.", "uk": "Щоб відкрити навчальний матеріал, потрібно налаштувати облікові записи. Заповни firebase-config.js і запусти сервер за інструкцією в README."}, "Connexion impossible. Vérifie la configuration Firebase et réessaie.": {"en": "Could not sign in. Check the Firebase configuration and try again.", "uk": "Не вдалося увійти. Перевірте налаштування Firebase й повторіть спробу."}, "Connexion à Firebase…": {"en": "Connecting to Firebase…", "uk": "Підключення до Firebase…"}, "Cette adresse possède déjà un compte. Choisis Se connecter.": {"en": "This address already has an account. Choose Sign in.", "uk": "Для цієї адреси вже є обліковий запис. Натисніть «Увійти»."}, "Firebase indisponible. Vérifie la connexion et la configuration, puis recharge la page.": {"en": "Firebase is unavailable. Check the connection and configuration, then reload the page.", "uk": "Firebase недоступний. Перевірте з’єднання та налаштування, а потім перезавантажте сторінку."}, "Adresse email ou mot de passe incorrect.": {"en": "Incorrect email address or password.", "uk": "Неправильна електронна адреса або пароль."}, "Trop de tentatives. Attends un moment avant de réessayer.": {"en": "Too many attempts. Wait a while before trying again.", "uk": "Забагато спроб. Зачекайте трохи й повторіть спробу."}, "Crée un compte pour retrouver ta progression et préparer l’examen dans les langues qui te conviennent.": {"en": "Create an account to save your progress and prepare for the exam in the languages that work for you.", "uk": "Створи обліковий запис, щоб зберігати свій поступ і готуватися до іспиту тими мовами, якими тобі зручно."}, "La fenêtre Google a été fermée. Tu peux réessayer.": {"en": "The Google window was closed. You can try again.", "uk": "Вікно Google закрито. Можна повторити спробу."}};
+const messages = {"13 chapitres · Lexique · Flashcards · Quiz": {"en": "13 chapters · Glossary · Flashcards · Quiz", "uk": "13 розділів · Словник · Картки · Тест"}, "Adresse email": {"en": "Email address", "uk": "Електронна адреса"}, "Adresse email ou mot de passe incorrect.": {"en": "Incorrect email address or password.", "uk": "Неправильна електронна адреса або пароль."}, "Au moins 6 caractères": {"en": "At least 6 characters", "uk": "Щонайменше 6 символів"}, "Autorise la fenêtre Google dans ton navigateur, puis réessaie.": {"en": "Allow the Google popup in your browser, then try again.", "uk": "Дозвольте спливне вікно Google у браузері й повторіть спробу."}, "Ce domaine doit être ajouté aux domaines autorisés de Firebase Authentication.": {"en": "Add this domain to the authorized domains in Firebase Authentication.", "uk": "Додайте цей домен до списку дозволених доменів у Firebase Authentication."}, "Cette adresse possède déjà un compte. Choisis Se connecter.": {"en": "This address already has an account. Choose Sign in.", "uk": "Для цієї адреси вже є обліковий запис. Натисніть «Увійти»."}, "Comprendre les institutions. Préparer l’examen.": {"en": "Understand institutions. Prepare for the exam.", "uk": "Зрозумій, як працюють інституції. Підготуйся до іспиту."}, "Compte": {"en": "Account", "uk": "Обліковий запис"}, "Connexion au serveur impossible. Vérifie ta connexion et réessaie.": {"en": "Could not connect to the server. Check your connection and try again.", "uk": "Не вдалося підключитися до сервера. Перевір з’єднання й спробуй ще раз."}, "Connexion impossible. Vérifie la configuration Firebase et réessaie.": {"en": "Could not sign in. Check the Firebase configuration and try again.", "uk": "Не вдалося увійти. Перевірте налаштування Firebase й повторіть спробу."}, "Connexion nécessaire pour accéder à la fiche.": {"en": "Sign in to access the study guide.", "uk": "Увійди, щоб відкрити навчальний матеріал."}, "Connexion réseau indisponible. Vérifie la connexion et réessaie.": {"en": "Network unavailable. Check your connection and try again.", "uk": "Немає доступу до мережі. Перевірте з’єднання й повторіть спробу."}, "Connexion à Firebase…": {"en": "Connecting to Firebase…", "uk": "Підключення до Firebase…"}, "Continuer avec Google": {"en": "Continue with Google", "uk": "Продовжити з Google"}, "Crée un compte pour retrouver ta progression et préparer l’examen dans les langues qui te conviennent.": {"en": "Create an account to save your progress and prepare for the exam in the languages that work for you.", "uk": "Створи обліковий запис, щоб зберігати свій поступ і готуватися до іспиту тими мовами, якими тобі зручно."}, "Créer un compte": {"en": "Create an account", "uk": "Створити обліковий запис"}, "Firebase indisponible. Vérifie la connexion et la configuration, puis recharge la page.": {"en": "Firebase is unavailable. Check the connection and configuration, then reload the page.", "uk": "Firebase недоступний. Перевірте з’єднання та налаштування, а потім перезавантажте сторінку."}, "Interface language": {"en": "Interface language", "uk": "Мова інтерфейсу"}, "La fenêtre Google a été fermée. Tu peux réessayer.": {"en": "The Google window was closed. You can try again.", "uk": "Вікно Google закрито. Можна повторити спробу."}, "Les comptes doivent être configurés pour ouvrir la fiche. Renseigne firebase-config.js, puis lance le serveur indiqué dans le README.": {"en": "Accounts must be configured before you can open the study guide. Fill in firebase-config.js, then start the server described in the README.", "uk": "Щоб відкрити навчальний матеріал, потрібно налаштувати облікові записи. Заповни firebase-config.js і запусти сервер за інструкцією в README."}, "Mot de passe": {"en": "Password", "uk": "Пароль"}, "Réessayer": {"en": "Try again", "uk": "Спробувати ще раз"}, "Se connecter": {"en": "Sign in", "uk": "Увійти"}, "Ton espace de révision": {"en": "Your study space", "uk": "Твій простір для навчання"}, "Trop de tentatives. Attends un moment avant de réessayer.": {"en": "Too many attempts. Wait a while before trying again.", "uk": "Забагато спроб. Зачекайте трохи й повторіть спробу."}, "Utilise un mot de passe d’au moins six caractères.": {"en": "Use a password with at least six characters.", "uk": "Використайте пароль щонайменше із шести символів."}, "Vérifie le format de l’adresse email.": {"en": "Check the email address format.", "uk": "Перевірте формат електронної адреси."}, "nom@exemple.com": {"en": "name@example.com", "uk": "name@example.com"}, "ou avec ton adresse email": {"en": "or with your email address", "uk": "або за допомогою електронної пошти"}};
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
 let lang='fr', ready=false, busy=false, signup=true, auth=null, api=null;
 try {const saved=JSON.parse(localStorage.getItem('ioe-lang'));if (['fr','en','uk'].includes(saved)) lang=saved;} catch {}
@@ -390,11 +457,15 @@ const tr = source => lang==='fr' ? source : messages[source]?.[lang] ?? source;
 function note(id,source){$(id).dataset.ui=source;$(id).textContent=tr(source);}
 function render(){
  document.documentElement.lang=lang;
+ $('#auth-hint').hidden=ready;
+ $('#auth-form').setAttribute('aria-busy',String(busy));
  $$('[data-ui]').forEach(el=>el.textContent=tr(el.dataset.ui));
+ $$('[data-ui-attr]').forEach(el=>Object.entries(JSON.parse(el.dataset.uiAttr)).forEach(([attr,source])=>el.setAttribute(attr,tr(source))));
  $$('#access-language button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
  $('#auth-submit').dataset.action=signup?'signup':'signin';
  note('#auth-submit',signup?'Créer un compte':'Se connecter');
  $('#auth-password').autocomplete=signup?'new-password':'current-password';
+ $('#password-hint').hidden=!signup;
  $('#auth-signup-tab').classList.toggle('on',signup);$('#auth-signin-tab').classList.toggle('on',!signup);
  $('#auth-signup-tab').setAttribute('aria-pressed',String(signup));$('#auth-signin-tab').setAttribute('aria-pressed',String(!signup));
  $$('#auth-form button').forEach(b=>b.disabled=!ready||busy);

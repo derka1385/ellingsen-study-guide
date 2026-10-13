@@ -10,7 +10,7 @@ Trois modes sont disponibles :
 | Bilingue guidé | Texte dans la langue choisie ; titres, questions centrales et notions en anglais | Anglais | Langue choisie |
 | Préparation à l’examen en anglais | Anglais | Anglais | Encadrés explicatifs, pièges à éviter, corrections du quiz et verso des cartes dans la langue choisie |
 
-La langue choisie peut être le français, l’anglais ou l’ukrainien. Les citations anglaises, noms propres, formules et sigles restent conservés. Le lexique garde sa colonne de référence anglaise. Les boutons EN / UK donnent toujours une aide ponctuelle sans modifier les préférences générales. Le bouton **Préférences** permet de changer le mode ; FR / EN / UK change la langue de compréhension. Ces modifications conservent la progression, la question de quiz et les réglages du micro-lab.
+La langue choisie peut être le français, l’anglais ou l’ukrainien. Les citations anglaises, noms propres, formules et sigles restent conservés. Le lexique garde sa colonne de référence anglaise. Les boutons EN / UK donnent toujours une aide ponctuelle sans modifier les préférences générales. La page de connexion reprend le logo Google multicolore du Micro Lab et propose Google en premier, avec email/mot de passe en alternative. Son formulaire est adapté aux écrans mobiles et au thème sombre. Le bouton **Préférences** permet de changer le mode ; FR / EN / UK change la langue de compréhension. Ces modifications conservent la progression, la question de quiz et les réglages du micro-lab.
 
 ## Configuration Firebase active
 
@@ -97,7 +97,7 @@ Les tests serveur vérifient les accès anonymes, les catalogues privés, les fi
 
 Les contrôles navigateur ont couvert l’accès obligatoire, l’inscription et Google simulés, les préférences, leur restauration, les trois modes, les treize chapitres dans les trois langues, les corrections du quiz, le maintien de l’état des outils, les erreurs Firestore et les écrans mobile/ordinateur. La configuration réelle a également été vérifiée : Firebase génère une URL de connexion Google (HTTP 200), autorise `localhost`, et Firestore refuse les requêtes anonymes. Le parcours réel Google a également réussi dans le navigateur : création de session protégée, enregistrement des préférences, sauvegarde d’un chapitre étudié dans Firestore et restauration après rechargement. Le chapitre utilisé pour ce contrôle a été remis dans son état initial. Aucun hébergement public du site n’est déployé.
 
-Les traductions restent des objets JavaScript indexés par identifiants numériques, dans deux scripts classiques. Les **1 974 blocs** de l’extraction initiale sont conservés ; les catalogues comptent désormais **3 755 entrées** chacun. Balises, entités, liens, hash et données des matrices/arbres ont été comparés automatiquement. Les outils contiennent **213 termes**, **304 cartes** et **90 questions**.
+Les traductions restent des objets JavaScript indexés par identifiants numériques, dans deux scripts classiques. Les **1 974 blocs** de l’extraction initiale sont conservés ; les catalogues comptent désormais **3 760 entrées** chacun. Balises, entités, liens, hash et données des matrices/arbres ont été comparés automatiquement. Les outils contiennent **213 termes**, **304 cartes** et **90 questions**.
 
 `i18n/blocks.json` et `i18n/tagged.html` conservent l’extraction initiale pour audit. Ne pas les publier avec un serveur statique. Ne pas renuméroter les blocs ni les cartes sans vérifier les données déjà enregistrées. L’extraction initiale a utilisé :
 
