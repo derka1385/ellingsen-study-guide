@@ -93,4 +93,4 @@ python3 -I i18n/extract.py ellingsen.html i18n/tagged.html i18n/blocks.json
 
 Le texte distingue les chapitres 1–10 du livre et la reconstruction des chapitres 11–13 depuis les supports de cours. Les indications d’incertitude et les formules originales sont conservées, y compris le libellé du triangle au chapitre 7 (`u1 + u2 = 2` pour la frontière, l’intérieur satisfaisant `≤ 2`).
 
-Un commit local accompagne les changements. Aucun push GitHub ni déploiement n’est effectué.
+Le projet est versionné dans le dépôt privé [derka1385/ellingsen-study-guide](https://github.com/derka1385/ellingsen-study-guide). Les commits locaux ont été poussés sur `main` avec l’autorisation de l’utilisateur. Ce dépôt contient le code source ; aucun hébergement du site n’est encore déployé. La connexion Google nécessite toujours la création du projet Firebase et l’activation du fournisseur Google comme décrit ci-dessus.
