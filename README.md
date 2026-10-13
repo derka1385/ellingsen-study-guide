@@ -1,93 +1,96 @@
-# Fiche Ellingsen — français, anglais, ukrainien
+# Fiche Ellingsen — compte et révision multilingue
 
-Ouvrir `ellingsen.html` directement dans un navigateur. Aucun build ni installation n’est nécessaire. Les traductions sont chargées par deux scripts classiques (`i18n/en.js` et `i18n/uk.js`), avec des objets indexés par identifiants numériques. Aucun `fetch` de JSON n’est utilisé : la lecture fonctionne en `file://`.
+L’accès passe désormais par la création d’un compte ou la connexion à un compte existant, avec email/mot de passe ou Google. Après la première connexion, une courte page propose la langue de compréhension et le mode de préparation. Les comptes existants passent aussi par ce choix une seule fois.
 
-Le sélecteur FR / EN / UK change la langue de la fiche et des outils. Les petits boutons EN / UK ouvrent la traduction du passage ou du terme sélectionné sans changer la langue générale. Les citations déjà en anglais, les formules et les sigles sont conservés. Le lexique garde une colonne de référence avec les termes anglais du livre.
+Trois modes sont disponibles :
+
+| Mode | Cours | Questions et recto des cartes | Explications |
+| --- | --- | --- | --- |
+| Tout dans ma langue | Langue choisie | Langue choisie | Langue choisie |
+| Bilingue guidé | Texte dans la langue choisie ; titres, questions centrales et notions en anglais | Anglais | Langue choisie |
+| Préparation à l’examen en anglais | Anglais | Anglais | Encadrés explicatifs, pièges à éviter, corrections du quiz et verso des cartes dans la langue choisie |
+
+La langue choisie peut être le français, l’anglais ou l’ukrainien. Les citations anglaises, noms propres, formules et sigles restent conservés. Le lexique garde sa colonne de référence anglaise. Les boutons EN / UK donnent toujours une aide ponctuelle sans modifier les préférences générales. Le bouton **Préférences** permet de changer le mode ; FR / EN / UK change la langue de compréhension. Ces modifications conservent la progression, la question de quiz et les réglages du micro-lab.
 
 ## Configurer Firebase
 
-1. Dans la [console Firebase](https://console.firebase.google.com/), créer un projet, puis ajouter une application **Web**. Google Analytics est facultatif.
-2. Ouvrir **Authentication → Sign-in method**. Activer **Email/Password** et **Google**. Pour Google, sélectionner une adresse d’assistance et enregistrer.
-3. Dans **Authentication → Settings → Authorized domains**, ajouter les domaines servant réellement la fiche. Ajouter explicitement `localhost` pour les tests locaux : les nouveaux projets ne l’autorisent plus automatiquement.
-4. Ouvrir **Firestore Database**, créer une base **Cloud Firestore** en mode production et choisir sa région.
-5. Dans les paramètres du projet, copier la configuration de l’application Web dans `firebase-config.js`. Renseigner au minimum `apiKey`, `authDomain`, `projectId` et `appId`. Les autres champs peuvent être copiés avec la configuration fournie.
-6. Dans **Firestore Database → Rules**, remplacer les règles par le contenu de `firestore.rules`, puis cliquer sur **Publier** :
+1. Dans la [console Firebase](https://console.firebase.google.com/), créer un projet et ajouter une application **Web**.
+2. Dans **Authentication → Sign-in method**, activer **Email/Password** et **Google**. Pour Google, choisir l’adresse d’assistance.
+3. Dans **Authentication → Settings → Authorized domains**, ajouter le domaine du site et explicitement `localhost` pour les essais locaux.
+4. Créer une base **Cloud Firestore** en mode production, puis choisir sa région.
+5. Copier la configuration Web dans `firebase-config.js`, en renseignant au minimum `apiKey`, `authDomain`, `projectId` et `appId`.
+6. Publier le contenu de `firestore.rules` dans **Firestore Database → Rules**. Une seule autorisation y figure :
 
    ```text
-   rules_version = '2';
-   service cloud.firestore {
-     match /databases/{database}/documents {
-       match /users/{userId} {
-         allow read, write: if request.auth != null && request.auth.uid == userId;
-       }
-     }
-   }
+   allow read, write: if request.auth != null && request.auth.uid == userId;
    ```
 
-7. Pour les comptes, servir le dossier via HTTP(S). Pour un test local, depuis ce dossier :
+Le SDK Web modulaire est épinglé à **12.19.0**, chargé depuis `https://www.gstatic.com/firebasejs/12.19.0/`. Les clés de configuration Web sont publiques. Ne jamais ajouter de compte de service, de clé privée ni de secret administrateur au dépôt. Voir les documentations officielles [installation Web](https://firebase.google.com/docs/web/setup), [Google](https://firebase.google.com/docs/auth/web/google-signin) et [règles par utilisateur](https://firebase.google.com/docs/rules/rules-and-auth).
 
-   ```sh
-   python3 -m http.server 8000 --bind 127.0.0.1
-   ```
+## Démarrer le site avec un accès réellement protégé
 
-   Ouvrir ensuite [la fiche locale](http://localhost:8000/ellingsen.html). La connexion Google exige une origine HTTP(S) autorisée ; elle n’est pas utilisable en `file://`. En `file://`, la fiche conserve intégralement son mode invité et affiche une indication dans la fenêtre de connexion, sans charger Firebase.
+L’interface reste en HTML/CSS/JS sans build. **Un serveur est maintenant nécessaire pour contrôler l’accès au contenu.** Depuis ce dossier, avec Node.js 22 ou supérieur :
 
-Le SDK **modulaire Firebase 12.19.0** est épinglé. Les modules App, Auth et Firestore sont importés depuis `https://www.gstatic.com/firebasejs/12.19.0/` uniquement si la configuration est renseignée et la page ouverte via HTTP(S). Voir les documentations officielles [installation Web](https://firebase.google.com/docs/web/setup), [authentification Google](https://firebase.google.com/docs/auth/web/google-signin) et [règles par utilisateur](https://firebase.google.com/docs/rules/rules-and-auth).
+```sh
+npm ci --ignore-scripts --omit=optional
+npm start
+```
 
-Les clés de configuration Web Firebase sont publiques par conception. La protection des données repose sur Authentication et les règles Firestore. Ne jamais ajouter de clé de compte de service, de secret Admin SDK ou de clé privée au projet.
+Ouvrir [le site local](http://localhost:8000/). La première commande installe les dépendances du serveur ; la seconde lance `server.mjs`, lié par défaut à `127.0.0.1`.
 
-## Progression et comptes
+Le serveur ne livre `ellingsen.html` et les catalogues EN/UK qu’après validation d’un jeton Firebase signé, pour le projet configuré. Sans session, il redirige vers `login.html` ; les catalogues renvoient 401. Seuls la page de compte et le modèle de configuration Web sont publics. Les extractions, sources serveur, dépendances, tests et fichiers Git ne sont jamais servis.
 
-En mode invité, les clés existantes `ioe-done` et `ioe-cards` restent utilisées. La langue est enregistrée dans `ioe-lang`. Chaque accès à `localStorage` est protégé par `try/catch` ; un navigateur qui refuse le stockage peut toujours afficher et utiliser la fiche, avec une progression conservée seulement en mémoire pendant la session.
+Le serveur utilise **firebase-admin 13.6.0**, uniquement pour [vérifier les jetons d’identité](https://firebase.google.com/docs/auth/admin/verify-id-tokens) avec les certificats publics Firebase et le `projectId`. Il ne lit ni n’écrit Firestore et n’utilise aucune clé de compte de service. Le cookie de session est `HttpOnly`, `SameSite=Strict`, `Secure` en HTTPS, et expire avec le jeton, au plus après une heure. Le client actualise ce cookie lorsque Firebase renouvelle le jeton. La signature, le projet et l’expiration sont vérifiés à chaque requête protégée ; la révocation administrative immédiate n’est pas interrogée. La déconnexion efface le cookie du navigateur. Les réponses privées ne sont pas mises en cache, et les opérations de session refusent les origines différentes.
 
-Après connexion, la progression est lue dans le document `users/{uid}` :
+Pour un hébergement, déployer **ce serveur Node** derrière HTTPS, avec l’origine exacte, par exemple :
+
+```sh
+HOST=0.0.0.0 PORT=8000 APP_ORIGIN=https://revision.example.org npm start
+```
+
+Le proxy HTTPS doit transmettre `/`, `/login.html`, `/session`, `/ellingsen.html`, `/firebase-config.js` et `/i18n/*` à ce serveur. Ne pas publier parallèlement les fichiers comme ressources statiques publiques : cela contournerait le contrôle d’accès. `APP_ORIGIN` doit correspondre exactement à l’origine du navigateur ; le serveur refuse une origine HTTP distante.
+
+Un simple `python3 -m http.server`, un hébergement exclusivement statique ou `file://` ne peut pas protéger la source d’un fichier HTML. L’ouverture directe du fichier affiche désormais l’écran de compte et laisse la fiche verrouillée, sans erreur JavaScript ; la connexion demande le serveur. Une configuration Firebase vide laisse également l’accès verrouillé avec une explication. Aucun contournement invité n’est proposé.
+
+## Profil et progression
+
+Le document `users/{uid}` contient :
 
 ```js
 {
   studied: { "1": true },
   cards: { "c:question originale": 1, "v:terme anglais": 2 },
-  lang: "fr", // "fr", "en" ou "uk"
+  lang: "uk", // fr, en ou uk : langue de compréhension
+  studyMode: "guided", // full, guided ou exam
+  preferencesSet: true,
   updatedAt: serverTimestamp()
 }
 ```
 
-Lorsqu’une progression invitée n’a pas encore été importée, elle est fusionnée avec celle du compte : un chapitre étudié reste étudié et la meilleure note de carte est conservée. Une empreinte locale évite de réimporter automatiquement la même progression dans un autre compte. Les valeurs invitées restent disponibles après déconnexion.
+La fiche s’ouvre seulement une fois le profil chargé et les préférences enregistrées. En cas d’échec de lecture ou de sauvegarde initiale, l’écran reste verrouillé et propose de réessayer. À la reconnexion, les préférences et la progression sont restaurées ; le choix initial n’est pas redemandé. Un échec de sauvegarde de progression conserve les changements en attente et affiche un bouton de reprise.
 
-Une fois connecté, les modifications de chapitres et de cartes écrivent dans Firestore, sans remplacer `ioe-done` ni `ioe-cards`. Les identifiants des cartes déjà présentes restent identiques, quelle que soit la langue affichée. La langue est également sauvegardée dans le compte. La fiche écoute les changements du document pour actualiser la progression sur les autres appareils.
+Les anciennes clés `ioe-done` et `ioe-cards` sont conservées pour importer une progression créée avant l’obligation de compte. Une empreinte empêche de réimporter les mêmes données dans plusieurs comptes. Les nouvelles progressions passent exclusivement par Firestore. `ioe-lang` mémorise la langue d’interface du navigateur ; le profil connecté fait autorité. Tous les accès à localStorage sont protégés par `try/catch`.
 
-Une erreur de lecture du compte ne provoque aucune écriture automatique ni remplacement par les données locales. Une sauvegarde échouée reste en attente en mémoire et le bouton **Réessayer la sauvegarde** permet de la relancer. La déconnexion attend les sauvegardes ; si elles échouent, elle affiche l’erreur pour éviter une perte silencieuse.
+Les identifiants des cartes restent fondés sur leurs questions ou termes de référence d’origine. Les modes de révision changent uniquement l’affichage, sans modifier les scores ni les données des jeux.
 
-## Vérification
+## Vérifications
 
-- Ouvrir la fiche en `file://` avec la configuration vide : navigation par hash, matrices, arbres, lexique, cartes et quiz fonctionnent sans Firebase.
-- Passer successivement en FR, EN et UK ; visiter les treize chapitres et les outils. Ouvrir une aide EN/UK et vérifier que le sélecteur général reste inchangé.
-- Marquer un chapitre et noter une carte en mode invité ; recharger pour vérifier la restauration locale.
-- Avec une configuration Firebase valide, ouvrir en HTTP(S), créer un compte email/mot de passe, puis vérifier aussi la connexion Google. Contrôler le document `users/{uid}` dans la console Firestore.
-- Modifier une progression connectée, se déconnecter puis se reconnecter, et vérifier sa restauration. Vérifier que le mode invité retrouve ses données locales.
-- Tester deux comptes : chacun doit lire et écrire uniquement son document. Les autres chemins Firestore doivent être refusés.
+```sh
+npm test
+```
 
-Les tests locaux de l’intégration utilisent des réponses Firebase simulées pour couvrir migration, sauvegarde, reconnexion et erreurs. Le test réel de Google et de Firestore doit être effectué après ajout de votre configuration ; aucun projet Firebase n’est fourni ni créé automatiquement.
+Les tests serveur vérifient les accès anonymes, les catalogues privés, les fichiers non servis, les jetons invalides/expirés, l’origine des opérations de session, les cookies et les réponses authentifiées. Le vérificateur Firebase y est simulé pour des tests déterministes.
 
-## Sources et maintenance
+Les contrôles navigateur ont couvert l’accès obligatoire, l’inscription et Google simulés, les préférences, leur restauration, les trois modes, les treize chapitres dans les trois langues, les corrections du quiz, le maintien de l’état des outils, les erreurs Firestore et les écrans mobile/ordinateur. La configuration réelle et la connexion Google doivent être testées après ajout de votre projet Firebase ; aucun projet ni hébergement n’a été créé ou publié automatiquement.
 
-Le projet a été retrouvé dans un espace de travail temporaire de Claude. Il est mis à jour à son emplacement d’origine ; sa version initiale est conservée dans l’historique Git local. Une copie identique accompagne les livrables. Le texte d’origine distingue les chapitres 1–10 du livre et la reconstruction des chapitres 11–13 à partir des supports de cours. Les indications de source et d’incertitude restent présentes. Un libellé du schéma au chapitre 7 décrit le triangle réalisable avec `u1 + u2 = 2`, alors que son intérieur satisfait `u1 + u2 ≤ 2` ; les formules originales ont été conservées conformément à la consigne.
+Les traductions restent des objets JavaScript indexés par identifiants numériques, dans deux scripts classiques. Les **1 974 blocs** de l’extraction initiale sont conservés ; les catalogues comptent désormais **3 755 entrées** chacun. Balises, entités, liens, hash et données des matrices/arbres ont été comparés automatiquement. Les outils contiennent **213 termes**, **304 cartes** et **90 questions**.
 
-L’extraction initiale a été exécutée avec la commande demandée et a produit **1 974 blocs** :
+`i18n/blocks.json` et `i18n/tagged.html` conservent l’extraction initiale pour audit. Ne pas les publier avec un serveur statique. Ne pas renuméroter les blocs ni les cartes sans vérifier les données déjà enregistrées. L’extraction initiale a utilisé :
 
 ```sh
 python3 -I i18n/extract.py ellingsen.html i18n/tagged.html i18n/blocks.json
 ```
 
-`blocks.json` et `tagged.html` conservent cette extraction initiale pour audit. Les identifiants supplémentaires des catalogues couvrent les textes des tableaux JavaScript, légendes, attributs d’accessibilité et nouveaux contrôles. Ne pas renuméroter les blocs ou les cartes sans régénérer les deux catalogues et vérifier les données déjà enregistrées. La réexécution brute de l’extracteur sur la version enrichie ne constitue pas une procédure de mise à jour des catalogues.
+Le texte distingue les chapitres 1–10 du livre et la reconstruction des chapitres 11–13 depuis les supports de cours. Les indications d’incertitude et les formules originales sont conservées, y compris le libellé du triangle au chapitre 7 (`u1 + u2 = 2` pour la frontière, l’intérieur satisfaisant `≤ 2`).
 
-Un commit Git local accompagne la livraison. Aucun dépôt distant ni push GitHub n’est créé par cette modification.
-
-## Contrôles exécutés avant livraison
-
-Les deux catalogues contiennent chacun **3 730 entrées** : les **1 974 blocs** extraits et **1 756 textes supplémentaires** pour les tableaux JavaScript, légendes et contrôles. Les balises, attributs, liens et entités HTML de tous les blocs d’origine ont été comparés automatiquement. Les données de matrices et d’arbres et les destinations de navigation sont inchangées.
-
-Le lexique contient **213 entrées**, les flashcards **304 cartes**, et le quiz **90 questions**, avec une couverture des chapitres 11–13 ajoutée aux outils.
-
-Les tests navigateur ont réussi en `file://`, sur écran large et mobile : les treize chapitres dans les trois langues, aides ponctuelles, recherche, progression, identifiants de cartes, état du quiz lors du changement de langue, labo, navigation par hash, restauration après rechargement et refus de localStorage. Aucun message d’erreur JavaScript ni console n’a été relevé dans ces tests.
-
-L’intégration Firebase a été vérifiée avec des modules simulés pour les flux email/Google, la migration, la sauvegarde, la reconnexion, l’isolation des comptes, la synchronisation et les erreurs. Cette simulation ne remplace pas un essai réel avec un projet Firebase configuré.
+Un commit local accompagne les changements. Aucun push GitHub ni déploiement n’est effectué.

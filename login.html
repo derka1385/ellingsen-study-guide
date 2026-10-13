@@ -1,0 +1,452 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Ellingsen — compte</title><style>[hidden]{display:none!important}:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+
+/* Layout: sticky chapter rail beside a ~70ch reading column. Signature: payoff matrices where Rowena (row, 1st number) is blue,
+   Colin (column, 2nd number) is orange, best responses are underlined and Nash equilibria sit under a highlighter. */
+:root{
+  --paper:#F2F3EE; --sheet:#FBFBF7; --ink:#1A1E22; --ink-2:#4D5560; --rule:#D5D8CF;
+  --row:#1D58B0; --col:#B4500E; --eq:#E2BC2E; --eq-bg:rgba(233,197,58,.30);
+  --good:#2E7A4C; --bad:#B03636;
+  --display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --body:"Literata",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#111417; --sheet:#181C20; --ink:#E5E7E1; --ink-2:#A5ADB6; --rule:#2C3238;
+    --row:#86ADF2; --col:#EE9C62; --eq:#D8B53C; --eq-bg:rgba(216,181,60,.17);
+    --good:#6BC08E; --bad:#E88080; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111417; --sheet:#181C20; --ink:#E5E7E1; --ink-2:#A5ADB6; --rule:#2C3238;
+  --row:#86ADF2; --col:#EE9C62; --eq:#D8B53C; --eq-bg:rgba(216,181,60,.17);
+  --good:#6BC08E; --bad:#E88080; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.62 var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration-color:var(--ink-2);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--row);outline-offset:2px;border-radius:2px}
+button,input,select{font:inherit;color:inherit}
+sub,sup{font-size:.72em;line-height:0}
+
+/* ---------- shell ---------- */
+.app{display:grid;grid-template-columns:276px minmax(0,1fr);min-height:100vh}
+.rail{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;height:100vh;overflow-y:auto;padding:24px 14px 48px 20px;border-right:1px solid var(--rule)}
+.brand{display:block;text-decoration:none;font:800 16px/1.15 var(--display);letter-spacing:-.01em}
+.brand small{display:block;margin-top:6px;font:500 12px/1.4 var(--display);letter-spacing:.02em;color:var(--ink-2)}
+.rail h2{font:600 11px/1 var(--display);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-2);margin:24px 0 8px 8px}
+.rail ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.rail nav a{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:4px;text-decoration:none;font:500 14px/1.3 var(--display);color:var(--ink-2)}
+.rail nav a .n{font:500 12px/1 var(--mono);min-width:1.5em}
+.rail nav a:hover{background:var(--sheet);color:var(--ink)}
+.rail nav a[aria-current="page"]{background:var(--ink);color:var(--paper)}
+.rail nav a .ok{margin-left:auto;font:600 12px var(--display);color:var(--good)}
+.rail nav a[aria-current="page"] .ok{color:var(--paper)}
+.short{display:none}
+main{min-width:0;padding-block:44px 104px;padding-inline:clamp(16px,5vw,64px)}
+.view{max-width:46rem;margin:0 auto}
+.view.wide{max-width:68rem}
+.read{max-width:46rem}
+@media (max-width:880px){
+  .app{grid-template-columns:1fr}
+  .rail{z-index:20;height:auto;overflow:visible;background:var(--paper);border-right:0;border-bottom:1px solid var(--rule);padding:10px 0 10px 16px}
+  .brand,.rail h2{display:none}
+  .rail nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-right:16px}
+  .rail nav::-webkit-scrollbar{display:none}
+  .rail ul{display:flex;gap:4px}
+  .rail nav a{white-space:nowrap;padding:7px 11px;font-size:13px;border:1px solid var(--rule)}
+  .rail nav a .n{min-width:0}
+  .full{display:none}.short{display:inline}
+  main{padding-block:26px 88px}
+}
+
+/* ---------- type ---------- */
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+.kicker,.lab{font:600 11.5px/1.2 var(--display);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-2);margin:0 0 8px}
+.view>h2,.view .h2{font-size:25px;font-weight:700;letter-spacing:-.012em;margin:52px 0 14px;padding-top:16px;border-top:1px solid var(--rule)}
+.view h3{font-size:18.5px;font-weight:700;margin:30px 0 8px}
+.view h4{font-size:15.5px;font-weight:700;margin:20px 0 6px}
+.view p{margin:0 0 14px}
+.view ul,.view ol{padding-left:1.3em;margin:0 0 14px}
+.view li{margin:5px 0}
+.view li::marker{color:var(--ink-2)}
+.en{font-style:italic}
+.tag{font:500 12.5px/1 var(--mono);color:var(--ink-2);font-weight:500;letter-spacing:0;margin-left:8px;white-space:nowrap}
+.pg{font:500 12px/1 var(--mono);color:var(--ink-2);white-space:nowrap}
+.who{font:600 .92em var(--display)}
+.who.r{color:var(--row)}.who.c{color:var(--col)}
+.muted{color:var(--ink-2)}
+strong{font-weight:600}
+
+/* ---------- chapter head ---------- */
+.ch-head{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:24px;align-items:end;padding-bottom:22px;border-bottom:2px solid var(--ink);margin-bottom:26px}
+.ch-num{grid-row:1/span 3;font:800 clamp(72px,11vw,112px)/.78 var(--display);letter-spacing:-.06em}
+.ch-head .kicker{margin:0 0 6px}
+.ch-head h1{font-size:clamp(27px,4.2vw,40px);font-weight:800;letter-spacing:-.022em}
+.ch-head .fr{margin:6px 0 0;font:italic 400 18px/1.3 var(--body);color:var(--ink-2)}
+.question{font:400 21px/1.45 var(--body);margin:0 0 26px}
+.question::before{content:"Question centrale";display:block;font:600 11.5px/1.2 var(--display);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-2);margin-bottom:6px}
+
+/* ---------- blocks ---------- */
+.brief,.def,.box{margin:22px 0;padding:18px 22px;background:var(--sheet);border:1px solid var(--rule);border-radius:3px}
+.brief ul{margin:0;padding-left:1.1em}
+.brief li{margin:6px 0}
+.def .lab,.box .lab{display:flex;justify-content:space-between;gap:12px}
+.def blockquote{margin:0 0 10px;font:italic 400 18.5px/1.5 var(--body)}
+.def>*:last-child,.box>*:last-child{margin-bottom:0}
+.box.trap .lab{color:var(--bad)}
+.eq{font:500 16px/1.5 var(--mono);background:var(--sheet);border:1px solid var(--rule);border-radius:3px;padding:12px 16px;margin:16px 0;overflow-x:auto;white-space:nowrap;display:flex;justify-content:space-between;gap:24px}
+.eq .no{color:var(--ink-2)}
+.eq.left{justify-content:flex-start}
+.quote{margin:18px 0;padding:0 0 0 18px;border-left:2px solid var(--ink-2);font:italic 400 17px/1.55 var(--body);color:var(--ink)}
+.quote cite{display:block;margin-top:6px;font:500 12.5px var(--mono);font-style:normal;color:var(--ink-2)}
+.apps{display:grid;gap:12px;margin:14px 0}
+.apps>div{padding:14px 18px;border:1px solid var(--rule);border-radius:3px}
+.apps>div h4{margin:0 0 4px}
+.apps>div p:last-child{margin:0}
+.traps{list-style:none;padding:0!important;margin:12px 0}
+.traps li{padding:8px 0 8px 28px;position:relative;border-bottom:1px solid var(--rule);margin:0}
+.traps li::before{content:"✕";position:absolute;left:4px;top:8px;color:var(--bad);font:600 14px var(--display)}
+details.exo{border-top:1px solid var(--rule)}
+details.exo:last-of-type{border-bottom:1px solid var(--rule)}
+details.exo summary{cursor:pointer;list-style:none;display:flex;gap:12px;align-items:baseline;padding:13px 0;font:600 15.5px/1.4 var(--display)}
+details.exo summary::-webkit-details-marker{display:none}
+details.exo summary::before{content:"+";font:500 15px var(--mono);color:var(--ink-2);width:1em;flex:none}
+details.exo[open] summary::before{content:"−"}
+details.exo .body{padding:0 0 16px 26px}
+.tablewrap{overflow-x:auto;margin:16px 0}
+table.t{border-collapse:collapse;width:100%;font-size:15px;line-height:1.45}
+table.t th{font:600 12px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);text-align:left;padding:8px 10px;border-bottom:1.5px solid var(--ink)}
+table.t td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+table.t td.m{font-family:var(--mono);font-size:14px;white-space:nowrap}
+.ch-foot{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-top:56px;padding-top:18px;border-top:2px solid var(--ink)}
+.ch-foot nav{display:flex;gap:18px;font:500 14px var(--display)}
+.btn{appearance:none;border:1px solid var(--ink);background:transparent;padding:8px 14px;border-radius:4px;font:600 14px/1.2 var(--display);cursor:pointer}
+.btn:hover{background:var(--sheet)}
+.btn.on{background:var(--ink);color:var(--paper)}
+.btn.ghost{border-color:var(--rule)}
+.chvocab{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:14px 0}
+.chvocab div{background:var(--paper);padding:10px 12px;font-size:14.5px;line-height:1.4}
+.chvocab b{display:block;font:600 14.5px/1.3 var(--display)}
+.chvocab i{display:block;color:var(--ink-2)}
+.chvocab span{display:block;margin-top:4px}
+
+/* ---------- matrices & trees ---------- */
+figure{margin:20px 0}
+.mx{overflow-x:auto}
+.mx table{border-collapse:collapse;font:500 16px/1.2 var(--mono);font-variant-numeric:tabular-nums;margin:0}
+.mx th{font:600 15px/1.2 var(--display);padding:5px 12px}
+.mx th.r{color:var(--row);text-align:right}.mx th.c{color:var(--col)}
+.mx th.corner{font:500 11px/1.25 var(--display);text-align:left;color:var(--ink-2);padding:0 8px 4px 0}
+.mx td{border:1.5px solid var(--ink);background:var(--sheet);padding:9px 14px;text-align:center;white-space:nowrap}
+.pr{color:var(--row)}.pc{color:var(--col)}
+.br{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.mx td.ne{background:var(--eq-bg);box-shadow:inset 0 0 0 2.5px var(--eq)}
+figcaption{margin-top:8px;font:500 13px/1.4 var(--display);color:var(--ink-2)}
+figcaption .pg{margin-left:6px}
+.stages{display:flex;flex-wrap:wrap;gap:12px 40px;align-items:flex-start;margin:20px 0}
+.stages figure{margin:0}
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:8px 28px;align-items:start}
+.tree svg{width:100%;max-width:440px;height:auto;display:block}
+.tree .e{stroke:var(--ink-2);stroke-width:1.4;fill:none}
+.tree .e.on{stroke:var(--ink);stroke-width:3.2}
+.tree .e.off{stroke-dasharray:5 5;opacity:.5}
+.tree text{font-family:var(--display);font-size:14px;fill:var(--ink)}
+.tree .lbl{font-size:13px;fill:var(--ink-2)}
+.tree .pl{font-weight:600}
+.tree .pr{fill:var(--row)}.tree .pc{fill:var(--col)}
+.tree .pay{font-family:var(--mono);font-size:13px}
+.tree .node{fill:var(--ink)}
+.tree .root{fill:var(--paper);stroke:var(--ink);stroke-width:1.5}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font:500 14px var(--display);margin:12px 0}
+.legend span{display:inline-flex;gap:8px;align-items:center}
+.sw{width:14px;height:14px;display:inline-block;border-radius:2px}
+
+/* ---------- carte ---------- */
+.hero{padding-bottom:26px;border-bottom:2px solid var(--ink)}
+.hero h1{font-size:clamp(34px,6vw,64px);font-weight:800;letter-spacing:-.035em;line-height:.98;max-width:14ch}
+.hero .sub{margin:16px 0 0;font:400 18px/1.5 var(--body);color:var(--ink-2);max-width:44rem}
+.bigq{margin:34px 0 8px;max-width:48rem}
+.bigq .q-en{font:600 clamp(24px,3.6vw,34px)/1.2 var(--display);letter-spacing:-.015em;margin:0 0 12px;text-wrap:balance}
+.bigq .q-fr{font-size:18px;color:var(--ink-2);margin:0}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(14.5rem,1fr));gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin:30px 0}
+.three article{padding:18px 22px 20px 0}
+.three article+article{padding-left:22px;border-left:1px solid var(--rule)}
+.three h3{font-size:24px;font-weight:800;letter-spacing:-.02em;margin:0 0 8px}
+.three .q{font:italic 400 16.5px/1.45 var(--body);margin:0 0 10px}
+.three p{font-size:15.5px;margin:0 0 8px}
+.three .chs{font:500 12.5px var(--mono);color:var(--ink-2);margin:0}
+@media (max-width:760px){.three article+article{padding-left:0;border-left:0;border-top:1px solid var(--rule)}}
+.road{list-style:none;padding:0!important;margin:16px 0;border-top:1px solid var(--ink)}
+.road li{margin:0;border-bottom:1px solid var(--rule)}
+.road a{display:grid;grid-template-columns:3.2rem minmax(0,16rem) minmax(0,1fr);gap:4px 20px;padding:13px 4px;text-decoration:none;align-items:baseline}
+.road a:hover{background:var(--sheet)}
+.road .n{font:800 26px/1 var(--display);letter-spacing:-.04em}
+.road .t{font:700 16px/1.3 var(--display)}
+.road .t i{display:block;font:italic 400 14.5px/1.35 var(--body);color:var(--ink-2)}
+.road .k{font-size:15.5px;line-height:1.5}
+@media (max-width:760px){.road a{grid-template-columns:2.6rem minmax(0,1fr)}.road .k{grid-column:2}}
+.map svg{width:100%;max-width:660px;height:auto;display:block}
+.map text{font-family:var(--display);fill:var(--ink)}
+.map .en{font-size:15px;font-weight:600;font-style:normal}
+.map .fr{font-family:var(--body);font-style:italic;font-size:12.5px;fill:var(--ink-2)}
+.map .lv{font:600 13px var(--mono);fill:var(--ink-2)}
+.map .side{font-size:12px;fill:var(--ink-2);letter-spacing:.06em;text-transform:uppercase}
+.map .s{stroke:var(--ink);stroke-width:1.4;fill:none}
+.map .d{stroke:var(--ink-2);stroke-width:1.4;stroke-dasharray:2 4;fill:none}
+.ess{columns:2 22rem;column-gap:36px;padding-left:1.2em!important}
+.ess li{break-inside:avoid;margin:0 0 10px}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(12.5rem,1fr));gap:10px;margin:16px 0}
+.tools a{display:block;padding:14px 16px;border:1px solid var(--rule);border-radius:3px;text-decoration:none}
+.tools a:hover{border-color:var(--ink)}
+.tools b{display:block;font:700 15.5px/1.3 var(--display);margin-bottom:4px}
+.tools span{font-size:14.5px;color:var(--ink-2);line-height:1.45;display:block}
+
+/* ---------- tools: lexique, flashcards, quiz, labo, timeline ---------- */
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0}
+.bar input[type=search],.bar select{padding:9px 12px;border:1px solid var(--rule);border-radius:4px;background:var(--sheet);font:500 15px var(--display);min-width:0}
+.bar input[type=search]{flex:1 1 16rem;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{appearance:none;border:1px solid var(--rule);background:transparent;border-radius:999px;padding:5px 12px;font:500 13.5px var(--display);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.count{font:500 13px var(--mono);color:var(--ink-2)}
+#lex-table td:first-child{font:600 15px/1.35 var(--display);min-width:11rem}
+#lex-table td:nth-child(2){font-style:italic;min-width:9rem}
+#lex-table td:last-child{font:500 12.5px var(--mono);color:var(--ink-2);white-space:nowrap}
+.fc-wrap{max-width:44rem}
+.fc-stage{perspective:1400px;margin:14px 0}
+.fc{position:relative;height:clamp(300px,52vh,440px);cursor:pointer;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.75,.2,1);border:0;background:none;width:100%;padding:0;text-align:left}
+.fc.flip{transform:rotateY(180deg)}
+.fc .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:28px 30px;display:flex;flex-direction:column;justify-content:center;overflow:auto}
+.fc .back{transform:rotateY(180deg)}
+.fc .front .term{font:700 clamp(22px,3.4vw,30px)/1.2 var(--display);letter-spacing:-.015em;text-wrap:balance}
+.fc .front .hint,.fc .face .meta{font:500 12.5px var(--mono);color:var(--ink-2);margin-top:14px}
+.fc .back .fr{font:italic 400 15px var(--body);color:var(--ink-2);margin-bottom:8px}
+.fc .back .ans{font-size:17px;line-height:1.55}
+.fc-ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.fc-ctl .rate-no{border-color:var(--bad);color:var(--bad)}
+.fc-ctl .rate-yes{border-color:var(--good);color:var(--good)}
+@media (prefers-reduced-motion:reduce){.fc{transition:none}}
+.qz{max-width:44rem}
+.qz .q{font:600 20px/1.4 var(--display);margin:8px 0 16px;text-wrap:pretty}
+.qz .opts{display:grid;gap:8px}
+.qz .opt{appearance:none;text-align:left;padding:12px 16px;border:1px solid var(--rule);border-radius:4px;background:var(--sheet);font:400 16px/1.45 var(--body);cursor:pointer}
+.qz .opt:hover:not(:disabled){border-color:var(--ink)}
+.qz .opt:disabled{cursor:default}
+.qz .opt.ok{border-color:var(--good);box-shadow:inset 3px 0 0 var(--good)}
+.qz .opt.ko{border-color:var(--bad);box-shadow:inset 3px 0 0 var(--bad)}
+.qz .expl{margin:14px 0 0;padding:14px 18px;border:1px solid var(--rule);border-radius:3px;font-size:16px}
+.qz .expl b.ok{color:var(--good)}.qz .expl b.ko{color:var(--bad)}
+.progress{height:4px;background:var(--rule);border-radius:2px;overflow:hidden;margin:6px 0 4px}
+.progress i{display:block;height:100%;background:var(--ink);width:0;transition:width .3s}
+.lab-grid{display:grid;grid-template-columns:auto repeat(2,minmax(0,9.5rem));gap:6px;align-items:center;margin:14px 0}
+.lab-grid .h{font:600 15px var(--display);text-align:center}
+.lab-grid .h.r{color:var(--row);text-align:right;padding-right:6px}.lab-grid .h.c{color:var(--col)}
+.lab-cell{display:flex;gap:4px;padding:6px;border:1.5px solid var(--ink);background:var(--sheet)}
+.lab-cell input{width:100%;min-width:0;padding:6px 4px;border:1px solid var(--rule);border-radius:3px;background:var(--paper);font:500 16px var(--mono);text-align:center}
+.lab-cell input.pr{color:var(--row)}.lab-cell input.pc{color:var(--col)}
+.lab-param{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:10px 0;font:500 15px var(--display)}
+.lab-param input[type=range]{flex:1 1 14rem;accent-color:var(--ink)}
+.lab-param output{font:600 16px var(--mono);min-width:4ch}
+.lab-out{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px 32px;align-items:start;margin-top:12px}
+@media (max-width:700px){.lab-out{grid-template-columns:1fr}}
+.lab-out dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;font-size:15.5px}
+.lab-out dt{font:600 12px/1.6 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.lab-out dd{margin:0}
+.diag{margin:12px 0 0;padding:12px 16px;border:1px solid var(--ink);border-radius:3px;font-size:16px}
+.tl{list-style:none;padding:0!important;margin:18px 0;border-top:1px solid var(--ink)}
+.tl li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:4px 18px;padding:12px 0;border-bottom:1px solid var(--rule);margin:0}
+.tl .y{font:600 15px/1.35 var(--mono)}
+.tl .w{font:700 15.5px/1.35 var(--display)}
+.tl .w em{font:500 12px var(--mono);font-style:normal;color:var(--ink-2);margin-left:8px;letter-spacing:.04em;text-transform:uppercase}
+.tl p{margin:3px 0 0;font-size:15.5px;line-height:1.5}
+.tl a{font:500 12.5px var(--mono);color:var(--ink-2)}
+.cat{display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:14px;margin:16px 0}
+.cat article{border:1px solid var(--rule);border-radius:3px;padding:16px 18px;background:var(--paper)}
+.cat h3{margin:0 0 2px!important;font-size:17px!important}
+.cat .src{font:500 12px var(--mono);color:var(--ink-2);margin:0 0 6px}
+.cat figure{margin:10px 0}
+.cat p{font-size:15px;margin:6px 0 0}
+.cat p b{font-family:var(--display);font-weight:600}
+/* source tags: filled = Ellingsen's own material, outlined = general game theory, dashed = my inference */
+:root{--warn:#8A5A00}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--warn:#E2B04A}}
+:root[data-theme="dark"]{--warn:#E2B04A}
+span.src{display:inline-flex;flex-wrap:wrap;gap:4px;vertical-align:middle;margin-left:4px}
+.tg{display:inline-block;font:600 10.5px/1.35 var(--mono);letter-spacing:.03em;text-transform:uppercase;padding:2px 6px;border-radius:2px;white-space:nowrap;vertical-align:middle}
+.tg.e{background:var(--ink);color:var(--paper);border:1px solid var(--ink)}
+.tg.g{border:1px solid var(--ink-2);color:var(--ink-2)}
+.tg.i{border:1px dashed var(--ink-2);color:var(--ink-2)}
+.pill{display:inline-block;font:600 12px/1.3 var(--display);padding:3px 8px;border-radius:999px}
+.pill.ok{color:var(--good);border:1px solid var(--good)}
+.pill.part{color:var(--warn);border:1px solid var(--warn)}
+.pill.no{color:var(--bad);border:1px solid var(--bad)}
+.box.warn{border-color:var(--warn)}
+.box.warn .lab{color:var(--warn)}
+.view .cc h3{font-size:17px;margin:0 0 4px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.cc dl{display:grid;grid-template-columns:8rem minmax(0,1fr);gap:7px 16px;margin:10px 0 0;font-size:15.5px;line-height:1.5}
+.cc dt{font:600 11px/1.9 var(--display);letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.cc dd{margin:0;min-width:0}
+@media (max-width:600px){.cc dl{grid-template-columns:1fr;gap:2px}.cc dt{margin-top:8px}}
+.flow{list-style:none;padding:0!important;margin:10px 0 16px;font:500 14.5px/1.45 var(--mono)}
+.flow li{padding:3px 0 3px 24px;position:relative;margin:0}
+.flow li+li::before{content:"→";position:absolute;left:2px;color:var(--ink-2)}
+.sigs{border-top:1px solid var(--rule);margin:12px 0}
+.sig{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px 20px;padding:11px 0;border-bottom:1px solid var(--rule);font-size:15.5px}
+.sig q{font-style:italic;quotes:none}
+.sig .th{font:600 14.5px/1.45 var(--display)}
+@media (max-width:600px){.sig{grid-template-columns:1fr}}
+.box.write p:last-child{font-size:17px;line-height:1.65}
+.pe{color:var(--ink);font-weight:600}
+.cov td:last-child{min-width:10rem}
+
+
+/* Small language aids follow the existing reading palette and type. */
+.question::before{content:var(--question-label,"Question centrale")}
+.account-controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-block:18px 8px;font:500 13px/1.4 var(--display)}
+.account-controls .btn{font-size:13px;padding:7px 10px}
+.rail{min-width:0}.account-controls{min-width:0;max-width:100%;flex-shrink:1}
+#account-status{flex-basis:100%;margin:0;color:var(--ink-2);overflow-wrap:anywhere;font-size:12px}
+#language-switch{display:inline-flex;border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+#language-switch button{appearance:none;min-height:34px;min-width:38px;padding:6px 8px;background:var(--sheet);border:0;border-inline-end:1px solid var(--rule);font:600 12px var(--display);cursor:pointer}
+#language-switch button:last-child{border-inline-end:0}
+#language-switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.i18n-help{display:inline-flex;gap:2px;margin-inline-start:6px;vertical-align:middle;white-space:nowrap;font:500 10px/1 var(--display);letter-spacing:0;font-style:normal;text-transform:none}
+.i18n-help button{appearance:none;min-height:26px;min-width:26px;padding:3px;background:transparent;border:1px solid transparent;border-radius:3px;color:var(--ink-2);font:inherit;cursor:pointer}
+.i18n-help button:hover,.i18n-help button:focus-visible{background:var(--sheet);border-color:var(--rule);color:var(--ink)}
+.rail .i18n-help{margin-inline-start:4px}.rail li{position:relative}.rail li>.i18n-help{display:flex;justify-content:flex-end;margin-block:-3px 2px}
+.rail h2 .i18n-help{font-size:9px}
+dialog{color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:8px;max-width:min(46rem,calc(100vw - 24px));max-height:85vh;padding:24px;overflow:auto;font:400 17px/1.6 var(--body)}
+dialog::backdrop{background:rgb(0 0 0 / .45)}
+.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+.dialog-head h2{font-size:22px}.dialog-head .btn{flex-shrink:0}
+.translation-passage+.translation-passage{margin-block-start:16px;padding-block-start:16px;border-top:1px solid var(--rule)}
+#auth-form{display:grid;gap:10px}#auth-form label{font:600 14px/1.4 var(--display)}
+#auth-form input{width:100%;min-height:44px;font-size:16px;padding:9px;border:1px solid var(--rule);border-radius:4px;background:var(--paper)}
+.auth-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}#auth-error{color:var(--bad);margin:0}
+button:disabled{opacity:.6;cursor:wait}.option-row{display:flex;align-items:center;gap:4px}.option-row .opt{flex:1;min-width:0}
+#fc-help{min-height:30px;text-align:center;margin-block:8px}
+@media(max-width:880px){.account-controls{margin:0 16px 9px 0;gap:8px}.account-controls #account-status{flex-basis:auto;flex:1;min-width:100px}.rail li>.i18n-help{margin:0;justify-content:center}.rail nav li{display:flex;align-items:center;gap:2px}.rail nav li>.i18n-help{display:flex}.rail nav a{white-space:nowrap}.view{overflow-wrap:anywhere}dialog{padding:18px}.auth-actions .btn{flex:1 1 auto}.i18n-help button{min-height:32px;min-width:30px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+@media print{.account-controls,.i18n-help,dialog,#fc-help{display:none!important}}
+@media(max-width:880px){.app{grid-template-columns:minmax(0,1fr)}.rail{max-width:100%}.rail nav{max-width:100%}.brand+.i18n-help{display:none}}
+
+
+/* Account access uses the sheet's existing typography and reading palette. */
+.app[hidden]{display:none!important}
+.access-gate{min-height:100svh;padding:clamp(24px,6vw,64px) 20px;background:var(--paper)}
+.access-wrap{max-width:36rem;margin:0 auto}
+.access-brand{font:700 22px/1.25 var(--display);margin-bottom:24px}
+.access-language,.access-tabs,.access-actions{display:flex;flex-wrap:wrap;gap:8px;margin-block:16px}
+.access-language button{background:transparent;color:var(--ink-2);border:1px solid var(--rule);border-radius:4px;padding:8px 12px;font:500 14px var(--display);cursor:pointer}
+.access-language button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
+.access-gate h1{font:700 clamp(28px,6vw,38px)/1.18 var(--display);letter-spacing:-.025em;margin:28px 0 12px;text-wrap:balance}
+.access-gate h2{font:600 24px/1.3 var(--display);margin:24px 0 16px}
+.access-gate p{max-width:65ch}.access-gate .btn{min-height:44px}
+#preferences-form{display:grid;gap:12px}#preferences-form label,#preferences-form legend{font:600 15px/1.45 var(--display)}
+#preferences-form select{min-height:44px;background:var(--sheet);padding:8px;border:1px solid var(--rule);border-radius:4px;width:100%}
+#preferences-form fieldset{border:0;padding:0;margin:16px 0 0;min-width:0}
+#preferences-form legend{margin-bottom:12px}
+.mode-choice{display:flex;align-items:flex-start;gap:12px;padding:16px 0;border-top:1px solid var(--rule);cursor:pointer}
+.mode-choice input{flex-shrink:0;margin:4px 0 0;accent-color:var(--row);width:18px;height:18px}
+.mode-choice strong{display:block;font-weight:600}.mode-choice small{display:block;font:400 15px/1.5 var(--body);color:var(--ink-2);margin-top:5px}
+#preferences-error{color:var(--bad);margin:0}#gate-status{overflow-wrap:anywhere;color:var(--ink-2)}
+@media print{body:has(.app[hidden]) .app{display:none!important}}
+</style></head><body><section id="access-gate" class="access-gate" aria-labelledby="access-title">
+  <div class="access-wrap">
+    <header class="access-brand">Institutional &amp;<br>Organizational Economics</header>
+    <div id="access-language" class="access-language" role="group" aria-label="Interface language">
+      <button type="button" data-lang="fr" lang="fr">Français</button><button type="button" data-lang="en" lang="en">English</button><button type="button" data-lang="uk" lang="uk">Українська</button>
+    </div>
+    <h1 id="access-title" data-ui="Ton espace de révision">Ton espace de révision</h1>
+    <p id="access-intro" data-ui="Crée un compte pour retrouver ta progression et préparer l’examen dans les langues qui te conviennent.">Crée un compte pour retrouver ta progression et préparer l’examen dans les langues qui te conviennent.</p>
+    <section id="auth-dialog" aria-label="Compte">
+      <div class="access-tabs" role="group"><button class="btn on" id="auth-signup-tab" type="button" data-ui="Créer un compte">Créer un compte</button><button class="btn" id="auth-signin-tab" type="button" data-ui="Se connecter">Se connecter</button></div>
+      <p id="auth-hint" class="muted" role="status"></p>
+      <form id="auth-form">
+        <label for="auth-email" data-ui="Adresse email">Adresse email</label>
+        <input id="auth-email" type="email" autocomplete="email" required maxlength="254">
+        <label for="auth-password" data-ui="Mot de passe">Mot de passe</label>
+        <input id="auth-password" type="password" autocomplete="new-password" required minlength="6">
+        <p id="auth-error" role="alert"></p>
+        <button class="btn on" id="auth-submit" type="submit" data-action="signup" data-ui="Créer un compte">Créer un compte</button>
+        <button class="btn" type="button" id="auth-google" data-ui="Continuer avec Google">Continuer avec Google</button>
+      </form>
+    </section>
+    
+    <p id="gate-status" role="status" aria-live="polite"></p>
+    <div class="access-actions"><button class="btn" id="gate-retry" type="button" hidden data-ui="Réessayer">Réessayer</button></div>
+    <noscript>JavaScript doit être activé pour se connecter et accéder à la fiche.</noscript>
+  </div>
+</section>
+<script src="firebase-config.js"></script><script>(() => {
+'use strict';
+const messages = {"Vérifie le format de l’adresse email.": {"en": "Check the email address format.", "uk": "Перевірте формат електронної адреси."}, "Mot de passe": {"en": "Password", "uk": "Пароль"}, "Ce domaine doit être ajouté aux domaines autorisés de Firebase Authentication.": {"en": "Add this domain to the authorized domains in Firebase Authentication.", "uk": "Додайте цей домен до списку дозволених доменів у Firebase Authentication."}, "Adresse email": {"en": "Email address", "uk": "Електронна адреса"}, "Continuer avec Google": {"en": "Continue with Google", "uk": "Продовжити з Google"}, "Réessayer": {"en": "Try again", "uk": "Спробувати ще раз"}, "Connexion réseau indisponible. Vérifie la connexion et réessaie.": {"en": "Network unavailable. Check your connection and try again.", "uk": "Немає доступу до мережі. Перевірте з’єднання й повторіть спробу."}, "Utilise un mot de passe d’au moins six caractères.": {"en": "Use a password with at least six characters.", "uk": "Використайте пароль щонайменше із шести символів."}, "Connexion nécessaire pour accéder à la fiche.": {"en": "Sign in to access the study guide.", "uk": "Увійди, щоб відкрити навчальний матеріал."}, "Ton espace de révision": {"en": "Your study space", "uk": "Твій простір для навчання"}, "Se connecter": {"en": "Sign in", "uk": "Увійти"}, "Connexion au serveur impossible. Vérifie ta connexion et réessaie.": {"en": "Could not connect to the server. Check your connection and try again.", "uk": "Не вдалося підключитися до сервера. Перевір з’єднання й спробуй ще раз."}, "Autorise la fenêtre Google dans ton navigateur, puis réessaie.": {"en": "Allow the Google popup in your browser, then try again.", "uk": "Дозвольте спливне вікно Google у браузері й повторіть спробу."}, "Créer un compte": {"en": "Create an account", "uk": "Створити обліковий запис"}, "Les comptes doivent être configurés pour ouvrir la fiche. Renseigne firebase-config.js, puis lance le serveur indiqué dans le README.": {"en": "Accounts must be configured before you can open the study guide. Fill in firebase-config.js, then start the server described in the README.", "uk": "Щоб відкрити навчальний матеріал, потрібно налаштувати облікові записи. Заповни firebase-config.js і запусти сервер за інструкцією в README."}, "Connexion impossible. Vérifie la configuration Firebase et réessaie.": {"en": "Could not sign in. Check the Firebase configuration and try again.", "uk": "Не вдалося увійти. Перевірте налаштування Firebase й повторіть спробу."}, "Connexion à Firebase…": {"en": "Connecting to Firebase…", "uk": "Підключення до Firebase…"}, "Cette adresse possède déjà un compte. Choisis Se connecter.": {"en": "This address already has an account. Choose Sign in.", "uk": "Для цієї адреси вже є обліковий запис. Натисніть «Увійти»."}, "Firebase indisponible. Vérifie la connexion et la configuration, puis recharge la page.": {"en": "Firebase is unavailable. Check the connection and configuration, then reload the page.", "uk": "Firebase недоступний. Перевірте з’єднання та налаштування, а потім перезавантажте сторінку."}, "Adresse email ou mot de passe incorrect.": {"en": "Incorrect email address or password.", "uk": "Неправильна електронна адреса або пароль."}, "Trop de tentatives. Attends un moment avant de réessayer.": {"en": "Too many attempts. Wait a while before trying again.", "uk": "Забагато спроб. Зачекайте трохи й повторіть спробу."}, "Crée un compte pour retrouver ta progression et préparer l’examen dans les langues qui te conviennent.": {"en": "Create an account to save your progress and prepare for the exam in the languages that work for you.", "uk": "Створи обліковий запис, щоб зберігати свій поступ і готуватися до іспиту тими мовами, якими тобі зручно."}, "La fenêtre Google a été fermée. Tu peux réessayer.": {"en": "The Google window was closed. You can try again.", "uk": "Вікно Google закрито. Можна повторити спробу."}};
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+let lang='fr', ready=false, busy=false, signup=true, auth=null, api=null;
+try {const saved=JSON.parse(localStorage.getItem('ioe-lang'));if (['fr','en','uk'].includes(saved)) lang=saved;} catch {}
+const tr = source => lang==='fr' ? source : messages[source]?.[lang] ?? source;
+function note(id,source){$(id).dataset.ui=source;$(id).textContent=tr(source);}
+function render(){
+ document.documentElement.lang=lang;
+ $$('[data-ui]').forEach(el=>el.textContent=tr(el.dataset.ui));
+ $$('#access-language button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
+ $('#auth-submit').dataset.action=signup?'signup':'signin';
+ note('#auth-submit',signup?'Créer un compte':'Se connecter');
+ $('#auth-password').autocomplete=signup?'new-password':'current-password';
+ $('#auth-signup-tab').classList.toggle('on',signup);$('#auth-signin-tab').classList.toggle('on',!signup);
+ $('#auth-signup-tab').setAttribute('aria-pressed',String(signup));$('#auth-signin-tab').setAttribute('aria-pressed',String(!signup));
+ $$('#auth-form button').forEach(b=>b.disabled=!ready||busy);
+ $('#gate-retry').disabled=busy;
+}
+function errorMessage(error){return ({
+ 'auth/invalid-credential':'Adresse email ou mot de passe incorrect.',
+ 'auth/email-already-in-use':'Cette adresse possède déjà un compte. Choisis Se connecter.',
+ 'auth/invalid-email':'Vérifie le format de l’adresse email.',
+ 'auth/weak-password':'Utilise un mot de passe d’au moins six caractères.',
+ 'auth/too-many-requests':'Trop de tentatives. Attends un moment avant de réessayer.',
+ 'auth/popup-closed-by-user':'La fenêtre Google a été fermée. Tu peux réessayer.',
+ 'auth/popup-blocked':'Autorise la fenêtre Google dans ton navigateur, puis réessaie.',
+ 'auth/unauthorized-domain':'Ce domaine doit être ajouté aux domaines autorisés de Firebase Authentication.',
+ 'auth/network-request-failed':'Connexion réseau indisponible. Vérifie la connexion et réessaie.'
+})[error?.code] || 'Connexion impossible. Vérifie la configuration Firebase et réessaie.';}
+async function enter(user){
+ busy=true;render();
+ try {
+  const token=await user.getIdToken();
+  const response=await fetch('/session',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({token})});
+  if(!response.ok) throw new Error('session');
+  try {localStorage.setItem('ioe-lang',JSON.stringify(lang));} catch {}
+  location.replace('/ellingsen.html'+location.hash);
+ } catch {note('#auth-error','Connexion au serveur impossible. Vérifie ta connexion et réessaie.');$('#gate-retry').hidden=false;busy=false;render();}
+}
+async function sign(action){
+ if(!ready||busy)return;busy=true;note('#auth-error','');render();
+ try {
+  const email=$('#auth-email').value.trim(),password=$('#auth-password').value;
+  const credential=action==='google'?await api.signInWithPopup(auth,new api.GoogleAuthProvider()):signup?await api.createUserWithEmailAndPassword(auth,email,password):await api.signInWithEmailAndPassword(auth,email,password);
+  $('#auth-password').value='';await enter(credential.user);
+ }catch(error){note('#auth-error',errorMessage(error));busy=false;render();}
+}
+$('#auth-form').addEventListener('submit',e=>{e.preventDefault();sign(signup?'signup':'signin');});
+$('#auth-google').addEventListener('click',()=>sign('google'));
+$('#auth-signup-tab').addEventListener('click',()=>{signup=true;render();});
+$('#auth-signin-tab').addEventListener('click',()=>{signup=false;render();});
+$('#access-language').addEventListener('click',e=>{const b=e.target.closest('[data-lang]');if(b){lang=b.dataset.lang;render();}});
+$('#gate-retry').addEventListener('click',()=>{if(auth?.currentUser)enter(auth.currentUser);else location.reload();});
+render();
+(async()=>{
+ const config=window.IOE_FIREBASE_CONFIG||{};
+ if(!['apiKey','authDomain','projectId','appId'].every(k=>typeof config[k]==='string'&&config[k].trim())){note('#auth-hint','Les comptes doivent être configurés pour ouvrir la fiche. Renseigne firebase-config.js, puis lance le serveur indiqué dans le README.');return;}
+ note('#auth-hint','Connexion à Firebase…');
+ try {
+  const [appApi,authApi]=await Promise.all([import('https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js'),import('https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js')]);
+  api=authApi;auth=api.getAuth(appApi.initializeApp(config));
+  // Only restore a pre-existing session here; form submissions call enter once themselves.
+  let first=true;
+  api.onAuthStateChanged(auth,user=>{if(!first)return;first=false;ready=true;note('#auth-hint','Connexion nécessaire pour accéder à la fiche.');render();if(user)enter(user);},error=>{note('#auth-error',errorMessage(error));});
+ }catch{note('#auth-hint','Firebase indisponible. Vérifie la connexion et la configuration, puis recharge la page.');$('#gate-retry').hidden=false;}
+})();
+})();
+</script></body></html>
