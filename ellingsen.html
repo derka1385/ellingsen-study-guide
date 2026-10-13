@@ -3946,6 +3946,8 @@ let firebaseServices = null, authUser = null, authBusy = false, authReady = fals
 let accountMessage = '', migrationBusy = false;
 let writePromise = Promise.resolve(), unsubscribeUser = null, authEpoch = 0;
 let profileReady = false, editingPreferences = false, preferencesBusy = false;
+// ?onboarding replays the first-run steps for an account that already has preferences.
+let replaySetup = new URLSearchParams(location.search).has('onboarding');
 const guestKey = 'ioe-guest-imports';
 const clone = value => JSON.parse(JSON.stringify(value));
 function normalizeProgress(raw) {
@@ -4224,7 +4226,7 @@ $('#preferences-form').addEventListener('submit', async e => {
     await fs.setDoc(fs.doc(db, 'users', authUser.uid), { lang, studyMode: mode, preferencesSet: true, updatedAt: fs.serverTimestamp() }, { merge: true });
     if (epoch !== authEpoch) return;
     Object.assign(cloudState.data, { lang, studyMode: mode, preferencesSet: true });
-    studyMode = mode; editingPreferences = false; applyLanguage(lang, false); localWrite('ioe-lang', lang);
+    studyMode = mode; editingPreferences = false; replaySetup = false; applyLanguage(lang, false); localWrite('ioe-lang', lang);
   } catch {
     $('#preferences-error').dataset.ui = 'Préférences non enregistrées. Vérifie ta connexion et réessaie.';
     $('#preferences-error').textContent = tr($('#preferences-error').dataset.ui);
@@ -4235,8 +4237,8 @@ function paintGate() {
   $('#auth-hint').hidden = authReady;
   $('#auth-form').setAttribute('aria-busy', String(authBusy));
   const ready = !!authUser && profileReady && !cloudState.loading;
-  const showPreferences = ready && (!cloudState.data.preferencesSet || editingPreferences);
-  const unlocked = ready && cloudState.data.preferencesSet && !editingPreferences && !preferencesBusy;
+  const showPreferences = ready && (!cloudState.data.preferencesSet || editingPreferences || replaySetup);
+  const unlocked = ready && cloudState.data.preferencesSet && !editingPreferences && !replaySetup && !preferencesBusy;
   const wasHidden = app.hidden;
   if (showPreferences && $('#preferences-form').hidden) setupStep = 'lang';
   gate.classList.toggle('preferences-open', showPreferences);

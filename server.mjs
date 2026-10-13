@@ -52,7 +52,7 @@ export function createAccessServer({verifyToken, origin, directory = root}) {
         let claims;try {if (token) claims = await verifyToken(token);} catch {}
         if (!claims?.uid || !(claims.exp > Date.now()/1000)) {
           res.setHeader('Set-Cookie',clearCookie(secure));
-          if (pathname === '/ellingsen.html') {res.writeHead(302,{'Location':'/login.html'});res.end();return;}
+          if (pathname === '/ellingsen.html') {res.writeHead(302,{'Location':'/login.html'+(url.search === '?onboarding' ? url.search : '')});res.end();return;}
           return reply(401,'Sign in required');
         }
       }

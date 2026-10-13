@@ -489,7 +489,7 @@ async function enter(user){
   const response=await fetch('/session',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({token})});
   if(!response.ok) throw new Error('session');
   try {localStorage.setItem('ioe-lang',JSON.stringify(lang));} catch {}
-  location.replace('/ellingsen.html'+location.hash);
+  location.replace('/ellingsen.html'+location.search+location.hash);
  } catch {note('#auth-error','Connexion au serveur impossible. Vérifie ta connexion et réessaie.');$('#gate-retry').hidden=false;busy=false;render();}
 }
 async function sign(action){
