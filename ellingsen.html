@@ -9,7 +9,7 @@
    Colin (column, 2nd number) is orange, best responses are underlined and Nash equilibria sit under a highlighter. */
 :root{
   --paper:#F2F3EE; --sheet:#FBFBF7; --ink:#1A1E22; --ink-2:#4D5560; --rule:#D5D8CF;
-  --row:#1D58B0; --col:#B4500E; --eq:#E2BC2E; --eq-bg:rgba(233,197,58,.30);
+  --row:#1D58B0; --col:#9B4309; --eq:#E2BC2E; --eq-bg:rgba(233,197,58,.30);
   --good:#2E7A4C; --bad:#B03636;
   --display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
   --body:"Literata",Georgia,"Times New Roman",serif;
@@ -42,7 +42,7 @@ sub,sup{font-size:.72em;line-height:0}
 .brand small{display:block;margin-top:6px;font:500 12px/1.4 var(--display);letter-spacing:.02em;color:var(--ink-2)}
 .rail h2{font:600 11px/1 var(--display);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-2);margin:24px 0 8px 8px}
 .rail ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
-.rail nav a{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:4px;text-decoration:none;font:500 14px/1.3 var(--display);color:var(--ink-2)}
+.rail nav a{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:4px;text-decoration:none;font:500 14px/1.4 var(--display);color:var(--ink-2)}
 .rail nav a .n{font:500 12px/1 var(--mono);min-width:1.5em}
 .rail nav a:hover{background:var(--sheet);color:var(--ink)}
 .rail nav a[aria-current="page"]{background:var(--ink);color:var(--paper)}
@@ -68,7 +68,7 @@ main{min-width:0;padding-block:44px 104px;padding-inline:clamp(16px,5vw,64px)}
 
 /* ---------- type ---------- */
 h1,h2,h3,h4{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
-.kicker,.lab{font:600 11.5px/1.2 var(--display);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-2);margin:0 0 8px}
+.kicker,.lab{font:600 12px/1.3 var(--display);letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);margin:0 0 8px}
 .view>h2,.view .h2{font-size:25px;font-weight:700;letter-spacing:-.012em;margin:52px 0 14px;padding-top:16px;border-top:1px solid var(--rule)}
 .view h3{font-size:18.5px;font-weight:700;margin:30px 0 8px}
 .view h4{font-size:15.5px;font-weight:700;margin:20px 0 6px}
@@ -86,12 +86,12 @@ strong{font-weight:600}
 
 /* ---------- chapter head ---------- */
 .ch-head{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:24px;align-items:end;padding-bottom:22px;border-bottom:2px solid var(--ink);margin-bottom:26px}
-.ch-num{grid-row:1/span 3;font:800 clamp(72px,11vw,112px)/.78 var(--display);letter-spacing:-.06em}
+.ch-num{grid-row:1/span 3;font:800 clamp(72px,11vw,112px)/.85 var(--display);letter-spacing:-.04em}
 .ch-head .kicker{margin:0 0 6px}
 .ch-head h1{font-size:clamp(27px,4.2vw,40px);font-weight:800;letter-spacing:-.022em}
 .ch-head .fr{margin:6px 0 0;font:italic 400 18px/1.3 var(--body);color:var(--ink-2)}
 .question{font:400 21px/1.45 var(--body);margin:0 0 26px}
-.question::before{content:"Question centrale";display:block;font:600 11.5px/1.2 var(--display);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-2);margin-bottom:6px}
+.question::before{content:"Question centrale";display:block;font:600 12px/1.3 var(--display);letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);margin-bottom:6px}
 
 /* ---------- blocks ---------- */
 .brief,.def,.box{margin:22px 0;padding:18px 22px;background:var(--sheet);border:1px solid var(--rule);border-radius:3px}
@@ -127,7 +127,7 @@ table.t td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:t
 table.t td.m{font-family:var(--mono);font-size:14px;white-space:nowrap}
 .ch-foot{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-top:56px;padding-top:18px;border-top:2px solid var(--ink)}
 .ch-foot nav{display:flex;gap:18px;font:500 14px var(--display)}
-.btn{appearance:none;border:1px solid var(--ink);background:transparent;padding:8px 14px;border-radius:4px;font:600 14px/1.2 var(--display);cursor:pointer}
+.btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid var(--ink);background:transparent;padding:10px 14px;border-radius:4px;font:600 14px/1.3 var(--display);text-align:center;cursor:pointer}
 .btn:hover{background:var(--sheet)}
 .btn.on{background:var(--ink);color:var(--paper)}
 .btn.ghost{border-color:var(--rule)}
@@ -151,7 +151,8 @@ figure{margin:20px 0}
 figcaption{margin-top:8px;font:500 13px/1.4 var(--display);color:var(--ink-2)}
 figcaption .pg{margin-left:6px}
 .stages{display:flex;flex-wrap:wrap;gap:12px 40px;align-items:flex-start;margin:20px 0}
-.stages figure{margin:0}
+.stages>*{min-width:0;max-width:100%}.stages figure{margin:0}
+.duo>*{min-width:0}
 .duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:8px 28px;align-items:start}
 .tree svg{width:100%;max-width:440px;height:auto;display:block}
 .tree .e{stroke:var(--ink-2);stroke-width:1.4;fill:none}
@@ -213,7 +214,7 @@ figcaption .pg{margin-left:6px}
 .bar input[type=search],.bar select{padding:9px 12px;border:1px solid var(--rule);border-radius:4px;background:var(--sheet);font:500 15px var(--display);min-width:0}
 .bar input[type=search]{flex:1 1 16rem;font-size:16px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{appearance:none;border:1px solid var(--rule);background:transparent;border-radius:999px;padding:5px 12px;font:500 13.5px var(--display);cursor:pointer}
+.chip{appearance:none;display:inline-flex;align-items:center;justify-content:center;min-height:40px;border:1px solid var(--rule);background:transparent;border-radius:999px;padding:8px 12px;font:500 14px/1.3 var(--display);cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .count{font:500 13px var(--mono);color:var(--ink-2)}
 #lex-table td:first-child{font:600 15px/1.35 var(--display);min-width:11rem}
@@ -279,7 +280,7 @@ figcaption .pg{margin-left:6px}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--warn:#E2B04A}}
 :root[data-theme="dark"]{--warn:#E2B04A}
 span.src{display:inline-flex;flex-wrap:wrap;gap:4px;vertical-align:middle;margin-left:4px}
-.tg{display:inline-block;font:600 10.5px/1.35 var(--mono);letter-spacing:.03em;text-transform:uppercase;padding:2px 6px;border-radius:2px;white-space:nowrap;vertical-align:middle}
+.tg{display:inline-block;max-width:100%;font:600 12px/1.4 var(--mono);letter-spacing:.01em;text-transform:uppercase;padding:3px 6px;border-radius:2px;white-space:normal;vertical-align:middle}
 .tg.e{background:var(--ink);color:var(--paper);border:1px solid var(--ink)}
 .tg.g{border:1px solid var(--ink-2);color:var(--ink-2)}
 .tg.i{border:1px dashed var(--ink-2);color:var(--ink-2)}
@@ -313,15 +314,19 @@ span.src{display:inline-flex;flex-wrap:wrap;gap:4px;vertical-align:middle;margin
 .account-controls .btn{font-size:13px;padding:7px 10px}
 .rail{min-width:0}.account-controls{min-width:0;max-width:100%;flex-shrink:1}
 #account-status{flex-basis:100%;margin:0;color:var(--ink-2);overflow-wrap:anywhere;font-size:12px}
-#language-switch{display:inline-flex;border:1px solid var(--rule);border-radius:4px;overflow:hidden}
-#language-switch button{appearance:none;min-height:34px;min-width:38px;padding:6px 8px;background:var(--sheet);border:0;border-inline-end:1px solid var(--rule);font:600 12px var(--display);cursor:pointer}
-#language-switch button:last-child{border-inline-end:0}
-#language-switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-.i18n-help{display:inline-flex;gap:2px;margin-inline-start:6px;vertical-align:middle;white-space:nowrap;font:500 10px/1 var(--display);letter-spacing:0;font-style:normal;text-transform:none}
-.i18n-help button{appearance:none;min-height:26px;min-width:26px;padding:3px;background:transparent;border:1px solid transparent;border-radius:3px;color:var(--ink-2);font:inherit;cursor:pointer}
+#language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;max-width:420px}
+#language-switch button{justify-content:center;min-height:46px;padding:10px 8px;border:1px solid var(--rule);border-radius:6px;font:500 14px/1.3 var(--display)}
+#language-switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.i18n-help{display:inline-flex;gap:2px;margin-inline-start:8px;vertical-align:middle;white-space:nowrap;font:500 12px/1 var(--display);letter-spacing:0;font-style:normal;text-transform:none}
+.i18n-help button{appearance:none;display:inline-flex;align-items:center;justify-content:center;min-height:32px;min-width:32px;padding:4px;border:1px solid transparent;border-radius:4px;background:transparent;color:var(--ink-2);font:inherit;cursor:pointer}
 .i18n-help button:hover,.i18n-help button:focus-visible{background:var(--sheet);border-color:var(--rule);color:var(--ink)}
-.rail .i18n-help{margin-inline-start:4px}.rail li{position:relative}.rail li>.i18n-help{display:flex;justify-content:flex-end;margin-block:-3px 2px}
-.rail h2 .i18n-help{font-size:9px}
+.translation-block{position:relative}
+@media(min-width:1100px){
+ .view:not(.wide):not(.no-help):not(.tool-view){padding-inline-end:76px}
+ .view:not(.wide):not(.no-help):not(.tool-view) .translation-block>.i18n-help{position:absolute;inset-inline-start:calc(100% + 10px);inset-block-start:0;margin:0}
+ .view:not(.wide):not(.no-help):not(.tool-view) :is(.brief,.def,.box) .translation-block>.i18n-help{inset-inline-start:calc(100% + 33px)}
+ .view:not(.wide):not(.no-help):not(.tool-view) .apps>div .translation-block>.i18n-help{inset-inline-start:calc(100% + 29px)}
+}
 dialog{color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:8px;max-width:min(46rem,calc(100vw - 24px));max-height:85vh;padding:24px;overflow:auto;font:400 17px/1.6 var(--body)}
 dialog::backdrop{background:rgb(0 0 0 / .45)}
 .dialog-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
@@ -330,20 +335,22 @@ dialog::backdrop{background:rgb(0 0 0 / .45)}
 #auth-form{display:grid;gap:10px}#auth-form label{font:600 14px/1.4 var(--display)}
 #auth-form input{width:100%;min-height:44px;font-size:16px;padding:9px;border:1px solid var(--rule);border-radius:4px;background:var(--paper)}
 .auth-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}#auth-error{color:var(--bad);margin:0}
-button:disabled{opacity:.6;cursor:wait}.option-row{display:flex;align-items:center;gap:4px}.option-row .opt{flex:1;min-width:0}
-#fc-help{min-height:30px;text-align:center;margin-block:8px}
-@media(max-width:880px){.account-controls{margin:0 16px 9px 0;gap:8px}.account-controls #account-status{flex-basis:auto;flex:1;min-width:100px}.rail li>.i18n-help{margin:0;justify-content:center}.rail nav li{display:flex;align-items:center;gap:2px}.rail nav li>.i18n-help{display:flex}.rail nav a{white-space:nowrap}.view{overflow-wrap:anywhere}dialog{padding:18px}.auth-actions .btn{flex:1 1 auto}.i18n-help button{min-height:32px;min-width:30px}}
+button:disabled{opacity:.6;cursor:default}.option-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px}.option-row .opt{min-width:0}.option-row .i18n-help{margin:0}
+#fc-help{text-align:right;margin-block:8px 12px}#fc-help .i18n-help{margin:0}
+@media(max-width:880px){.account-controls{margin:0 16px 9px 0;gap:8px}.account-controls #account-status{flex-basis:auto;flex:1;min-width:100px}.rail nav li{display:flex;align-items:center}.rail nav a{white-space:nowrap}.view{overflow-wrap:anywhere}dialog{padding:18px}.auth-actions .btn{flex:1 1 auto}.i18n-help button{min-height:36px;min-width:36px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 @media print{.rail-account,.i18n-help,dialog,#fc-help{display:none!important}}
 /* sidebar: collapsible groups, account and preferences at the bottom */
 @media(min-width:881px){
- .rail{display:flex;flex-direction:column}
+ .rail{display:flex;flex-direction:column;overflow:hidden;padding-bottom:20px}
+ .rail nav{flex:1;min-height:0;overflow-y:auto;padding-bottom:12px;scrollbar-width:thin}
+ .rail-account{flex-shrink:0}
  .rail nav h2[role=button]{cursor:pointer;display:flex;align-items:center;gap:6px;border-radius:4px;padding:4px 0}
  .rail nav h2[role=button]::before{content:"";width:6px;height:6px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:rotate(-45deg);transition:transform .2s;margin-inline:2px 4px}
  .rail nav h2[aria-expanded=true]::before{transform:rotate(45deg)}
  .rail nav h2[role=button]:hover{color:var(--ink)}
  .rail nav ul.closed{display:none}
- .rail .rail-account{margin-top:auto;padding-top:16px}
+ .rail .rail-account{margin-top:12px;padding-top:12px}
 }
 .rail-account{display:grid;gap:2px;border-top:1px solid var(--rule);margin-top:20px;padding-top:12px}
 .account-chip{display:flex;align-items:center;gap:10px;padding:8px;border-radius:6px;text-decoration:none;color:var(--ink);min-width:0}
@@ -353,7 +360,7 @@ button:disabled{opacity:.6;cursor:wait}.option-row{display:flex;align-items:cent
 .account-avatar{width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;background:var(--ink);color:var(--paper);font:600 13px var(--display)}
 .account-avatar.big{width:52px;height:52px;font-size:22px}
 .account-text{display:grid;min-width:0}.account-text b{font:600 14px/1.3 var(--display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.account-text small{font:400 11.5px/1.35 var(--display);color:var(--ink-2);overflow-wrap:anywhere}
+.account-text small{font:400 12px/1.4 var(--display);color:var(--ink-2);overflow-wrap:anywhere}
 .rail-link{display:block;padding:7px 8px;border-radius:4px;text-decoration:none;font:500 14px/1.3 var(--display);color:var(--ink-2)}
 .rail-link:hover{background:var(--sheet);color:var(--ink)}
 .rail-account #account-retry{justify-self:start;font-size:12px;padding:6px 9px}
@@ -374,21 +381,20 @@ button:disabled{opacity:.6;cursor:wait}.option-row{display:flex;align-items:cent
 .mode-card{display:grid;gap:6px;align-content:start;text-align:left;padding:12px 12px 16px;background:var(--sheet);border:1px solid var(--rule);border-radius:9px;font:inherit;color:var(--ink);cursor:pointer}
 .mode-card:hover{border-color:var(--ink-2)}
 .mode-card[aria-checked=true]{border-color:var(--ink);box-shadow:0 0 0 2px var(--ink)}
-.mode-card>strong{font:600 15px/1.3 var(--display);margin-top:6px}.mode-card>small{font:400 13px/1.45 var(--body);color:var(--ink-2)}
+.mode-card>strong{font:600 15px/1.3 var(--display);margin-top:6px}.mode-card>small{font:400 14px/1.5 var(--body);color:var(--ink-2)}
 .demo{border:1px solid var(--rule);border-radius:6px;background:var(--paper);overflow:hidden}
 .demo-bar{height:16px;background:var(--ink);position:relative}
-.demo-bar i{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--paper);transform-origin:left;animation:demo-time 9s linear infinite}
-.demo-row{padding:6px 9px;font:400 11.5px/1.4 var(--body);border-top:1px solid var(--rule)}
+.demo-bar i{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--paper);transform-origin:left;transform:scaleX(.6)}
+.demo-row{padding:8px 10px;font:400 13px/1.45 var(--body);border-top:1px solid var(--rule)}
 .demo-row:first-of-type{border-top:0}
-.demo-row b{display:inline-block;font:600 9.5px var(--mono);letter-spacing:.06em;color:var(--ink-2);margin-right:6px;text-transform:uppercase}
+.demo-row b{display:inline-block;font:600 11px/1.4 var(--mono);letter-spacing:.03em;color:var(--ink-2);margin-right:6px;text-transform:uppercase}
 .demo-row.q{font-weight:600}
 .demo-row.c{background:var(--sheet)}
 @media(prefers-reduced-motion:no-preference){
- .demo-row{animation:demo-row 9s infinite both}.demo-row.q{animation-delay:.9s}.demo-row.c{animation-delay:2.2s}
+ .demo-row{animation:demo-row .45s ease-out both}.demo-row.q{animation-delay:.12s}.demo-row.c{animation-delay:.24s}
  .welcome-tour li{animation:tour-in .7s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.3s + var(--i) * .35s)}
 }
-@keyframes demo-time{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-@keyframes demo-row{0%{opacity:0;transform:translateY(4px)}8%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes demo-row{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 @keyframes tour-in{from{opacity:0;transform:translateX(-12px);clip-path:inset(0 100% 0 0)}to{opacity:1;transform:none;clip-path:inset(0)}}
 .setup-step{display:grid;gap:12px}.setup-step h2{margin:0;font:600 26px/1.2 var(--display);letter-spacing:-.02em}
 .setup-count{font:500 12px var(--mono);color:var(--ink-2);margin:0}
@@ -472,6 +478,59 @@ button:disabled{opacity:.6;cursor:wait}.option-row{display:flex;align-items:cent
 }
 @media(max-width:380px){.access-content{padding-inline:20px}.access-book{padding-inline:20px}.access-language button{padding-inline:8px}}
 @media print{body:has(.app[hidden]) .app{display:none!important}}
+
+/* Finishing pass: shared control alignment and small-screen reading. */
+.filters{align-items:end;gap:12px}
+.filter-field{display:grid;gap:7px;flex:1 1 12rem;min-width:0}
+.filter-field.grow{flex-grow:2}
+.filter-field label{font-size:12px;line-height:1.3;letter-spacing:.06em}
+.filters input,.filters select{width:100%;min-height:44px;max-width:100%;margin:0}
+.filters>.count{font-size:12px;line-height:1.5;align-self:center}
+#lexique .filters>.count,#quiz .filters>.count{flex-basis:100%}
+#lex-table{font-size:16px;line-height:1.5}
+#lex-table td:nth-child(3){position:relative;padding-inline-end:88px}
+#lex-table td:nth-child(3)>.i18n-help{position:absolute;inset-inline-end:8px;inset-block-start:8px;margin:0}
+.fc-ctl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fc-ctl .btn{width:100%;height:100%}
+#fc-shuffle{grid-column:1/-1;justify-self:center;width:auto}
+.profile-facts{min-width:0}
+.settings-actions .btn{max-width:100%}
+@media(max-width:880px){
+ .rail nav a{min-height:36px;align-items:center}
+ .tool-view .ch-head{display:block;padding-bottom:16px;margin-bottom:18px}
+ .tool-view .ch-num{display:none}
+ .tool-view .ch-head .kicker{margin-bottom:6px}
+ .tool-view .ch-head h1{font-size:30px;line-height:1.15}
+ .tool-view .ch-head .fr{font:400 15px/1.5 var(--body);margin-top:8px}
+ .tool-view .bar{margin:12px 0}
+ #flashcards .filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ #fc-weak{grid-column:1/-1;justify-self:start;min-height:36px}
+ .fc{height:clamp(240px,38svh,340px)}
+ .fc .face{padding:22px}
+ .fc .front .term{font-size:24px;line-height:1.3}
+ .ch-foot nav{width:100%;justify-content:space-between;gap:12px}
+ .ch-foot nav a{padding-block:8px}
+ .profile-facts div{grid-template-columns:1fr;gap:2px}
+}
+@media(max-width:600px){
+ .filters{gap:12px}
+ #lexique .filter-field.grow{flex-basis:100%}
+ #lex-table,#lex-table tbody{display:block;width:100%}
+ #lex-table thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ #lex-table tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;padding:18px 0;border-bottom:1px solid var(--rule)}
+ #lex-table td{display:block;min-width:0!important;padding:0;border:0;overflow-wrap:break-word}
+ #lex-table td:first-child{grid-column:1;grid-row:1;font-size:17px}
+ #lex-table td:nth-child(2){grid-column:1;grid-row:2;font-size:16px}
+ #lex-table td:nth-child(3){grid-column:1/-1;grid-row:3;padding:4px 0 0;font-size:16px}
+ #lex-table td:last-child:not([colspan]){grid-column:2;grid-row:1;font-size:13px}
+ #lex-table td:nth-child(3)>.i18n-help{position:static;display:flex;justify-content:flex-end;margin:4px 0 0}
+ #lex-table td[colspan]{grid-column:1/-1;font:400 16px/1.5 var(--body)}
+ .mode-card>small{font-size:14px}
+ .demo-row{font-size:13px}
+ .option-row{gap:4px}
+ .qz .opt{padding:12px;font-size:16px}
+ .brief,.def,.box{padding:16px}
+}
 </style>
 <div class="app" hidden inert>
 <aside class="rail">
@@ -2816,38 +2875,38 @@ button:disabled{opacity:.6;cursor:wait}.option-row{display:flex;align-items:cent
 
 <!-- ============ LEXIQUE ============ -->
 <section class="view wide" id="lexique" aria-labelledby="lex-t">
-  <header class="hero">
+  <header class="hero no-help">
     <p class="kicker" data-i="1943">Outil · vocabulaire</p>
     <h1 id="lex-t" data-i="1944" data-ui="Lexique">Lexique</h1>
     <p class="sub" data-i="1945" data-ui="Les termes anglais du livre, leur traduction et leur sens précis chez Ellingsen. La recherche accepte le français, l’anglais et l’ukrainien.">Les termes anglais du livre, leur traduction et leur sens précis chez Ellingsen. La recherche accepte le français, l’anglais et l’ukrainien.</p>
   </header>
-  <div class="bar">
-    <label for="lex-q" class="kicker" style="margin:0" data-i="1946">Rechercher</label>
-    <input type="search" id="lex-q" placeholder="ex. hold-up, équilibre, norme…" autocomplete="off" data-ui-attr='{"placeholder": "ex. hold-up, équilibre, norme…"}'>
-    <label for="lex-ch" class="kicker" style="margin:0" data-i="1947">Chapitre</label>
-    <select id="lex-ch"><option value="all" data-i="1948">Tous</option></select>
+  <div class="bar filters">
+    <div class="filter-field grow"><label for="lex-q" class="kicker" style="margin:0" data-i="1946">Rechercher</label>
+    <input type="search" id="lex-q" placeholder="ex. hold-up, équilibre, norme…" autocomplete="off" data-ui-attr='{"placeholder": "ex. hold-up, équilibre, norme…"}'></div>
+    <div class="filter-field"><label for="lex-ch" class="kicker" style="margin:0" data-i="1947">Chapitre</label>
+    <select id="lex-ch"><option value="all" data-i="1948">Tous</option></select></div>
     <span class="count" id="lex-count"></span>
   </div>
-  <div class="tablewrap"><table class="t" id="lex-table">
+  <div class="tablewrap"><table class="t" id="lex-table" role="table">
     <thead><tr><th data-i="1949">Anglais</th><th data-i="1950" data-ui="Traduction">Traduction</th><th data-i="1951">Définition</th><th>Ch.</th></tr></thead>
     <tbody id="lex-body"></tbody>
   </table></div>
 </section>
 
 <!-- ============ FLASHCARDS ============ -->
-<section class="view" id="flashcards" aria-labelledby="fc-t">
-  <header class="ch-head">
+<section class="view tool-view" id="flashcards" aria-labelledby="fc-t">
+  <header class="ch-head no-help">
     <div class="ch-num" style="font-size:clamp(56px,8vw,84px)">FC</div>
     <p class="kicker" data-i="1952">Outil · mémorisation</p>
     <h1 id="fc-t" data-i="1953">Cartes de révision</h1>
     <p class="fr" data-i="1954" data-ui="Lis la carte dans la langue choisie. Clique ou appuie sur Espace pour retourner, puis indique si tu savais.">Lis la carte dans la langue choisie. Clique ou appuie sur Espace pour retourner, puis indique si tu savais.</p>
   </header>
   <div class="fc-wrap">
-    <div class="bar">
-      <label for="fc-deck" class="kicker" style="margin:0" data-i="1955">Paquet</label>
-      <select id="fc-deck"><option value="all" data-i="1956">Tout</option><option value="concept" data-i="1957">Concepts &amp; résultats</option><option value="vocab" data-i="1958">Vocabulaire</option></select>
-      <label for="fc-ch" class="kicker" style="margin:0" data-i="1959">Chapitre</label>
-      <select id="fc-ch"><option value="all" data-i="1960">Tous</option></select>
+    <div class="bar filters">
+      <div class="filter-field"><label for="fc-deck" class="kicker" style="margin:0" data-i="1955">Paquet</label>
+      <select id="fc-deck"><option value="all" data-i="1956">Tout</option><option value="concept" data-i="1957">Concepts &amp; résultats</option><option value="vocab" data-i="1958">Vocabulaire</option></select></div>
+      <div class="filter-field"><label for="fc-ch" class="kicker" style="margin:0" data-i="1959">Chapitre</label>
+      <select id="fc-ch"><option value="all" data-i="1960">Tous</option></select></div>
       <button class="chip" type="button" id="fc-weak" aria-pressed="false" data-i="1961">À revoir seulement</button>
     </div>
     <p class="count" id="fc-count"></p>
@@ -2860,9 +2919,9 @@ button:disabled{opacity:.6;cursor:wait}.option-row{display:flex;align-items:cent
     </div>
     <div id="fc-help"></div>
     <div class="fc-ctl">
-      <button class="btn ghost" type="button" id="fc-prev" data-i="1962">← Précédente</button>
       <button class="btn rate-no" type="button" id="fc-no" data-i="1963">Je ne savais pas (1)</button>
       <button class="btn rate-yes" type="button" id="fc-yes" data-i="1964">Je savais (2)</button>
+      <button class="btn ghost" type="button" id="fc-prev" data-i="1962">← Précédente</button>
       <button class="btn ghost" type="button" id="fc-next" data-i="1965">Suivante →</button>
       <button class="btn ghost" type="button" id="fc-shuffle" data-i="1966">Mélanger</button>
     </div>
@@ -2871,17 +2930,17 @@ button:disabled{opacity:.6;cursor:wait}.option-row{display:flex;align-items:cent
 </section>
 
 <!-- ============ QUIZ ============ -->
-<section class="view" id="quiz" aria-labelledby="qz-t">
-  <header class="ch-head">
+<section class="view tool-view" id="quiz" aria-labelledby="qz-t">
+  <header class="ch-head no-help">
     <div class="ch-num" style="font-size:clamp(56px,8vw,84px)">Q</div>
     <p class="kicker" data-i="1968">Outil · auto-évaluation</p>
     <h1 id="qz-t" data-i="1969">Quiz</h1>
     <p class="fr" data-i="1970" data-ui="Questions et explications dans la langue choisie. Les citations anglaises du livre sont conservées.">Questions et explications dans la langue choisie. Les citations anglaises du livre sont conservées.</p>
   </header>
   <div class="qz">
-    <div class="bar">
-      <label for="qz-ch" class="kicker" style="margin:0" data-i="1971">Chapitre</label>
-      <select id="qz-ch"><option value="all" data-i="1972">Tous les chapitres</option></select>
+    <div class="bar filters">
+      <div class="filter-field grow"><label for="qz-ch" class="kicker" style="margin:0" data-i="1971">Chapitre</label>
+      <select id="qz-ch"><option value="all" data-i="1972">Tous les chapitres</option></select></div>
       <button class="btn on" type="button" id="qz-start" data-i="1973">Commencer</button>
       <span class="count" id="qz-count"></span>
     </div>
@@ -3494,31 +3553,35 @@ function tr(source, lang = language) {
 function msg(source, values) {
   return tr(source).replace(/\{(\d+)\}/g, (_, i) => String(values[i] ?? ''));
 }
-function help(ids) {
+function help(ids, shownLanguage = language) {
   ids = [...new Set(ids.filter(id => id !== undefined).map(String))];
   if (!ids.length) return '';
-  return `<span class="i18n-help"><button type="button" data-help="${ids.join(',')}" data-to="en" aria-label="${esc(tr('Afficher ce passage en anglais'))}">EN</button><button type="button" data-help="${ids.join(',')}" data-to="uk" aria-label="${esc(tr('Afficher ce passage en ukrainien'))}">UK</button></span>`;
+  const targets = ['en', 'uk'].filter(lang => lang !== shownLanguage);
+  return `<span class="i18n-help" role="group" aria-label="${esc(tr('Traduction'))}">${targets.map(lang => `<button type="button" data-help="${ids.join(',')}" data-to="${lang}" aria-label="${esc(tr(lang === 'en' ? 'Afficher ce passage en anglais' : 'Afficher ce passage en ukrainien'))}">${lang.toUpperCase()}</button>`).join('')}</span>`;
 }
 const helpText = (...texts) => help(texts.map(s => textIds[s]));
+const promptHelp = (...texts) => help(texts.map(s => textIds[s]), promptLanguage());
 function mountHelp() {
   $$('.i18n-help[data-static]').forEach(el => el.remove());
-  $$('[data-i]').forEach(el => {
+  const diagrams = new Map();
+  const attach = (el, ids) => {
+    const toolbar = help(ids, el.lang || language);
+    if (!toolbar) return;
+    el.classList.add('translation-block');
+    el.insertAdjacentHTML('beforeend', toolbar.replace('class="i18n-help"', 'class="i18n-help" data-static'));
+  };
+  $$('main [data-i]').forEach(el => {
+    // Global language already translates navigation, filters and other controls.
+    if (el.closest('a,button,form,.bar,.no-help') || el.matches('label,option,th,.kicker,.lab,.pg,.tag,.ch-head .fr') || el.querySelector('[data-i]')) return;
     if (el.namespaceURI !== 'http://www.w3.org/1999/xhtml') {
       const svg = el.closest('svg');
-      if (svg) svg.insertAdjacentHTML('afterend', help([el.dataset.i]).replace('class="i18n-help"', 'class="i18n-help" data-static'));
+      if (svg) diagrams.set(svg, [...(diagrams.get(svg) || []), el.dataset.i]);
       return;
     }
-    const toolbar = help([el.dataset.i]).replace('class="i18n-help"', 'class="i18n-help" data-static');
-    if (el.tagName === 'OPTION') el.closest('select').insertAdjacentHTML('afterend', toolbar);
-    else if (el.closest('button, a')) el.closest('button, a').insertAdjacentHTML('afterend', toolbar);
-    else el.insertAdjacentHTML('beforeend', toolbar);
+    attach(el, [el.dataset.i]);
   });
-  $$('main [data-ui], main [data-ui-html]').filter(el => !el.closest('[data-i]') && !el.closest('.no-help')).forEach(el => {
-    const source = el.dataset.ui || el.dataset.uiHtml;
-    const toolbar = help([textIds[source]]).replace('class="i18n-help"', 'class="i18n-help" data-static');
-    if (el.closest('a,button')) el.closest('a,button').insertAdjacentHTML('afterend', toolbar);
-    else el.insertAdjacentHTML('beforeend', toolbar);
-  });
+  diagrams.forEach((ids, svg) => svg.insertAdjacentHTML('afterend', help(ids).replace('class="i18n-help"', 'class="i18n-help" data-static')));
+  $$('main [data-ui], main [data-ui-html]').filter(el => !el.closest('[data-i],.no-help,a,button,form,.bar') && !el.matches('.kicker,.lab,.pg,.tag')).forEach(el => attach(el, [textIds[el.dataset.ui || el.dataset.uiHtml]]));
 }
 function applyLanguage(lang, persist = true) {
   if (!['fr', 'en', 'uk'].includes(lang)) return;
@@ -3857,7 +3920,7 @@ function qzRender() {
   }
   const q = qz.list[qz.i];
   $('#qz-count').textContent = msg('Question {0} / {1} · score {2}', [qz.i + 1, n, qz.score]);
-  box.innerHTML = `<p class="kicker">${tr('Chapitre')} ${q.ch} · ${tr(CH_T[q.ch - 1])}</p><p class="q" lang="${promptLanguage()}">${esc(tr(q.q, promptLanguage()))}${helpText(q.q)}</p><div class="opts">${q.order.map(k => `<div class="option-row"><button class="opt" lang="${promptLanguage()}" type="button" data-k="${k}">${esc(tr(q.o[k], promptLanguage()))}</button>${helpText(q.o[k])}</div>`).join('')}</div>`;
+  box.innerHTML = `<p class="kicker">${tr('Chapitre')} ${q.ch} · ${tr(CH_T[q.ch - 1])}</p><p class="q" lang="${promptLanguage()}">${esc(tr(q.q, promptLanguage()))}${promptHelp(q.q)}</p><div class="opts">${q.order.map(k => `<div class="option-row"><button class="opt" lang="${promptLanguage()}" type="button" data-k="${k}">${esc(tr(q.o[k], promptLanguage()))}</button>${promptHelp(q.o[k])}</div>`).join('')}</div>`;
   if (qz.selected !== null) qzExplain();
 }
 function qzExplain() {

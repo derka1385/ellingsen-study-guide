@@ -108,3 +108,13 @@ python3 -I i18n/extract.py ellingsen.html i18n/tagged.html i18n/blocks.json
 Le texte distingue les chapitres 1–10 du livre et la reconstruction des chapitres 11–13 depuis les supports de cours. Les indications d’incertitude et les formules originales sont conservées, y compris le libellé du triangle au chapitre 7 (`u1 + u2 = 2` pour la frontière, l’intérieur satisfaisant `≤ 2`).
 
 Le projet est versionné dans le dépôt privé [derka1385/ellingsen-study-guide](https://github.com/derka1385/ellingsen-study-guide). Les commits locaux ont été poussés sur `main` avec l’autorisation de l’utilisateur. Ce dépôt contient le code source ; aucun hébergement du site n’est encore déployé. La connexion Google est maintenant activée dans le projet Firebase Global challenges. Pour l’utiliser, lancer le serveur local ci-dessus ou héberger ce serveur derrière HTTPS ; une page GitHub de code source ne sert pas le site.
+
+## Finition visuelle du 14 octobre 2026
+
+Cette passe conserve le style de manuel et les parcours existants. Les aides EN/UK restent sur le contenu et les entrées du lexique, mais ne sont plus générées dans les menus, les filtres et les en-têtes des outils. Elles s’alignent dans une marge sur les grands écrans ; la langue déjà affichée n’est plus proposée. Les petites étiquettes, les sélecteurs et les groupes de boutons ont été harmonisés.
+
+Sur téléphone, le lexique affiche chaque entrée verticalement et les en-têtes des flashcards/quiz prennent moins de place. Les boutons de notation et de navigation des cartes sont regroupés par fonction. Le débordement du chapitre 11 et le contraste orange des cellules Nash en thème clair ont été corrigés. Les exemples de modes restent lisibles sans disparition cyclique du texte.
+
+Validation : 13 chapitres et outils en FR/EN/UK à 320, 390, 768, 1100 et 1440 px, avec un profil Firebase simulé ; absence de débordement global et d’erreur JavaScript sur ce parcours. Traductions ponctuelles, filtre du lexique, mode bilingue guidé, réponses du quiz, retournement/notation d’une carte et restauration de la note après rechargement, ainsi que le labo ont été contrôlés. Les 1 974 blocs source et leurs identifiants sont strictement inchangés. Les données des matrices et des arbres restent identiques lors des changements de langue. Le test serveur existant passe également. Aucun compte Firebase réel n’a été modifié pendant ces tests.
+
+Le nouveau parcours d’accueil, l’organisation de la navigation mobile, le choix de mode plus compact et les autres points fonctionnels/accessibilité de l’audit restent à décider ou traiter avant publication. Cette passe ne déploie rien et ne pousse aucun commit sur GitHub.
