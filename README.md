@@ -97,7 +97,7 @@ Les tests serveur vérifient les accès anonymes, les catalogues privés, les fi
 
 Les contrôles navigateur ont couvert l’accès obligatoire, l’inscription et Google simulés, les préférences, leur restauration, les trois modes, les treize chapitres dans les trois langues, les corrections du quiz, le maintien de l’état des outils, les erreurs Firestore et les écrans mobile/ordinateur. La configuration réelle a également été vérifiée : Firebase génère une URL de connexion Google (HTTP 200), autorise `localhost`, et Firestore refuse les requêtes anonymes. Le parcours réel Google a également réussi dans le navigateur : création de session protégée, enregistrement des préférences, sauvegarde d’un chapitre étudié dans Firestore et restauration après rechargement. Le chapitre utilisé pour ce contrôle a été remis dans son état initial. Aucun hébergement public du site n’est déployé.
 
-Les traductions restent des objets JavaScript indexés par identifiants numériques, dans deux scripts classiques. Les **1 974 blocs** de l’extraction initiale sont conservés ; les catalogues comptent désormais **3 760 entrées** chacun. Balises, entités, liens, hash et données des matrices/arbres ont été comparés automatiquement. Les outils contiennent **213 termes**, **304 cartes** et **90 questions**.
+Les traductions restent des objets JavaScript indexés par identifiants numériques, dans deux scripts classiques. Les **1 974 blocs** de l’extraction initiale sont conservés ; les catalogues comptent désormais **4 043 entrées** chacun. Balises, entités, liens, hash et données des matrices/arbres ont été comparés automatiquement. Les outils contiennent **213 termes**, **340 cartes** et **90 questions**.
 
 `i18n/blocks.json` et `i18n/tagged.html` conservent l’extraction initiale pour audit. Ne pas les publier avec un serveur statique. Ne pas renuméroter les blocs ni les cartes sans vérifier les données déjà enregistrées. L’extraction initiale a utilisé :
 
@@ -118,3 +118,29 @@ Sur téléphone, le lexique affiche chaque entrée verticalement et les en-tête
 Validation : 13 chapitres et outils en FR/EN/UK à 320, 390, 768, 1100 et 1440 px, avec un profil Firebase simulé ; absence de débordement global et d’erreur JavaScript sur ce parcours. Traductions ponctuelles, filtre du lexique, mode bilingue guidé, réponses du quiz, retournement/notation d’une carte et restauration de la note après rechargement, ainsi que le labo ont été contrôlés. Les 1 974 blocs source et leurs identifiants sont strictement inchangés. Les données des matrices et des arbres restent identiques lors des changements de langue. Le test serveur existant passe également. Aucun compte Firebase réel n’a été modifié pendant ces tests.
 
 Le nouveau parcours d’accueil, l’organisation de la navigation mobile, le choix de mode plus compact et les autres points fonctionnels/accessibilité de l’audit restent à décider ou traiter avant publication. Cette passe ne déploie rien et ne pousse aucun commit sur GitHub.
+
+## Comprendre, appliquer et réviser — 15 octobre 2026
+
+Chaque chapitre 1–13 comporte une couche pédagogique séparée : « En gros », schéma mémo, utilité du concept, nuance à conserver, exercice de prise en main avec piste de réponse et situation demandant quel concept mobiliser dans une copie. Les formulations sont des paraphrases et les exemples nouveaux sont signalés ; aucun passage ajouté n’est présenté comme une citation d’Ellingsen. Les avertissements de reconstruction des chapitres 11–13 restent visibles. Les 1 974 blocs de référence sont inchangés.
+
+La rubrique **Annales et entraînement** (`#atelier`) propose cinq sujets vérifiés dans le [recueil officiel GCExams](https://drive.google.com/file/d/156rO7KH2f8ASpbAdS2A53t3iBjktTvzu/view), version « October 2026 » publiée sur le [site compagnon de Tore Ellingsen](https://sites.google.com/view/tore-ellingsen/home) :
+
+| Session principale | Question | Thème | Page du recueil |
+|---|---|---|---|
+| 2025 | Q2 | Accord tarifaire UE–US | 2 |
+| 2025 | Q3 | Assurances de Budapest | 2–3 |
+| 2024 | Q3 | Réseaux sociaux et bien-être | 4 |
+| 2025 | Q1 | Négociations climatiques | 2 |
+| 2022 | Q2 | Manifestations et information publique | 8 |
+
+Seul un résumé très court de chaque sujet est repris. Les énoncés complets restent liés dans le document original. Les trois étapes « repérer les concepts / expliquer le mécanisme / poser les limites », leurs pistes et les cartes sont des exercices originaux pour cette fiche, **pas des corrigés officiels**. Les faits des scénarios d’examen sont traités comme des hypothèses du sujet, pas comme des données politiques actuelles.
+
+Les flashcards ajoutent trois paquets : **Mobiliser le livre** (13 cartes), **Prise en main** (13), **Annales décomposées** (10), soit 36 nouvelles cartes et 340 au total. Leurs IDs explicites `learn:chN:application`, `learn:chN:practice` et `exam:gc-YYYY-qN:concept/limit` préservent les anciens IDs `c:` et `v:` ainsi que les notes existantes. Les liens de retour ouvrent le passage ou l’annale, y compris un panneau fermé.
+
+Tous les ajouts sont disponibles en FR/EN/UK. Les questions suivent la langue des questions du mode choisi ; les explications pédagogiques des chapitres restent dans la langue de compréhension, y compris en mode examen. Les aides ponctuelles EN/UK n’enregistrent pas de changement de langue.
+
+Les textes relus, leurs IDs de référence et les sources des annales se trouvent dans `authoring/learning.json`. `authoring/build_learning.py` et `learning_labels.py` intègrent ces ajouts de façon idempotente sans régénérer la fiche d’origine. Le site livré ne nécessite aucun build : HTML/CSS/JS inline et catalogues classiques `i18n/en.js` / `i18n/uk.js`. Ne pas réutiliser les anciens scripts du dossier de travail pour écraser cette version.
+
+Validation dans un navigateur isolé avec Auth/Firestore simulés : 13 chapitres × 3 langues × 4 largeurs (320, 390, 768, 1440 px), aucun débordement global ni erreur JavaScript ; paquets et filtres, trois modes, traduction ponctuelle, lien direct dans une annale fermée, notation/rechargement d’une nouvelle carte sans perte d’une ancienne note, quiz existant et données matrices/arbres inchangées. La syntaxe JS et les 248 nouvelles entrées EN/UK sont vérifiées. Le contenu source a été comparé strictement avant/après. Aucun compte Firebase réel n’a été modifié par ces tests.
+
+Ces ajouts sont enregistrés localement. Aucun push ou déploiement n’est effectué sans nouvelle autorisation.

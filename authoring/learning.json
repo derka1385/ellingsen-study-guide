@@ -1,0 +1,1363 @@
+{
+  "chapters": [
+    {
+      "ch": 1,
+      "source_ids": [
+        146,
+        151,
+        154,
+        157,
+        161,
+        169
+      ],
+      "concepts": [
+        "organizational challenge",
+        "sacrifice",
+        "cooperation",
+        "coercion"
+      ],
+      "gist": {
+        "fr": "Dès que plusieurs personnes vivent ou travaillent ensemble, leurs actions peuvent s'aider ou se nuire. Le défi organisationnel consiste à rendre cette vie collective bénéfique. Trois réponses peuvent se combiner : renoncer volontairement pour autrui, ajuster mutuellement ses actions ou imposer certains comportements. Avant de parler de réussite, il faut préciser pour quel groupe et examiner les effets sur les autres.",
+        "en": "Whenever people live or work together, their actions can help or harm one another. The organizational challenge is to make collective life beneficial. Three responses can combine: voluntarily sacrificing for others, coordinating actions for mutual benefit, and coercing certain actions. Before calling an organization successful, identify the relevant group and examine what its success does to people outside it.",
+        "uk": "Коли люди живуть або працюють разом, їхні дії можуть допомагати чи шкодити одне одному. Організаційний виклик (organizational challenge) полягає в тому, щоб зробити спільне життя корисним. Самопожертва (sacrifice), співпраця (cooperation) та примус (coercion) можуть поєднуватися. Перше означає добровільну поступку заради інших, друге — взаємне узгодження дій, третє — вимушені дії. Оцінюючи успіх, спершу визнач групу й перевір наслідки для сторонніх."
+      },
+      "use": {
+        "fr": "Cette grille sert à décomposer une organisation : qui aide qui, par quel mécanisme, et au bénéfice de quel groupe ? Elle évite de confondre réussite interne et bénéfice collectif.",
+        "en": "Use this framework to unpack an organization: who helps whom, through which mechanism, and for whose benefit? It keeps internal success distinct from benefits to the wider group.",
+        "uk": "Ця схема допомагає розібрати організацію: хто кому допомагає, завдяки якому механізму та на користь якої групи? Вона відділяє внутрішній успіх від користі для ширшої спільноти."
+      },
+      "nuance": {
+        "fr": "Les trois réponses ne sont pas trois étapes obligatoires. Un sacrifice peut être unilatéral ; la coopération est mutuelle ; la coercition implique une contrainte. Leur caractère souhaitable dépend aussi du groupe étudié.",
+        "en": "These responses are not three compulsory stages. Sacrifice can be unilateral; cooperation is mutual; coercion involves compulsion. Whether any of them is desirable also depends on the group being examined.",
+        "uk": "Ці відповіді не є трьома обов’язковими етапами. Самопожертва може бути односторонньою, співпраця є взаємною, а примус передбачає вимушені дії. Їхня бажаність також залежить від обраної групи."
+      },
+      "diagram": [
+        {
+          "fr": "Définir le groupe étudié",
+          "en": "Identify the relevant group",
+          "uk": "Визнач досліджувану групу"
+        },
+        {
+          "fr": "Repérer aides et dommages",
+          "en": "Identify help and harm",
+          "uk": "Вияв допомогу та шкоду"
+        },
+        {
+          "fr": "Identifier les mécanismes mobilisés",
+          "en": "Identify the mechanisms involved",
+          "uk": "Визнач задіяні механізми"
+        },
+        {
+          "fr": "Examiner aussi les effets extérieurs",
+          "en": "Check effects on outsiders too",
+          "uk": "Перевір також наслідки для сторонніх"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Exemple inventé : Léa aide seule un voisin ; deux voisins déplacent leur armoire commune ; un règlement impose le nettoyage. Associe chaque cas à une réponse au défi organisationnel.",
+        "en": "Invented example: Lea helps a neighbour alone; two neighbours jointly move their shared wardrobe; a regulation requires cleaning. Match each case to a response to the organizational challenge.",
+        "uk": "Вигаданий приклад: Леа сама допомагає сусідові; двоє сусідів разом переносять спільну шафу; правило зобов’язує прибирати. Визнач, якій відповіді на організаційний виклик відповідає кожен випадок, і коротко поясни чому."
+      },
+      "exercise_a": {
+        "fr": "L'aide de Léa relève du sacrifice si elle renonce volontairement à son temps pour le voisin. Porter ensemble l'armoire relève de la coopération : les deux ajustent leurs efforts pour un bénéfice mutuel. Le nettoyage obligatoire relève de la coercition s'il est imposé sous contrainte. Une règle écrite ne suffit donc pas, à elle seule, à établir une coercition effective.",
+        "en": "Lea's help is sacrifice if she voluntarily gives up time for her neighbour. Carrying the wardrobe together is cooperation: both adjust their efforts for mutual benefit. Compulsory cleaning involves coercion if people are forced to do it. Merely writing down a rule therefore does not, by itself, establish that effective coercion occurs in this invented case.",
+        "uk": "Допомога Леа є самопожертвою, якщо вона добровільно віддає свій час заради сусіда. Спільне перенесення шафи є співпрацею: обидва узгоджують зусилля для взаємної користі. Обов’язкове прибирання є примусом, якщо людей змушують його виконувати. Отже, самого записаного правила недостатньо, щоб встановити наявність дієвого примусу в цьому вигаданому прикладі; потрібно перевірити, як саме забезпечується його виконання."
+      },
+      "apply_q": {
+        "fr": "Exemple inventé : plusieurs producteurs s'entendent pour augmenter leurs prix. Leurs profits montent, mais les acheteurs paient davantage. Quelle idée du chapitre permet de discuter cette réussite ?",
+        "en": "Invented example: several producers agree to increase their prices. Their profits rise, but buyers pay more. Which idea from this chapter helps you assess that apparent success?",
+        "uk": "Вигаданий приклад: кілька виробників домовляються підвищити ціни. Їхні прибутки зростають, але покупці платять більше. Яка ідея цього розділу допоможе оцінити такий успіх і пояснити його межі?"
+      },
+      "apply_a": {
+        "fr": "Mobilise la frontière du groupe : la coopération entre producteurs peut réussir pour eux tout en nuisant aux acheteurs. Le mécanisme est l'ajustement mutuel des prix au profit du sous-groupe. La conclusion dépend donc du groupe de référence : analyser seulement les producteurs masque les pertes extérieures. Cela ne prouve pas que toute coopération entre entreprises soit nuisible.",
+        "en": "Use the group boundary: cooperation among producers can succeed for them while harming buyers. The mechanism is mutual adjustment of prices for the subgroup's benefit. Your conclusion therefore depends on the reference group: examining only producers hides losses outside it. This does not establish that every form of cooperation between firms is harmful to others.",
+        "uk": "Застосуй ідею межі групи: співпраця виробників може бути успішною для них і водночас шкодити покупцям. Механізм полягає у взаємному узгодженні цін на користь підгрупи. Висновок залежить від обраної групи: аналіз лише виробників приховує зовнішні втрати. Це не доводить, що будь-яка співпраця між підприємствами шкідлива для інших людей за будь-яких обставин чи умов."
+      },
+      "sentence": {
+        "fr": "Dans cet exemple inventé, je distingue le succès des producteurs du bénéfice collectif : leur coopération augmente leurs profits tout en faisant supporter un coût aux acheteurs.",
+        "en": "In this invented example, I distinguish producer success from collective benefit: their cooperation increases profits while imposing a cost on buyers outside the subgroup.",
+        "uk": "У цьому вигаданому прикладі я відділяю успіх виробників від спільної користі: їхня співпраця збільшує прибутки, водночас покладаючи витрати на покупців поза підгрупою."
+      }
+    },
+    {
+      "ch": 2,
+      "source_ids": [
+        196,
+        203,
+        205,
+        207,
+        211,
+        228
+      ],
+      "concepts": [
+        "unilateral sacrifice",
+        "social dilemma",
+        "multilateral sacrifice"
+      ],
+      "gist": {
+        "fr": "Un sacrifice unilatéral fait gagner quelqu'un au prix d'une perte volontaire pour celui qui donne. Le dilemme social apparaît lorsque plusieurs personnes peuvent contribuer : chacune garde davantage en ne donnant pas, mais toutes gagnent si toutes donnent. Dans la version multilatérale, le bénéfice de chaque contribution se répartit entre de nombreux bénéficiaires. Le gain collectif subsiste même si chaque part devient petite.",
+        "en": "Unilateral sacrifice benefits someone at a voluntary cost to the giver. A social dilemma arises when several people can contribute: each keeps more by not giving, yet everyone gains if everyone gives. With multilateral sacrifice, the benefit of each contribution is spread across many recipients. The collective gain remains even when each recipient's share becomes small.",
+        "uk": "Одностороння самопожертва (unilateral sacrifice) приносить комусь користь ціною добровільної втрати для того, хто віддає. Соціальна дилема (social dilemma) виникає, коли внески можуть робити кілька людей: кожен зберігає більше, не віддаючи, але всі виграють, якщо віддають усі. За багатосторонньої самопожертви (multilateral sacrifice) користь кожного внеску розподіляється між багатьма отримувачами. Загальний виграш зберігається, навіть коли окрема частка стає малою."
+      },
+      "use": {
+        "fr": "Cette idée sert à vérifier deux comparaisons : ce que chacun gagne en contribuant seul, puis ce que tous gagnent lorsque chacun contribue. Leur opposition révèle le dilemme.",
+        "en": "Use this idea to check two comparisons: what an individual gains from contributing alone, and what everyone gains when all contribute. Their conflict reveals the social dilemma.",
+        "uk": "Ця ідея допомагає перевірити два порівняння: що отримує окрема людина від власного внеску та що отримують усі, коли роблять внески разом. Суперечність між ними виявляє соціальну дилему."
+      },
+      "nuance": {
+        "fr": "Un don isolé n'est pas automatiquement un dilemme social. Il faut établir à la fois la tentation individuelle de ne pas contribuer et l'avantage partagé de contributions généralisées.",
+        "en": "An isolated donation is not automatically a social dilemma. Establish both the individual temptation not to contribute and the shared advantage of contributions by everyone involved.",
+        "uk": "Окремий дарунок не є автоматично соціальною дилемою. Потрібно встановити і особисту спокусу не робити внесок, і спільну перевагу ситуації, коли внески роблять усі учасники групи."
+      },
+      "diagram": [
+        {
+          "fr": "Fixer les contributions des autres",
+          "en": "Hold others' contributions fixed",
+          "uk": "Зафіксуй внески інших"
+        },
+        {
+          "fr": "Comparer donner et garder",
+          "en": "Compare giving with keeping",
+          "uk": "Порівняй віддати та залишити"
+        },
+        {
+          "fr": "Comparer contributions de tous et d'aucun",
+          "en": "Compare everyone giving with nobody giving",
+          "uk": "Порівняй внески всіх і відсутність внесків"
+        },
+        {
+          "fr": "Repérer le conflit individuel/collectif",
+          "en": "Identify the individual/collective conflict",
+          "uk": "Вияв суперечність особистого та спільного"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Variante pédagogique inventée : quatre personnes ont chacune 1 dollar. Chaque don distribue 2 dollars aux trois autres. Calcule les gains si personne ne donne, si tous donnent, puis si une seule garde.",
+        "en": "Invented teaching variant: four people each have one dollar. Each donation distributes two dollars among the other three. Calculate payoffs when nobody gives, everyone gives, and only one person keeps.",
+        "uk": "Вигаданий навчальний варіант: четверо людей мають по долару. Кожен внесок розподіляє два долари між трьома іншими. Обчисли виграші, коли ніхто не віддає, віддають усі та лише один залишає долар."
+      },
+      "exercise_a": {
+        "fr": "Si personne ne donne, chacun garde 1 dollar. Si tous donnent, chacun reçoit trois fois deux tiers, donc 2 dollars. Si une seule personne garde tandis que les trois autres donnent, elle reçoit ces mêmes 2 dollars et conserve le sien : 3 dollars. Garder apporte toujours 1 dollar supplémentaire à son auteur, mais donner tous ensemble enrichit chacun.",
+        "en": "When nobody gives, each keeps one dollar. When everyone gives, each receives three times two thirds, making two dollars. If one person keeps while the other three give, that person receives those same two dollars and retains one: three dollars. Keeping always adds one dollar for the individual, but everyone giving makes each person better off.",
+        "uk": "Якщо ніхто не віддає, кожен зберігає один долар. Якщо віддають усі, кожен отримує тричі по дві третини, тобто два долари. Якщо один залишає долар, а троє інших віддають, він отримує ті самі два долари й зберігає свій: разом три. Залишити долар завжди вигідніше особисто, але спільні внески роблять кожного заможнішим порівняно з повною відсутністю внесків."
+      },
+      "apply_q": {
+        "fr": "Exemple inventé : préparer des fiches communes coûte du temps à chaque étudiant. Tous préfèrent disposer des fiches, mais chacun aimerait laisser les autres les préparer. Quel concept mobiliser ?",
+        "en": "Invented example: preparing shared revision notes costs each student time. Everyone wants the notes, but each would like others to prepare them. Which concept should your answer use?",
+        "uk": "Вигаданий приклад: підготовка спільних конспектів забирає час кожного студента. Усі хочуть мати конспекти, але кожен волів би, щоб їх готували інші. Яке поняття варто застосувати у відповіді?"
+      },
+      "apply_a": {
+        "fr": "Mobilise le dilemme social : le coût est supporté par celui qui prépare, tandis que les bénéfices sont partagés, y compris avec ceux qui ne contribuent pas. Pour conclure, vérifie que contribuer réduit bien le gain individuel, à contributions des autres fixées, et que les contributions de tous améliorent le sort de chacun. Le simple partage d'un document ne suffit pas.",
+        "en": "Use social dilemma: the person preparing the notes bears the cost, while benefits are shared, including with noncontributors. To establish the dilemma, check that contributing reduces the individual's payoff, holding others' contributions fixed, and that contributions by everyone improve each person's position. Simply sharing a document does not establish these two conditions in every case.",
+        "uk": "Застосуй поняття соціальної дилеми: витрати несе той, хто готує конспект, а користь отримують усі, зокрема ті, хто не допомагає. Перевір дві умови: власний внесок зменшує особистий виграш за незмінних внесків інших, а внески всіх поліпшують становище кожного. Сам факт спільного доступу до документа ще не встановлює цих умов і не доводить наявності дилеми."
+      },
+      "sentence": {
+        "fr": "Dans cet exemple inventé, le dilemme vient du décalage entre le coût individuel de préparation et le bénéfice partagé, sous réserve de vérifier les gains de chacun.",
+        "en": "In this invented example, the dilemma comes from individual preparation costs and shared benefits, provided the payoff comparisons confirm that everyone contributing makes everyone better off.",
+        "uk": "У цьому вигаданому прикладі дилема виникає через особисті витрати та спільну користь, якщо порівняння виграшів підтверджує перевагу внесків усіх для кожного учасника."
+      }
+    },
+    {
+      "ch": 3,
+      "source_ids": [
+        267,
+        269,
+        276,
+        302,
+        311,
+        338
+      ],
+      "concepts": [
+        "rationality",
+        "expected utility",
+        "externality",
+        "Pareto efficiency"
+      ],
+      "gist": {
+        "fr": "La rationalité décrit la façon de poursuivre ses objectifs, pas leur caractère égoïste. L'utilité espérée combine préférences et croyances pour représenter le choix ; l'utilité peut intégrer autrui et le devoir. Une externalité est l'effet d'une action sur l'utilité d'autrui. L'efficacité de Pareto pose une question : peut-on améliorer le sort de quelqu'un sans détériorer celui de personne ? Elle ne mesure pas la justice.",
+        "en": "Rationality concerns how people pursue their goals, rather than whether those goals are selfish. Expected utility combines preferences and beliefs to represent choice; utility can include concern for others and duty. An externality affects someone else's utility. Pareto efficiency asks a different question: could someone be made better off without making anyone worse off? It does not measure justice.",
+        "uk": "Раціональність (rationality) описує спосіб досягнення цілей, а не їхню егоїстичність. Очікувана корисність (expected utility) поєднує вподобання та переконання для опису вибору; корисність може враховувати інших і обов’язок. Зовнішній ефект (externality) означає вплив дії на чужу корисність. Ефективність за Парето (Pareto efficiency) ставить інше питання: чи можна поліпшити чиєсь становище, не погіршуючи становища нікого? Вона не вимірює справедливість."
+      },
+      "use": {
+        "fr": "Ce vocabulaire sépare quatre questions : quels objectifs poursuit-on, comment choisit-on, qui subit les conséquences, et reste-t-il une amélioration possible sans perdant ? Cela rend un diagnostic beaucoup plus précis.",
+        "en": "This vocabulary separates four questions: what goals are pursued, how choices are made, whose utility is affected, and whether an improvement without losers remains possible. It makes diagnosis more precise.",
+        "uk": "Ці поняття відділяють чотири питання: які цілі переслідують, як роблять вибір, на чию корисність впливають дії та чи можливе поліпшення без втрат для інших. Так аналіз стає точнішим."
+      },
+      "nuance": {
+        "fr": "Un choix généreux peut être rationnel. L'utilité n'est pas nécessairement l'argent, et le modèle ne suppose pas un calcul conscient. Une répartition injuste peut rester efficace au sens de Pareto.",
+        "en": "A generous choice can be rational. Utility need not equal money, and the model does not require conscious calculation. An unjust distribution can still be Pareto efficient.",
+        "uk": "Щедрий вибір може бути раціональним. Корисність не обов’язково дорівнює грошам, а модель не вимагає свідомих обчислень. Несправедливий розподіл може водночас залишатися ефективним за Парето для учасників."
+      },
+      "diagram": [
+        {
+          "fr": "Préciser objectifs et préférences",
+          "en": "Specify goals and preferences",
+          "uk": "Уточни цілі та вподобання"
+        },
+        {
+          "fr": "Préciser croyances et conséquences",
+          "en": "Specify beliefs and consequences",
+          "uk": "Уточни переконання та наслідки"
+        },
+        {
+          "fr": "Comparer les utilités espérées",
+          "en": "Compare expected utilities",
+          "uk": "Порівняй очікувані корисності"
+        },
+        {
+          "fr": "Identifier l'action préférée",
+          "en": "Identify the preferred action",
+          "uk": "Визнач бажану дію"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Exemple inventé : deux issues donnent (8, 2) ou (6, 6). La première personne valorise sa consommation plus celle de l'autre, à poids égal. Que choisit-elle ? Est-ce irrationnel ?",
+        "en": "Invented example: two outcomes give (8, 2) or (6, 6). The first person values their own consumption plus the other's, with equal weights. What do they choose? Is it irrational?",
+        "uk": "Вигаданий приклад: два результати дають (8, 2) або (6, 6). Перша людина однаково цінує власне й чуже споживання, додаючи їх. Що вона обере? Чи є такий вибір ірраціональним?"
+      },
+      "exercise_a": {
+        "fr": "La première issue donne une utilité de 8 + 2 = 10 ; la seconde, 6 + 6 = 12. La personne choisit donc la seconde, malgré une consommation personnelle plus faible. Ce choix est compatible avec la rationalité : elle poursuit son objectif altruiste. On ne peut pas diagnostiquer l'irrationalité en regardant seulement la somme qu'elle reçoit personnellement.",
+        "en": "The first outcome gives utility of 8 + 2 = 10; the second gives 6 + 6 = 12. The person therefore chooses the second despite receiving less personally. This is consistent with rationality: they pursue their altruistic objective. Looking only at the amount they receive cannot establish that their choice is irrational.",
+        "uk": "Перший результат дає корисність 8 + 2 = 10, а другий — 6 + 6 = 12. Отже, людина обере другий, хоча особисто отримає менше. Це узгоджується з раціональністю: вона досягає своєї альтруїстичної мети. Не можна визнати вибір ірраціональним лише тому, що особисте споживання зменшилося; потрібно врахувати її вподобання та спосіб оцінювання обох доступних результатів."
+      },
+      "apply_q": {
+        "fr": "Exemple inventé : dix unités doivent être partagées entre deux personnes qui ne valorisent que leur propre part. Un partage (9, 1) est contesté. L'inégalité prouve-t-elle l'inefficacité ?",
+        "en": "Invented example: ten units must be divided between two people who value only their own shares. A division of (9, 1) is challenged. Does inequality establish inefficiency?",
+        "uk": "Вигаданий приклад: десять одиниць ділять між двома людьми, які цінують лише власну частку. Розподіл (9, 1) викликає заперечення. Чи доводить нерівність його неефективність за Парето?"
+      },
+      "apply_a": {
+        "fr": "Mobilise l'efficacité de Pareto, en la distinguant de l'équité. Si seules ces dix unités sont disponibles et que chacun préfère une part plus grande, augmenter la part du second réduit celle du premier. Aucun autre partage n'améliore quelqu'un sans nuire à l'autre. Cette efficacité dépend des possibilités et préférences supposées ; elle ne justifie pas moralement le partage.",
+        "en": "Use Pareto efficiency and distinguish it from fairness. If only these ten units are available and each person prefers a larger share, increasing the second person's share reduces the first person's. No alternative division improves someone's position without harming the other. This efficiency depends on the assumed possibilities and preferences; it does not morally justify the division.",
+        "uk": "Застосуй ефективність за Парето, відділяючи її від справедливості. Якщо доступні лише ці десять одиниць і кожен хоче більшу власну частку, збільшення частки другого зменшує частку першого. Інший розподіл не поліпшить чиєсь становище без чужих втрат. Ефективність залежить від припущень про можливості та вподобання; вона не є моральним виправданням саме цього нерівного розподілу."
+      },
+      "sentence": {
+        "fr": "Dans cet exemple inventé, le partage est Pareto-efficace sous les hypothèses retenues, car toute amélioration pour une personne coûte à l'autre ; sa justice reste une question distincte.",
+        "en": "In this invented example, the division is Pareto efficient under the stated assumptions because any improvement for one person harms the other; fairness remains a separate question.",
+        "uk": "У цьому вигаданому прикладі розподіл ефективний за Парето за прийнятих припущень: будь-яке поліпшення для одного шкодить іншому, а справедливість залишається окремим питанням."
+      }
+    },
+    {
+      "ch": 4,
+      "source_ids": [
+        354,
+        355,
+        374,
+        382,
+        412,
+        413
+      ],
+      "concepts": [
+        "situation (game form)",
+        "game",
+        "altruism",
+        "cooperation"
+      ],
+      "gist": {
+        "fr": "Une situation indique les joueurs, les informations et actions disponibles, puis leurs conséquences. Pour obtenir un jeu, il faut ajouter les préférences de chaque joueur, en utilités. L'altruisme peut ainsi changer le jeu sans changer les conséquences matérielles. La coopération, elle, est mutuelle : chacun agit au bénéfice des autres sans être assuré d'y gagner. Elle n'exige pas de sacrifice et n'est pas toujours souhaitable.",
+        "en": "A situation specifies players, available information and actions, and their consequences. To obtain a game, add each player's preferences, expressed as utilities. Altruism can therefore change the game without changing material consequences. Cooperation is mutual: each member acts to benefit others without being certain to benefit personally. It does not necessarily require sacrifice, nor is it always desirable for the group.",
+        "uk": "Ситуація (situation, game form) задає гравців, доступну інформацію й дії та їхні наслідки. Щоб отримати гру (game), потрібно додати вподобання кожного, виражені через корисність. Альтруїзм (altruism) може змінити гру без зміни матеріальних наслідків. Співпраця (cooperation) є взаємною: кожен діє на користь інших, не маючи певності у власному виграші. Вона не обов’язково вимагає самопожертви й не завжди бажана для групи."
+      },
+      "use": {
+        "fr": "Cette distinction sert avant toute analyse de matrice : précise si les nombres représentent des conséquences ou des utilités. Ensuite seulement, compare les actions en tenant compte des motivations supposées.",
+        "en": "Use this distinction before analysing a matrix: establish whether the numbers represent consequences or utilities. Only then compare actions, taking the assumed motivations of the players into account.",
+        "uk": "Застосовуй це розрізнення перед аналізом матриці: уточни, чи числа позначають наслідки, чи корисність. Лише після цього порівнюй дії, враховуючи припущення про мотиви гравців у досліджуваній взаємодії."
+      },
+      "nuance": {
+        "fr": "Les préférences ne produisent pas toutes le même résultat. Dans l'exemple du livre, un altruisme suffisant rend S dominante ; l'aversion à l'inégalité peut seulement créer un problème de coordination.",
+        "en": "Different preferences need not produce the same result. In the book's example, sufficient altruism makes S dominant, while inequality aversion can instead create a coordination problem.",
+        "uk": "Різні вподобання не обов’язково дають однаковий результат. У прикладі книги достатній альтруїзм робить S домінантною стратегією, а неприйняття нерівності може натомість створити проблему координації між гравцями."
+      },
+      "diagram": [
+        {
+          "fr": "Joueurs, informations, actions et conséquences",
+          "en": "Players, information, actions and consequences",
+          "uk": "Гравці, інформація, дії та наслідки"
+        },
+        {
+          "fr": "Ajouter les préférences de chacun",
+          "en": "Add each player's preferences",
+          "uk": "Додай вподобання кожного гравця"
+        },
+        {
+          "fr": "Construire les utilités du jeu",
+          "en": "Construct the game's utilities",
+          "uk": "Побудуй значення корисності у грі"
+        },
+        {
+          "fr": "Comparer les actions possibles",
+          "en": "Compare the available actions",
+          "uk": "Порівняй можливі дії"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Variante numérique inventée du sacrifice bilatéral : α = 0,75. Rowena reçoit S/S : (2,2), N/S : (3,0), S/N : (0,3), N/N : (1,1). Avec U = cᵢ + αcⱼ, S est-elle dominante ?",
+        "en": "Invented numerical variant of bilateral sacrifice: α = 0.75. Rowena faces S/S: (2,2), N/S: (3,0), S/N: (0,3), N/N: (1,1). Using U = cᵢ + αcⱼ, is S dominant?",
+        "uk": "Вигаданий числовий варіант двосторонньої самопожертви: α = 0,75. Для Ровени S/S: (2,2), N/S: (3,0), S/N: (0,3), N/N: (1,1). За U = cᵢ + αcⱼ чи є S домінантною стратегією?"
+      },
+      "exercise_a": {
+        "fr": "Si Colin joue S, Rowena obtient 2 + 0,75 × 2 = 3,5 avec S, contre 3 avec N. Si Colin joue N, elle obtient 0,75 × 3 = 2,25 avec S, contre 1 + 0,75 = 1,75 avec N. S est donc strictement dominante. Les conséquences monétaires sont inchangées ; c'est leur évaluation qui transforme le jeu.",
+        "en": "If Colin chooses S, Rowena gets 2 + 0.75 × 2 = 3.5 from S, versus 3 from N. If Colin chooses N, she gets 0.75 × 3 = 2.25 from S, versus 1 + 0.75 = 1.75 from N. S is strictly dominant. The monetary consequences are unchanged; their evaluation transforms the game.",
+        "uk": "Якщо Колін обирає S, Ровена отримує 2 + 0,75 × 2 = 3,5 від S проти 3 від N. Якщо Колін обирає N, вона отримує 0,75 × 3 = 2,25 від S проти 1 + 0,75 = 1,75 від N. Отже, S строго домінує. Грошові наслідки незмінні; гру змінює саме їхнє оцінювання."
+      },
+      "apply_q": {
+        "fr": "Exemple inventé : deux équipes disposent du même budget et des mêmes options de contribution. L'une compte des membres altruistes, l'autre des membres uniquement intéressés par leur gain. Jouent-elles nécessairement le même jeu ?",
+        "en": "Invented example: two teams have identical budgets and contribution options. One has altruistic members; the other's members care only about their own payoffs. Must they be playing the same game?",
+        "uk": "Вигаданий приклад: дві команди мають однакові бюджети та можливості внесків. В одній учасники альтруїстичні, в іншій цінують лише власний виграш. Чи обов’язково вони грають в однакову гру?"
+      },
+      "apply_a": {
+        "fr": "Mobilise la distinction situation/jeu. Les ressources et options peuvent définir la même situation matérielle, mais l'altruisme fait entrer le gain d'autrui dans l'utilité et peut modifier les actions préférées. Il faut donc construire les utilités avant de prédire les choix. La limite est importante : un altruisme trop faible ne change pas nécessairement les meilleures réponses, comme le montre le seuil du chapitre.",
+        "en": "Use the situation/game distinction. Resources and options can define the same material situation, but altruism puts another person's payoff into utility and can change preferred actions. Construct utilities before predicting choices. The limitation matters: altruism that is too weak need not change best responses, as the threshold in this chapter's sacrifice example shows.",
+        "uk": "Застосуй розрізнення ситуації та гри. Ресурси й варіанти дій можуть задавати однакову матеріальну ситуацію, але альтруїзм включає чужий виграш до корисності й може змінити бажані дії. Тому спочатку побудуй функції корисності. Важлива межа: слабкий альтруїзм не обов’язково змінює найкращі відповіді, як показує порогове значення в прикладі самопожертви з цього розділу книги."
+      },
+      "sentence": {
+        "fr": "Dans cet exemple inventé, les équipes partagent une situation matérielle, mais leurs préférences peuvent définir des jeux différents ; le résultat dépend de l'intensité effective de l'altruisme.",
+        "en": "In this invented example, the teams share a material situation, but their preferences can define different games; the outcome depends on the actual strength of altruism.",
+        "uk": "У цьому вигаданому прикладі команди мають однакову матеріальну ситуацію, але їхні вподобання можуть задавати різні ігри; результат залежить від фактичної сили альтруїзму."
+      }
+    },
+    {
+      "ch": 5,
+      "source_ids": [
+        467,
+        479,
+        491,
+        494,
+        496,
+        464
+      ],
+      "concepts": [
+        "culture",
+        "institutions",
+        "understandings",
+        "expectations"
+      ],
+      "gist": {
+        "fr": "La culture rassemble les représentations et valeurs partagées : comment un groupe comprend les situations et les évalue. Les institutions sont les normes prescriptives qui indiquent comment agir envers autrui. Elles influencent les préférences et anticipations, puis les actions. Une représentation concerne la situation elle-même ; une anticipation concerne ce que feront les autres. Une règle écrite peut être ignorée, une règle informelle largement suivie.",
+        "en": "Culture comprises shared understandings and values: how a group interprets situations and evaluates them. Institutions are prescriptive norms about how people should behave towards one another. They influence individual preferences and expectations, and thereby actions. An understanding concerns the situation itself; an expectation concerns what others will do. A written rule can be ignored, while an informal rule can be widely followed.",
+        "uk": "Культура (culture) охоплює спільні уявлення (understandings) та цінності: як група розуміє ситуації й оцінює їх. Інституції (institutions) є приписувальними нормами поведінки щодо інших. Вони впливають на особисті вподобання й очікування (expectations), а через них — на дії. Уявлення стосуються самої ситуації, очікування — майбутніх дій інших. Письмове правило можуть ігнорувати, тоді як неформального можуть широко дотримуватися."
+      },
+      "use": {
+        "fr": "Cette grille sert à localiser un désaccord ou l'échec d'une réforme : les personnes comprennent-elles différemment la situation, évaluent-elles autrement les actions, ou anticipent-elles que les autres ignoreront la règle ?",
+        "en": "Use this framework to locate disagreement or reform failure: do people understand the situation differently, evaluate actions differently, or expect others to ignore the rule being introduced?",
+        "uk": "Ця схема допомагає знайти джерело незгоди чи невдачі реформи: люди по-різному розуміють ситуацію, інакше оцінюють дії чи очікують, що інші ігноруватимуть запроваджене правило у спільній діяльності?"
+      },
+      "nuance": {
+        "fr": "Formel décrit la codification ; fort décrit le respect effectif. Ce sont deux dimensions distinctes. Ici, une institution est une norme prescriptive, et non l'organisation chargée de la faire appliquer.",
+        "en": "Formal describes codification; strong describes actual compliance. These are separate dimensions. Here, an institution is a prescriptive norm, rather than the organization responsible for enforcing that norm.",
+        "uk": "Формальність описує кодифікацію, а сила — фактичне дотримання правила. Це окремі виміри. Тут інституція означає приписувальну норму, а не організацію, відповідальну за забезпечення її виконання на практиці."
+      },
+      "diagram": [
+        {
+          "fr": "Réalité interprétée et évaluée",
+          "en": "Reality interpreted and evaluated",
+          "uk": "Реальність, яку розуміють та оцінюють"
+        },
+        {
+          "fr": "Normes prescriptives du groupe",
+          "en": "The group's prescriptive norms",
+          "uk": "Приписувальні норми групи"
+        },
+        {
+          "fr": "Anticipations et préférences individuelles",
+          "en": "Individual expectations and preferences",
+          "uk": "Особисті очікування та вподобання"
+        },
+        {
+          "fr": "Actions directement observables",
+          "en": "Directly observable actions",
+          "uk": "Дії, які можна безпосередньо спостерігати"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Exemple inventé : un règlement écrit exige le tri, mais personne ne l'applique. À l'inverse, chacun respecte une règle non écrite de silence. Classe les deux institutions selon leurs deux dimensions.",
+        "en": "Invented example: a written regulation requires recycling, but nobody follows it. Everyone follows an unwritten rule requiring quiet. Classify both institutions using the chapter's two separate dimensions.",
+        "uk": "Вигаданий приклад: письмове правило вимагає сортувати відходи, але його ніхто не дотримується. Натомість усі дотримуються неписаного правила тиші. Класифікуй обидві інституції за двома окремими вимірами цього розділу."
+      },
+      "exercise_a": {
+        "fr": "Le tri est une institution formelle, car la règle est codifiée, et faible, car elle est ignorée. Le silence est une institution informelle, car la règle n'est pas codifiée, et forte, car elle est suivie. On suppose ici qu'il s'agit bien d'obligations envers autrui. Une simple habitude, sans prescription, ne suffit pas à constituer une institution au sens du livre.",
+        "en": "Recycling is a formal institution because the rule is codified, and a weak one because it is ignored. Quiet is an informal institution because the rule is unwritten, and a strong one because it is followed. Both are assumed to prescribe obligations towards others. A mere habit, without a prescription, does not establish an institution in the book's sense.",
+        "uk": "Сортування є формальною інституцією, бо правило кодифіковане, і слабкою, бо його ігнорують. Тиша є неформальною інституцією, бо правило не кодифіковане, і сильною, бо його дотримуються. Тут припускаємо, що обидва правила встановлюють обов’язки щодо інших людей. Сама звичка без припису ще не утворює інституції в розумінні книги; важливо розрізняти належну поведінку та звичайну повторювану дію."
+      },
+      "apply_q": {
+        "fr": "Exemple inventé : une entreprise publie une règle de partage d'information. Les salariés la comprennent, mais pensent que leurs collègues garderont leurs données. Quelle idée aide à expliquer l'absence de changement ?",
+        "en": "Invented example: a firm publishes an information-sharing rule. Employees understand it but expect colleagues to keep their data private. Which idea helps explain why behaviour does not change?",
+        "uk": "Вигаданий приклад: компанія публікує правило обміну інформацією. Працівники його розуміють, але очікують, що колеги приховають свої дані. Яка ідея допомагає пояснити відсутність змін у поведінці людей?"
+      },
+      "apply_a": {
+        "fr": "Mobilise la distinction entre représentations et anticipations, puis entre institutions formelles et fortes. Comprendre la règle ne signifie pas attendre son respect par autrui. Ces anticipations peuvent freiner une contribution si chacun préfère partager seulement quand les autres partagent. La publication change alors la règle codifiée sans garantir le comportement. Ce mécanisme exige cette condition de dépendance aux actions d'autrui.",
+        "en": "Use the distinction between understandings and expectations, then between formal and strong institutions. Understanding a rule does not mean expecting others to follow it. Those expectations can discourage contribution if each person prefers sharing only when others share. Publishing the rule then changes codification without guaranteeing behaviour. This mechanism requires the stated dependence on what other people do.",
+        "uk": "Застосуй розрізнення уявлень та очікувань, а потім формальних і сильних інституцій. Розуміти правило не означає очікувати, що інші його виконуватимуть. Такі очікування можуть стримувати внесок, якщо кожен воліє ділитися лише тоді, коли діляться інші. Публікація змінює кодифіковане правило, але не гарантує поведінки. Цей механізм потребує зазначеної залежності вибору від дій інших людей."
+      },
+      "sentence": {
+        "fr": "Dans cet exemple inventé, la règle devient formelle sans devenir forte : si le partage est conditionnel, les anticipations de non-respect peuvent maintenir l'ancien comportement.",
+        "en": "In this invented example, the rule becomes formal without becoming strong: if sharing is conditional, expectations of noncompliance can sustain the previous pattern of behaviour.",
+        "uk": "У цьому вигаданому прикладі правило стає формальним, але не сильним: якщо обмін умовний, очікування недотримання правила можуть зберігати попередню поведінку всіх учасників."
+      }
+    },
+    {
+      "ch": 6,
+      "source_ids": [
+        572,
+        577,
+        589,
+        596,
+        613,
+        620
+      ],
+      "concepts": [
+        "Nash equilibrium",
+        "best response",
+        "backward induction",
+        "subgame-perfect equilibrium"
+      ],
+      "gist": {
+        "fr": "En gros, prédire un jeu demande de regarder ce que chacun a intérêt à faire compte tenu des autres. Un équilibre de Nash rassemble des meilleures réponses mutuelles. Dans un jeu séquentiel, une stratégie précise aussi les réactions possibles. L'induction à rebours vérifie si les menaces resteraient intéressantes au moment de les exécuter.",
+        "en": "Broadly, predicting play means asking what each player wants to do given the others' strategies. A Nash equilibrium combines mutual best responses. In a sequential game, a strategy also specifies responses to possible earlier actions. Backward induction checks whether a threatened response would still serve the player's interests when its turn actually arrives.",
+        "uk": "Простіше кажучи, щоб передбачити гру, слід з'ясувати, який вибір вигідний кожному з огляду на стратегії інших. Рівновага Неша (Nash equilibrium) поєднує взаємні найкращі відповіді (best responses). У послідовній грі стратегія описує також можливі реакції. Зворотна індукція (backward induction) перевіряє, чи залишиться погроза вигідною, коли настане час її виконувати, з урахуванням уже зроблених ходів."
+      },
+      "use": {
+        "fr": "Cela sert à vérifier la stabilité d'une situation et la crédibilité d'une menace, plutôt qu'à déduire les comportements de la seule bonne volonté des participants.",
+        "en": "Use this to check a situation's stability and a threat's credibility by examining incentives, including what players would choose after an unexpected earlier action.",
+        "uk": "Це допомагає перевірити стійкість ситуації та переконливість погрози через стимули, зокрема через вибір, який учасник зробить після неочікуваного ходу іншого гравця."
+      },
+      "nuance": {
+        "fr": "Nash ne signifie ni efficacité collective ni prédiction certaine. La perfection en sous-jeux ajoute une exigence de crédibilité, selon les préférences et possibilités effectivement modélisées.",
+        "en": "Nash equilibrium guarantees neither collective efficiency nor a certain behavioral prediction. Subgame perfection adds credibility requirements, given the preferences and available actions specified in the game.",
+        "uk": "Рівновага Неша не гарантує ані колективної ефективності, ані точного прогнозу поведінки. Досконалість у підграх додає вимогу переконливості за тих уподобань і можливостей, які задано моделлю."
+      },
+      "diagram": [
+        {
+          "fr": "Comparer les réponses possibles",
+          "en": "Compare possible responses",
+          "uk": "Порівняти можливі відповіді"
+        },
+        {
+          "fr": "Repérer les meilleures réponses mutuelles",
+          "en": "Find mutual best responses",
+          "uk": "Знайти взаємні найкращі відповіді"
+        },
+        {
+          "fr": "Vérifier chaque décision ultérieure",
+          "en": "Check every later decision",
+          "uk": "Перевірити кожне подальше рішення"
+        },
+        {
+          "fr": "Distinguer équilibre et prévision",
+          "en": "Separate equilibrium from prediction",
+          "uk": "Розрізнити рівновагу та прогноз"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Exemple simplifié : un responsable menace d'annuler un projet après un refus. Une fois ce refus survenu, poursuivre lui rapporte davantage. Comment examiner cette menace ?",
+        "en": "Simplified example: a manager threatens to cancel a project after a refusal. Once that refusal occurs, continuing benefits the manager more. How should you examine the threat?",
+        "uk": "Спрощений приклад: керівник погрожує скасувати проєкт у разі відмови. Однак після самої відмови продовження проєкту вигідніше для нього. Як перевірити переконливість цієї погрози?"
+      },
+      "exercise_a": {
+        "fr": "Commence par la décision finale : après le refus, le responsable préfère poursuivre. Sa menace d'annulation n'est donc pas crédible dans ce jeu. L'induction à rebours conduit à écarter les équilibres qui reposent sur cette réaction. Une autre conclusion exigerait de modifier le jeu, par exemple en intégrant un coût réel du reniement.",
+        "en": "Start at the final decision: after the refusal, the manager prefers to continue. The cancellation threat is therefore not credible in this game. Backward induction rules out equilibria relying on that response. A different conclusion would require changing the game, for instance by including a real cost of failing to carry out the threat.",
+        "uk": "Почни з останнього рішення: після відмови керівникові вигідніше продовжувати. Отже, у цій грі погроза скасування непереконлива. Зворотна індукція виключає рівноваги, що спираються на таку реакцію. Інший висновок потребував би зміни гри, наприклад урахування реальної ціни невиконаної погрози. Оцінка залежить від повного опису його вигод і витрат, а не лише від сказаних слів."
+      },
+      "apply_q": {
+        "fr": "Dans un cas simplifié, deux services gardent une procédure lente, car changer seul serait encore pire. Quelle idée mobiliser pour expliquer cette stabilité sans la justifier ?",
+        "en": "In a simplified case, two departments keep a slow procedure because changing alone would be even worse. Which concept explains this stability without endorsing the outcome?",
+        "uk": "У спрощеному випадку два відділи зберігають повільну процедуру, бо самостійна зміна була б іще гіршою. Яке поняття пояснює цю стійкість, не виправдовуючи сам результат?"
+      },
+      "apply_a": {
+        "fr": "Mobilise l'équilibre de Nash : si chaque service répond au mieux à l'autre, aucun ne gagne à changer seul. Cela explique une stabilité individuelle malgré un résultat collectif médiocre. Il faut comparer les gains des autres issues pour parler d'efficacité ; et vérifier les croyances et la compréhension du jeu avant d'en faire une prédiction.",
+        "en": "Use Nash equilibrium: if each department best responds to the other, neither gains by changing alone. This explains individual stability despite a poor collective outcome. Assessing efficiency requires comparing other outcomes. Predicting actual behavior also requires examining beliefs and how well the participants understand the game, rather than treating equilibrium as an automatic forecast.",
+        "uk": "Застосуй рівновагу Неша: якщо кожен відділ найкраще відповідає на вибір іншого, самостійна зміна невигідна. Це пояснює індивідуальну стійкість попри поганий колективний результат. Для оцінки ефективності потрібно порівняти інші результати. А прогноз поведінки вимагає перевірки очікувань учасників і того, наскільки вони розуміють гру; сама наявність рівноваги ще не гарантує, що її оберуть."
+      },
+      "sentence": {
+        "fr": "J'utiliserais l'équilibre de Nash pour expliquer pourquoi personne ne change seul, puis la perfection en sous-jeux pour tester les réactions annoncées à chaque étape.",
+        "en": "I would use Nash equilibrium to explain why nobody changes alone, then subgame perfection to test whether announced responses remain credible at each stage.",
+        "uk": "Я використав би рівновагу Неша, щоб пояснити невигідність самостійної зміни, а досконалість у підграх — щоб перевірити переконливість оголошених реакцій на кожному етапі."
+      }
+    },
+    {
+      "ch": 7,
+      "source_ids": [
+        655,
+        667,
+        670,
+        671,
+        673,
+        676
+      ],
+      "concepts": [
+        "anarchy",
+        "Nash equilibrium",
+        "social dilemma",
+        "property rights"
+      ],
+      "gist": {
+        "fr": "En gros, le modèle demande ce que devient la production quand la force détermine qui la garde. Chacun partage son temps entre nourriture et armes. À égalité, augmenter légèrement ses armes permet de prendre davantage. Sous ces hypothèses, l'équilibre absorbe tout le temps dans les armes : la recherche individuelle de gains détruit la production commune.",
+        "en": "Broadly, the model asks what happens to production when force determines who keeps it. Each person divides time between food and weapons. From equal weapon levels, a small increase can secure more food. Under these assumptions, equilibrium allocates all time to weapons: individually motivated attempts to secure resources eliminate the group's food production.",
+        "uk": "Простіше кажучи, модель анархії (anarchy) запитує, що стається з виробництвом, коли силу використовують для привласнення результату. Кожен ділить час між їжею та зброєю. За однакового озброєння невелике збільшення дає змогу забрати більше їжі. За цих припущень рівновага Неша (Nash equilibrium) спрямовує весь час на зброю, а індивідуальне прагнення захистити вигоди усуває спільне виробництво."
+      },
+      "use": {
+        "fr": "Cela sert à expliquer pourquoi protéger ce que l'on produit compte autant que savoir produire, et pourquoi des choix individuellement intéressants peuvent gaspiller les ressources collectives.",
+        "en": "Use it to explain why securing the proceeds of production matters alongside productive capacity, and why individually attractive choices can waste collective resources.",
+        "uk": "Це допомагає пояснити, чому захист результатів праці важливий поряд зі здатністю виробляти і чому індивідуально вигідні рішення можуть марнувати спільні ресурси."
+      },
+      "nuance": {
+        "fr": "C'est un modèle stylisé, pas une preuve historique universelle. Son résultat dépend notamment de la règle du plus armé ; il ne suppose pas nécessairement des combats.",
+        "en": "This is a stylized model, not a universal historical finding. Its result depends on the stronger player's taking all food; actual fighting need not occur.",
+        "uk": "Це стилізована модель, а не універсальний історичний доказ. Результат залежить від правила, за яким краще озброєний забирає всю їжу; реальний бій не обов'язковий."
+      },
+      "diagram": [
+        {
+          "fr": "Temps : nourriture ou armes",
+          "en": "Time: food or weapons",
+          "uk": "Час: їжа або зброя"
+        },
+        {
+          "fr": "Allocation selon la force relative",
+          "en": "Allocation by relative strength",
+          "uk": "Розподіл за відносною силою"
+        },
+        {
+          "fr": "Vérifier les déviations individuelles",
+          "en": "Check individual deviations",
+          "uk": "Перевірити індивідуальні відхилення"
+        },
+        {
+          "fr": "Équilibre sans production alimentaire",
+          "en": "Equilibrium without food production",
+          "uk": "Рівновага без виробництва їжі"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Dans le modèle du chapitre, chacun consacre la moitié de son temps aux armes. Pourquoi cette égalité ne constitue-t-elle pas un équilibre de Nash ?",
+        "en": "In the chapter's model, each person spends half their time making weapons. Why does this equal division fail to constitute a Nash equilibrium?",
+        "uk": "У моделі розділу кожен витрачає половину свого часу на зброю, а решту — на їжу. Чому такий рівний розподіл часу не є рівновагою Неша?"
+      },
+      "exercise_a": {
+        "fr": "À égalité, chacun reçoit la moitié de la nourriture totale. Si l'un augmente très légèrement ses armes, il devient le plus armé et prend presque toute cette nourriture. Le gain d'appropriation dépasse alors la petite perte de production. Une déviation unilatérale est profitable : le partage égal du temps n'est donc pas un équilibre.",
+        "en": "At equal weapon levels, each receives half of total food. By making slightly more weapons, one player becomes stronger and takes almost all that food. The gain from appropriation outweighs the small reduction in production. Since a unilateral deviation is profitable, the equal division of time is not a Nash equilibrium under the model's allocation rule.",
+        "uk": "За однакового озброєння кожен отримує половину всієї їжі. Трохи збільшивши виробництво зброї, один гравець стає сильнішим і забирає майже всю їжу. Виграш від привласнення перевищує невелику втрату виробництва. Оскільки самостійне відхилення вигідне, рівний розподіл часу не є рівновагою Неша за правилом розподілу, яке встановлено в цій моделі. Рівність сама по собі не усуває стимулу відхилитися."
+      },
+      "apply_q": {
+        "fr": "Exemple simplifié : deux équipes passent beaucoup de temps à défendre leur budget contre l'autre au lieu d'avancer. Quel mécanisme du chapitre peut éclairer cette situation ?",
+        "en": "Simplified example: two teams spend much of their time defending their budgets against each other instead of doing productive work. Which chapter mechanism helps explain this?",
+        "uk": "Спрощений приклад: дві команди витрачають багато часу на захист своїх бюджетів одна від одної замість продуктивної роботи. Який механізм цього розділу допомагає пояснити ситуацію?"
+      },
+      "apply_a": {
+        "fr": "Mobilise le dilemme social du modèle d'anarchie : une activité défensive peut sembler utile à chaque équipe tout en détournant des ressources de la production. Des règles de protection peuvent modifier ces incitations. L'analogie reste limitée : il faut montrer que ces efforts servent surtout l'appropriation, plutôt que supposer que toute défense budgétaire est improductive.",
+        "en": "Use the social dilemma in the anarchy model: defensive effort may benefit each team while diverting resources from production. Protective rules can change those incentives. Keep the analogy conditional, however: establish that the effort mainly serves appropriation, rather than assuming that all budget defense is unproductive or that the model's exact zero-production outcome follows.",
+        "uk": "Застосуй соціальну дилему моделі анархії: захисні зусилля можуть бути вигідними кожній команді, але відбирати ресурси у виробництва. Правила захисту можуть змінити стимули. Проте аналогія умовна: треба показати, що ці зусилля передусім спрямовані на привласнення, а не вважати будь-який захист бюджету непродуктивним чи автоматично переносити на організацію точний результат моделі з нульовим виробництвом."
+      },
+      "sentence": {
+        "fr": "Le modèle d'anarchie m'aide à montrer comment la protection individuelle des gains peut absorber des ressources productives, sous une règle d'appropriation fondée sur la force.",
+        "en": "The anarchy model helps me show how individual attempts to secure gains can absorb productive resources under an allocation rule based on relative strength.",
+        "uk": "Модель анархії допомагає мені показати, як індивідуальні спроби захистити вигоди можуть поглинати продуктивні ресурси за правила розподілу, яке спирається на відносну силу учасників."
+      }
+    },
+    {
+      "ch": 8,
+      "source_ids": [
+        750,
+        756,
+        766,
+        783,
+        803,
+        819
+      ],
+      "concepts": [
+        "reciprocity",
+        "hold-up problem",
+        "Contract game",
+        "Promise game"
+      ],
+      "gist": {
+        "fr": "En gros, on peut comparer le jeu initial à une situation élargie où les personnes communiquent, récompensent ou punissent. Une réaction coûteuse devient crédible si gratitude, grief, devoir ou coût du reniement la rendent préférable. Autre possibilité : la mémoire du passé sélectionne entre plusieurs équilibres futurs. Ajouter des possibilités ne garantit pourtant pas leur bon usage.",
+        "en": "Broadly, compare the original game with an expanded situation allowing communication, rewards, or punishment. A costly response becomes credible if gratitude, grievance, duty, or the cost of breaking one's word makes it preferable. Alternatively, remembering the past can select among several future equilibria. Adding possibilities still does not guarantee that players coordinate on a better equilibrium.",
+        "uk": "Простіше кажучи, можна порівняти початкову гру з розширеною ситуацією спілкування, винагород і покарань. Взаємність (reciprocity) стає переконливою, якщо вдячність, образа, обов'язок або ціна порушеного слова роблять відповідну реакцію вигідною. Інакше можливе захоплення вигоди після чужих зусиль (hold-up problem). Пам'ять також може пов'язати минулий вчинок із вибором між кількома майбутніми рівновагами, але кращий результат не гарантовано."
+      },
+      "use": {
+        "fr": "Cela sert à analyser une promesse ou une sanction en demandant qui voudra réellement l'exécuter plus tard, avec quels coûts matériels et quelles motivations morales.",
+        "en": "Use it to analyze a promise or sanction by asking who would actually want to implement it later, considering both material costs and moral motivations.",
+        "uk": "Це допомагає аналізувати обіцянку або санкцію через питання, хто справді захоче виконати її пізніше, з урахуванням матеріальних витрат, моральних мотивів і очікувань інших."
+      },
+      "nuance": {
+        "fr": "Récompense et punition dépendent différemment des coûts et motivations morales. La punition peut rester hors du chemin d'équilibre ; le Promise game exige mémoire et équilibres futurs multiples.",
+        "en": "Rewards and punishments involve different costs and moral motives. Punishment may remain off the equilibrium path; the Promise game requires memory and multiple future equilibria.",
+        "uk": "Винагорода й покарання залежать від різних витрат і моральних мотивів. Покарання може не виконуватися на шляху рівноваги; гра обіцянки потребує пам'яті та кількох майбутніх рівноваг."
+      },
+      "diagram": [
+        {
+          "fr": "Élargir les actions possibles",
+          "en": "Expand the available actions",
+          "uk": "Розширити можливі дії"
+        },
+        {
+          "fr": "Évaluer coûts et motivations",
+          "en": "Assess costs and motives",
+          "uk": "Оцінити витрати та мотиви"
+        },
+        {
+          "fr": "Vérifier les réactions ultérieures",
+          "en": "Check later responses",
+          "uk": "Перевірити подальші реакції"
+        },
+        {
+          "fr": "Coordonner les anticipations",
+          "en": "Coordinate expectations",
+          "uk": "Узгодити очікування"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Exemple simplifié : une récompense coûte 1,5 au bénéficiaire de l'aide. Ne pas tenir sa promesse lui coûte moralement 2. Pourquoi l'aide peut-elle devenir possible ?",
+        "en": "Simplified example: a reward costs the recipient of help 1.5. Breaking the promise creates a moral cost of 2. Why can this make helping possible?",
+        "uk": "Спрощений приклад: винагорода коштує отримувачеві допомоги 1,5, а порушення обіцянки завдає йому моральної втрати 2. Чому за цих умов допомога може стати можливою?"
+      },
+      "exercise_a": {
+        "fr": "Après l'aide, payer coûte moins que renier sa parole : la promesse est crédible dans ce calcul. Si aider coûte 1 et que la récompense vaut 1,5 pour l'aidant, celui-ci préfère aider lorsqu'il connaît cette motivation. C'est la logique du Contract game. Sans coût du reniement suffisant, le problème de hold-up réapparaît.",
+        "en": "After receiving help, paying costs less than breaking the promise, so the promise is credible in this calculation. If helping costs 1 and the reward is worth 1.5 to the helper, helping is preferable when that motivation is known. This follows the Contract game. Without a sufficient cost of reneging, the hold-up problem returns.",
+        "uk": "Після отриманої допомоги заплатити дешевше, ніж порушити слово, тому за цим розрахунком обіцянка переконлива. Якщо допомога коштує помічникові 1, а винагорода дає йому 1,5, допомагати вигідніше, коли він знає про цю мотивацію. Це логіка контрактної гри. Якщо ціна порушення обіцянки недостатня, проблема захоплення вигоди повертається, і помічник може заздалегідь відмовитися від допомоги."
+      },
+      "apply_q": {
+        "fr": "Dans un cas simplifié, un client promet de payer après un travail spécifique, mais pourra renégocier une fois le travail terminé. Quelle idée utiliser pour analyser l'hésitation ?",
+        "en": "In a simplified case, a client promises payment for specialized work but can renegotiate after completion. Which concept explains why the supplier hesitates to begin?",
+        "uk": "У спрощеному випадку клієнт обіцяє заплатити за спеціалізовану роботу, але зможе переглянути умови після її завершення. Яке поняття пояснює, чому постачальник вагається починати?"
+      },
+      "apply_a": {
+        "fr": "Mobilise le hold-up : une fois l'effort fourni, le client peut préférer ne pas compenser comme promis. Anticipant ce choix, le fournisseur refuse ou réduit son effort. La réponse doit identifier ce qui rendrait le reniement coûteux. Une simple annonce ne suffit pas ; la condition doit rester opérante après la réalisation du travail.",
+        "en": "Use the hold-up problem: after the effort has been supplied, the client may prefer not to provide the promised compensation. Anticipating that choice, the supplier refuses or reduces effort. Identify what would make reneging costly. An announcement alone is insufficient; the relevant incentive or constraint must still operate after the work has been completed.",
+        "uk": "Застосуй проблему захоплення вигоди: після виконання роботи клієнтові може бути вигідніше не надати обіцяної компенсації. Передбачаючи це, постачальник відмовляється або зменшує зусилля. У відповіді слід назвати, що зробило б порушення обіцянки дорогим. Самої заяви недостатньо: відповідний стимул чи обмеження має діяти й після завершення роботи, коли початкові зусилля вже неможливо повернути."
+      },
+      "sentence": {
+        "fr": "J'analyserais cette promesse par le hold-up : la coopération dépend de l'intérêt à tenir parole après l'effort, et de ce que l'autre en sait.",
+        "en": "I would analyze this promise through hold-up: cooperation depends on the incentive to keep one's word after the effort and on the other player's knowledge.",
+        "uk": "Я проаналізував би цю обіцянку через проблему захоплення вигоди: співпраця залежить від стимулу дотримати слова після чужих зусиль і від обізнаності іншого учасника."
+      }
+    },
+    {
+      "ch": 9,
+      "source_ids": [
+        874,
+        880,
+        885,
+        886,
+        892,
+        895
+      ],
+      "concepts": [
+        "cheap talk",
+        "self-committing",
+        "self-signaling",
+        "Stag Hunt"
+      ],
+      "gist": {
+        "fr": "En gros, avoir plusieurs équilibres laisse une question ouverte : lequel les joueurs attendent-ils ? Parler peut rapprocher leurs anticipations, mais il faut regarder l'intérêt à envoyer le message. Self-committing signifie vouloir le respecter si l'émetteur pense être cru ; self-signaling signifie ne l'envoyer qu'avec cette intention. Le Stag Hunt montre pourquoi ces deux propriétés ne se confondent pas.",
+        "en": "Broadly, multiple equilibria leave open which one players expect. Communication may align their expectations, but examine the incentive to send each message. Self-committing means wanting to act as announced when the sender believes the receiver believes it. Self-signaling means sending it only when that action is intended. The Stag Hunt shows why these are distinct properties of a message.",
+        "uk": "Простіше кажучи, кілька рівноваг залишають питання: на яку очікують гравці? Безкоштовне спілкування без зобов'язань (cheap talk) може узгодити очікування. Самозобов'язувальне повідомлення (self-committing) вигідно виконати, коли відправник вважає, що одержувач йому повірив; самосигнальне (self-signaling) надсилають лише з наміром виконати сказане. Полювання на оленя (Stag Hunt) показує, чому ці властивості різні: вигідне оголошення ще не розкриває справжнього наміру."
+      },
+      "use": {
+        "fr": "Cela sert à distinguer un simple accord verbal d'une information crédible sur les intentions, et à expliquer pourquoi un intérêt commun ne supprime pas toujours la méfiance.",
+        "en": "Use this to distinguish verbal agreement from credible information about intentions, and to explain why sharing a preferred outcome does not always remove distrust.",
+        "uk": "Це допомагає відрізнити усну домовленість від переконливої інформації про наміри та пояснити, чому спільно бажаний результат не завжди усуває недовіру між учасниками."
+      },
+      "nuance": {
+        "fr": "Self-committing n'implique pas self-signaling. Dans le Stag Hunt, souhaiter que l'autre choisisse H peut rendre l'annonce H attractive même si l'on prévoit personnellement de choisir L.",
+        "en": "Self-committing does not imply self-signaling. In the Stag Hunt, wanting the other player to choose H can make announcing H attractive even while intending to choose L.",
+        "uk": "Самозобов'язувальність не означає самосигнальності. У полюванні на оленя бажання отримати H від іншого робить оголошення H вигідним навіть за власного наміру обрати L."
+      },
+      "diagram": [
+        {
+          "fr": "Identifier les équilibres possibles",
+          "en": "Identify possible equilibria",
+          "uk": "Визначити можливі рівноваги"
+        },
+        {
+          "fr": "Examiner le message annoncé",
+          "en": "Examine the announced message",
+          "uk": "Розглянути оголошене повідомлення"
+        },
+        {
+          "fr": "Tester engagement et signal",
+          "en": "Test commitment and signaling",
+          "uk": "Перевірити зобов’язання та сигнал"
+        },
+        {
+          "fr": "Évaluer les anticipations partagées",
+          "en": "Assess shared expectations",
+          "uk": "Оцінити спільні очікування"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Dans le Stag Hunt de la fiche, croire l'autre prêt à jouer H avec probabilité 0,8 suffit-il ? Compare H = 9q et L = 7 + q.",
+        "en": "In the study sheet's Stag Hunt, is believing the other player will choose H with probability 0.8 enough? Compare H = 9q and L = 7 + q.",
+        "uk": "У полюванні на оленя з цього конспекту чи достатньо ймовірності 0,8, що інший обере H? Порівняй очікувані виграші H = 9q та L = 7 + q."
+      },
+      "exercise_a": {
+        "fr": "Non : H rapporte 7,2 et L rapporte 7,8, donc L reste préférable. Pour choisir H, il faut 9q ≥ 7 + q, soit q ≥ 7/8. Ce seuil illustre la fragilité de la coordination : préférer ensemble (H, H) ne suffit pas. Il faut aussi une confiance assez forte dans le choix de l'autre.",
+        "en": "No: H yields 7.2 while L yields 7.8, so L is preferable. Choosing H requires 9q ≥ 7 + q, or q ≥ 7/8. This threshold illustrates fragile coordination: jointly preferring (H, H) is insufficient. Each player also needs sufficiently strong confidence in the other's choice under the payoffs given in this example.",
+        "uk": "Ні: H дає 7,2, а L — 7,8, тож L залишається вигіднішим. Для вибору H потрібно 9q ≥ 7 + q, тобто q ≥ 7/8. Цей поріг показує крихкість координації: спільної переваги результату (H, H) недостатньо. Потрібна також достатня впевненість у виборі іншого за виграшів, заданих у цьому конкретному прикладі."
+      },
+      "apply_q": {
+        "fr": "Exemple simplifié : deux partenaires annoncent un effort élevé, mais chacun préfère que l'autre travaille davantage même en réduisant son propre effort. Quel test appliquer à leurs annonces ?",
+        "en": "Simplified example: two partners announce high effort, but each prefers more effort from the other even while reducing their own contribution. Which test should you apply?",
+        "uk": "Спрощений приклад: двоє партнерів оголошують значні зусилля, але кожен хоче більше роботи від іншого навіть за зменшення власного внеску. Як перевірити їхні повідомлення?"
+      },
+      "apply_a": {
+        "fr": "Mobilise la distinction self-committing/self-signaling. Une annonce peut être intéressante à respecter si elle est crue, tout en restant avantageuse à envoyer sans intention de la respecter. Si l'émetteur gagne à stimuler l'autre quelle que soit sa propre action, son message ne révèle pas nécessairement son intention. Il faut vérifier les gains précis du cas.",
+        "en": "Use the self-committing/self-signaling distinction. An announcement may be worth honoring when believed, yet still be attractive to send without intending to honor it. If encouraging the other benefits the sender regardless of the sender's own action, the message need not reveal intention. Check the case's actual payoffs before concluding that its structure matches the Stag Hunt.",
+        "uk": "Застосуй розрізнення самозобов'язувальності та самосигнальності. Повідомлення може бути вигідно виконати, якщо в нього повірили, але водночас вигідно надіслати без наміру виконувати. Якщо заохочення іншого корисне незалежно від власної дії, слова не обов'язково розкривають намір. Перш ніж прирівнювати ситуацію до полювання на оленя, потрібно перевірити її конкретні виграші та стимули обох партнерів."
+      },
+      "sentence": {
+        "fr": "Je testerais le caractère self-signaling du message : l'émetteur aurait-il aussi intérêt à l'envoyer s'il prévoyait une autre action que celle qu'il annonce aux autres ?",
+        "en": "I would test whether the message is self-signaling: would the sender also benefit from sending it while planning a different action from the one announced?",
+        "uk": "Я перевірив би самосигнальність повідомлення: чи було б відправникові також вигідно надіслати його, якби він планував іншу дію, ніж та, яку оголошує іншим?"
+      }
+    },
+    {
+      "ch": 10,
+      "source_ids": [
+        967,
+        968,
+        977,
+        979,
+        981,
+        996
+      ],
+      "concepts": [
+        "nominal authority",
+        "real authority",
+        "absolute authority",
+        "hold-up problem"
+      ],
+      "gist": {
+        "fr": "En gros, porter le titre de chef ne suffit pas à être suivi. L'autorité réelle dépend aussi de ce que chacun attend des autres. Surtout, pouvoir décider à nouveau plus tard peut empêcher de promettre aujourd'hui. Dans le Promise game, limiter cette liberté peut rendre l'engagement crédible et améliorer même le gain du détenteur de l'autorité.",
+        "en": "Broadly, holding a leadership title does not guarantee obedience. Real authority also depends on what each follower expects of the others. Moreover, retaining freedom to decide again later can undermine today's promises. In the Promise game, limiting that freedom can make commitment credible and even improve the payoff of the person whose authority is constrained.",
+        "uk": "Простіше кажучи, титул керівника не гарантує послуху. Номінальна влада (nominal authority) відрізняється від реальної (real authority), яка залежить також від очікувань щодо інших. Абсолютна влада (absolute authority) дозволяє пізніше переглянути рішення й тому може знецінити сьогоднішню обіцянку. У грі обіцянки обмеження цієї свободи здатне зробити зобов'язання переконливим і навіть поліпшити виграш самого керівника."
+      },
+      "use": {
+        "fr": "Cela sert à analyser une réforme de gouvernance : qui sera effectivement suivi, et quelles contraintes donneront confiance à ceux qui doivent investir ou agir en premier ?",
+        "en": "Use it to analyze governance reform: who will actually be followed, and which constraints will reassure those who must invest or act before receiving the promised return?",
+        "uk": "Це допомагає аналізувати реформу управління: кого справді слухатимуть і які обмеження дадуть упевненість тим, хто має інвестувати або діяти раніше за отримання обіцяного результату?"
+      },
+      "nuance": {
+        "fr": "L'autorité nominale n'est ni nécessaire ni suffisante pour l'autorité réelle. Une contrainte ne crédibilise une promesse que si elle limite effectivement le choix futur pertinent.",
+        "en": "Nominal authority is neither necessary nor sufficient for real authority. A constraint supports a credible promise only if it effectively limits the relevant future choice.",
+        "uk": "Номінальна влада не є ані необхідною, ані достатньою для реальної. Обмеження підкріплює переконливість обіцянки лише тоді, коли справді звужує відповідний майбутній вибір."
+      },
+      "diagram": [
+        {
+          "fr": "Repérer qui est effectivement suivi",
+          "en": "Identify who is actually followed",
+          "uk": "Визначити, кого справді слухають"
+        },
+        {
+          "fr": "Examiner le pouvoir de révision",
+          "en": "Examine the power to revise",
+          "uk": "Перевірити можливість перегляду рішення"
+        },
+        {
+          "fr": "Tester les contraintes futures",
+          "en": "Test future constraints",
+          "uk": "Перевірити майбутні обмеження"
+        },
+        {
+          "fr": "Évaluer la crédibilité des engagements",
+          "en": "Assess commitment credibility",
+          "uk": "Оцінити переконливість зобов’язань"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Dans le Promise game présenté ici, Colin obtient 4 avec la promesse tenue mais 3 avec l'autorité absolue. Pourquoi davantage de pouvoir peut-il réduire son gain ?",
+        "en": "In the Promise game presented here, Colin receives 4 with the promise honored but 3 with absolute authority. Why can greater power reduce his payoff?",
+        "uk": "У наведеній грі обіцянки Колін отримує 4 за дотриманої обіцянки, але 3 за абсолютної влади. Чому більша влада може зменшити його власний виграш?"
+      },
+      "exercise_a": {
+        "fr": "Avec l'autorité absolue, Colin peut imposer plus tard son équilibre préféré, même après avoir promis autre chose. Rowena anticipe ce choix et ne se sacrifie pas. Colin perd alors le bénéfice de son aide. Limiter son pouvoir peut rétablir une promesse crédible ; le gain supplémentaire provient de la coopération rendue possible, pas du pouvoir lui-même.",
+        "en": "With absolute authority, Colin can later impose his preferred equilibrium even after promising something else. Rowena anticipates this and refuses to sacrifice. Colin therefore loses the benefit of her help. Constraining his authority can restore a credible promise; the extra payoff comes from the cooperation this makes possible, rather than from the constraint by itself.",
+        "uk": "За абсолютної влади Колін може пізніше нав'язати бажану рівновагу, навіть якщо обіцяв інше. Ровена передбачає це й відмовляється жертвувати. Тому Колін втрачає вигоду від її допомоги. Обмеження влади може відновити переконливу обіцянку; додатковий виграш походить від співпраці, яку це уможливлює, а не від самого обмеження чи автоматичного підвищення моральності когось із учасників."
+      },
+      "apply_q": {
+        "fr": "Exemple simplifié : une direction promet une prime pour un effort préalable, mais peut annuler toute décision. Quelle idée du chapitre utiliser pour proposer une amélioration crédible ?",
+        "en": "Simplified example: management promises a bonus for an earlier effort but can cancel any decision. Which chapter concept would support proposing a credible improvement to governance?",
+        "uk": "Спрощений приклад: керівництво обіцяє премію за попередні зусилля, але може скасувати будь-яке рішення. Яке поняття розділу допоможе запропонувати зміну управління, що підвищить довіру?"
+      },
+      "apply_a": {
+        "fr": "Mobilise les limites de l'autorité et le hold-up. Si la direction peut retirer la prime après l'effort, les salariés peuvent refuser de s'engager. Une contrainte effective sur cette révision peut rendre la promesse crédible. Il faut expliquer qui fait respecter la contrainte : un texte ou un titre nouveau ne garantit pas l'autorité réelle.",
+        "en": "Use authority's limitations and the hold-up problem. If management can withdraw the bonus after employees make the effort, they may refuse to commit. An effective restriction on that revision can make the promise credible. Explain who enforces the restriction: a written rule or a new title alone does not establish real authority or actual compliance.",
+        "uk": "Застосуй обмеження влади та проблему захоплення вигоди. Якщо керівництво може скасувати премію після зусиль працівників, вони можуть не погодитися докладати їх. Дієве обмеження такого перегляду здатне зробити обіцянку переконливою. Треба пояснити, хто забезпечує дотримання обмеження: письмове правило чи новий титул самі по собі не створюють реальної влади й не гарантують виконання."
+      },
+      "sentence": {
+        "fr": "Je distinguerais le titre officiel de l'obéissance effective, puis j'examinerais si les contraintes empêchent réellement le dirigeant de revenir sur sa promesse après l'effort demandé.",
+        "en": "I would distinguish the official title from actual obedience, then examine whether constraints really prevent the leader from revising the promise after the requested effort.",
+        "uk": "Я розрізнив би офіційний титул і фактичний послух, а потім перевірив би, чи обмеження справді заважають керівникові переглянути обіцянку після докладених іншими зусиль."
+      }
+    },
+    {
+      "ch": 11,
+      "source_ids": [
+        1077,
+        1137,
+        1139,
+        1150,
+        1228,
+        1229
+      ],
+      "concepts": [
+        "Indefinitely repeated social dilemma",
+        "Conditional cooperation",
+        "Renegotiation",
+        "Retribution and atonement"
+      ],
+      "gist": {
+        "fr": "En gros, une relation relie ce que je fais aujourd’hui à ce que l’autre fera demain. Même égoïste, je peux respecter un accord pour préserver ses bénéfices futurs. Mais il faut une continuation suffisamment probable, des comportements mémorisés et une réaction crédible à la triche. La coopération reste un équilibre possible parmi plusieurs : les attentes doivent aussi se coordonner.",
+        "en": "In plain terms, a relationship connects what I do today with how you treat me tomorrow. Even selfish players may honour an agreement to preserve future benefits. This requires a sufficiently likely continuation, remembered behaviour and a credible response to cheating. Cooperation remains one possible equilibrium among several, so players must also coordinate their expectations around the cooperative plan.",
+        "uk": "Коротко: тривалі відносини (relationships) пов’язують мої сьогоднішні дії з тим, як інша сторона поводитиметься завтра. Навіть егоїст може дотримуватися угоди заради майбутніх вигод. Для цього потрібні достатня ймовірність продовження взаємодії, пам’ять про поведінку та достовірна реакція на порушення. Співпраця залишається лише однією з можливих рівноваг, тому сторони також мають узгодити очікування щодо спільного плану дій."
+      },
+      "use": {
+        "fr": "Mobilise ce chapitre lorsqu’un cas mentionne des échanges durables, une coopération conditionnelle ou une menace de représailles. Explique à la fois pourquoi tricher coûte et pourquoi sanctionner reste intéressant.",
+        "en": "Use this chapter when a case describes lasting exchanges, conditional cooperation or threatened retaliation. Explain both why cheating becomes costly and why carrying out the response remains worthwhile.",
+        "uk": "Застосовуй цей розділ, коли йдеться про тривалі обміни, умовну співпрацю або загрозу відплати. Пояснюй і майбутню ціну порушення, і причину, через яку іншій стороні вигідно застосувати санкцію."
+      },
+      "nuance": {
+        "fr": "Reconstruction des supports de cours, sans texte du chapitre. Répétition indéfinie ne garantit pas coopération : δ, coût des sanctions et possibilité de renégocier déterminent la crédibilité du plan.",
+        "en": "Reconstructed from course materials, without the chapter text. Indefinite repetition does not guarantee cooperation: δ, punishment costs and possible renegotiation determine whether the proposed plan is credible.",
+        "uk": "Це реконструкція за навчальними матеріалами без тексту розділу. Невизначена тривалість взаємодії не гарантує співпраці: δ, витрати на покарання та можливість перегляду домовленостей визначають достовірність запропонованого плану поведінки."
+      },
+      "diagram": [
+        {
+          "fr": "Action présente, passé mémorisé",
+          "en": "Current action, remembered past",
+          "uk": "Сьогоднішня дія, пам’ять про минуле"
+        },
+        {
+          "fr": "Réaction future prévue",
+          "en": "Specified future response",
+          "uk": "Визначена майбутня реакція"
+        },
+        {
+          "fr": "Gain immédiat contre pertes futures",
+          "en": "Immediate gain versus future losses",
+          "uk": "Негайна вигода проти майбутніх втрат"
+        },
+        {
+          "fr": "Coopération possible si plan crédible",
+          "en": "Cooperation possible if plan credible",
+          "uk": "Співпраця можлива за достовірного плану"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Dans le modèle B de la fiche, coopérer rapporte 3, dévier 4 et la défection mutuelle 1. Avec δ = 1/2, compare coopération permanente et déviation suivie de défection permanente.",
+        "en": "In model B of the study sheet, cooperation pays 3, deviation 4 and mutual defection 1. With δ = 1/2, compare permanent cooperation with deviation followed by permanent mutual defection.",
+        "uk": "У моделі B цієї пам’ятки співпраця дає 3, одноразове порушення — 4, взаємна відмова від співпраці — 1. За δ = 1/2 порівняй постійну співпрацю з порушенням і подальшою взаємною відмовою."
+      },
+      "exercise_a": {
+        "fr": "Coopérer vaut 3/(1 − 1/2) = 6. Dévier vaut 4 + (1/2)/(1 − 1/2) = 5. La déviation ne paie donc pas si l’autre applique la réaction prévue. Cela vérifie l’incitation sur le chemin coopératif ; cela ne sélectionne pas cet équilibre. La défection permanente reste aussi possible, et la menace de rupture peut rencontrer un problème de renégociation.",
+        "en": "Cooperation is worth 3/(1 − 1/2) = 6. Deviation is worth 4 + (1/2)/(1 − 1/2) = 5. Cheating therefore does not pay if the partner follows the specified response. This checks the incentive along the cooperative path; it does not select that equilibrium. Permanent defection remains possible, and the threat of ending cooperation can face a renegotiation problem.",
+        "uk": "Співпраця дає 3/(1 − 1/2) = 6. Порушення дає 4 + (1/2)/(1 − 1/2) = 5. Отже, порушувати невигідно, якщо партнер виконує передбачений план реакції. Цей розрахунок перевіряє стимул дотримуватися співпраці, але не визначає, яку рівновагу оберуть сторони. Постійна відмова від співпраці також можлива, а загроза розриву може виявитися вразливою до перегляду домовленостей."
+      },
+      "apply_q": {
+        "fr": "Deux pays réduisent leurs droits de douane à condition que leur partenaire fasse de même. Après une violation, des représailles temporaires sont prévues. Quel concept structure ta réponse ?",
+        "en": "Two countries lower tariffs provided their partner does the same. A violation triggers planned temporary retaliation. Which concept should structure your answer, and what makes that retaliation credible?",
+        "uk": "Дві країни знижують мита за умови взаємності. Після порушення угоди передбачено тимчасові заходи у відповідь. Який концепт варто використати у відповіді та що робить ці заходи достовірними?"
+      },
+      "apply_a": {
+        "fr": "Mobilise le dilemme social répété indéfiniment : les concessions futures rendent la coopération conditionnelle intéressante. Vérifie ensuite la crédibilité des représailles, pas seulement leur sévérité. Une réparation temporaire avantageuse pour la victime peut résister à la renégociation. Il faut que les bénéfices futurs comptent suffisamment et que les pays se coordonnent sur ce plan plutôt que sur la défection permanente.",
+        "en": "Use the indefinitely repeated social dilemma: future concessions can make conditional cooperation worthwhile. Then assess the credibility of retaliation, rather than only its severity. Temporary atonement that benefits the harmed party can resist renegotiation. Future gains must matter sufficiently, and countries must coordinate on this plan rather than on permanent defection, which remains another possible equilibrium.",
+        "uk": "Використай концепт соціальної дилеми з невизначеним повторенням: майбутні поступки можуть зробити умовну співпрацю вигідною. Далі перевір достовірність відплати, а не лише її суворість. Тимчасове спокутування, вигідне потерпілій стороні, може витримати спроби перегляду домовленостей. Майбутні вигоди мають бути достатньо значущими, а країни повинні узгодити саме цей план, адже постійна відмова від співпраці також залишається можливою рівновагою."
+      },
+      "sentence": {
+        "fr": "Je peux coopérer sans être altruiste si perdre les échanges futurs me coûte davantage que tricher aujourd’hui et si la réaction annoncée reste crédible.",
+        "en": "I can cooperate without altruism when losing future exchanges costs more than cheating today yields, provided the announced response remains credible after a violation.",
+        "uk": "Я можу співпрацювати без альтруїзму, якщо втрата майбутніх обмінів коштує більше, ніж дає сьогоднішнє порушення, а оголошена реакція залишається достовірною після цього порушення."
+      }
+    },
+    {
+      "ch": 12,
+      "source_ids": [
+        1275,
+        1277,
+        1292,
+        1303,
+        1318,
+        1366
+      ],
+      "concepts": [
+        "Third-party punishment",
+        "Professional protection",
+        "Organizational economies of scale"
+      ],
+      "gist": {
+        "fr": "En gros, un tiers peut rendre une sanction crédible quand la victime n’a pas intérêt à l’appliquer seule. Le professionnel protège des revenus futurs provenant de plusieurs clients : laisser passer une violation peut tous les faire partir. Punir une fois devient alors rentable pour lui. La question centrale reste son intérêt à exécuter la menace, et non sa seule capacité physique.",
+        "en": "In plain terms, a third party can make punishment credible when the victim would not carry it out alone. A professional protects future income from several clients: overlooking one violation could drive them all away. Punishing once may therefore become worthwhile. The central question is whether the enforcer wants to execute the threat, alongside having the physical ability to do so.",
+        "uk": "Коротко: покарання третьою стороною (third-party punishment) може бути достовірним, коли самій жертві невигідно його застосовувати. Професіонал захищає майбутні доходи від багатьох клієнтів: одне непокаране порушення може відвернути їх усіх. Тому покарати один раз може бути вигідно. Головне питання — чи хоче виконавець здійснити погрозу, коли це потрібно, а не лише чи має він фізичну силу."
+      },
+      "use": {
+        "fr": "Mobilise ce chapitre quand la victime délègue sa protection à un tiers. Relie le coût d’une sanction aux revenus futurs menacés auprès de tous les clients du professionnel.",
+        "en": "Use this chapter when a victim delegates protection to a third party. Compare the cost of one punishment with future income at risk across the professional’s entire client base.",
+        "uk": "Застосовуй цей розділ, коли жертва доручає захист третій стороні. Порівняй витрати на одне покарання з майбутніми доходами, які виконавець ризикує втратити від усієї своєї клієнтської бази."
+      },
+      "nuance": {
+        "fr": "Reconstruction partielle à partir du cours, surtout du modèle de 2021. Le professionnel doit vouloir punir ; ses intérêts commerciaux ne garantissent aucune bienveillance envers les personnes qu’il protège ou contraint.",
+        "en": "A partial reconstruction from course materials, especially the 2021 model. The professional must want to punish; commercial incentives do not guarantee benevolence towards those being protected or coerced.",
+        "uk": "Це часткова реконструкція за навчальними матеріалами, переважно моделлю 2021 року. Професіонал повинен хотіти карати; комерційні стимули не гарантують доброзичливості до людей, яких він захищає або примушує."
+      },
+      "diagram": [
+        {
+          "fr": "Sanction individuelle trop coûteuse",
+          "en": "Individual punishment too costly",
+          "uk": "Особисте покарання надто дороге"
+        },
+        {
+          "fr": "Plusieurs clients paient un professionnel",
+          "en": "Several clients pay a professional",
+          "uk": "Кілька клієнтів платять професіоналу"
+        },
+        {
+          "fr": "Défaillance : revenus futurs menacés",
+          "en": "Failure puts future income at risk",
+          "uk": "Бездіяльність загрожує майбутнім доходам"
+        },
+        {
+          "fr": "Menace crédible si punir vaut le coût",
+          "en": "Credible threat if punishment worthwhile",
+          "uk": "Достовірна погроза, якщо карати вигідно"
+        }
+      ],
+      "exercise_q": {
+        "fr": "La fiche donne la condition ρ ≤ m·f·δ/(1 − δ). Que représentent les deux côtés, et pourquoi davantage de clients peuvent-ils rendre la sanction crédible à tarif inchangé ?",
+        "en": "The sheet gives the condition ρ ≤ m·f·δ/(1 − δ). What do the two sides represent, and why can more clients make punishment credible without increasing the fee?",
+        "uk": "У пам’ятці наведено умову ρ ≤ m·f·δ/(1 − δ). Що означають обидві частини нерівності та чому більше клієнтів можуть зробити покарання достовірним за незмінної плати?"
+      },
+      "exercise_a": {
+        "fr": "ρ est le coût d’une sanction. À droite figurent les paiements futurs de m clients, chacun payant f, pondérés par la continuation δ. Le professionnel accepte de punir pour ne pas perdre ce flux. Augmenter m accroît donc ce qu’il risque. Cette conclusion suppose que les clients apprennent sa défaillance et cessent effectivement de payer selon le plan prévu.",
+        "en": "ρ is the cost of one punishment. The right side represents future payments from m clients, each paying f, weighted by continuation δ. The professional punishes to preserve that income stream. Increasing m therefore raises what is at stake. This conclusion assumes that clients learn about the failure and actually stop paying as specified by the proposed strategy.",
+        "uk": "ρ — це витрати на одне покарання. Праворуч стоять майбутні платежі від m клієнтів, кожен з яких сплачує f, з урахуванням продовження взаємодії δ. Професіонал карає, щоб зберегти цей потік доходів. Збільшення m підвищує можливі втрати. Висновок передбачає, що клієнти дізнаються про бездіяльність і справді припинять платити відповідно до обраної стратегії поведінки."
+      },
+      "apply_q": {
+        "fr": "Des commerçants ne peuvent pas sanctionner seuls les clients qui refusent de payer. Un protecteur commun réclame une cotisation régulière. Quel concept explique pourquoi sa promesse pourrait être crédible ?",
+        "en": "Shopkeepers cannot credibly punish non-paying customers themselves. A shared protector asks for a regular fee. Which concept explains why the protector’s promise could become credible?",
+        "uk": "Торговці не можуть самостійно карати покупців, які відмовляються платити. Спільний захисник просить регулярний внесок. Який концепт пояснює, чому його обіцянка покарання порушників може стати достовірною для цих торговців?"
+      },
+      "apply_a": {
+        "fr": "Mobilise la protection professionnelle et les économies d’échelle organisationnelles. La défaillance envers un seul commerçant menace les cotisations futures de tous : sanctionner peut ainsi servir l’intérêt du protecteur. Vérifie que ce flux dépasse le coût de sanction et que les clients observent les défaillances. La crédibilité explique son comportement ; elle ne prouve pas qu’il utilisera toujours son pouvoir pour les protéger.",
+        "en": "Use professional protection and organizational economies of scale. Failing one shopkeeper threatens future fees from all clients, so punishment can serve the protector’s own interest. Check that this income stream exceeds the punishment cost and that clients observe failures. Credibility explains the protector’s behaviour; it does not establish that the resulting power will always be used to protect clients.",
+        "uk": "Використай професійний захист та організаційну економію від масштабу. Бездіяльність щодо одного торговця загрожує майбутнім внескам від усіх клієнтів, тому покарання може відповідати власним інтересам захисника. Перевір, чи перевищує цей потік доходів витрати на покарання та чи бачать клієнти порушення зобов’язань. Достовірність пояснює поведінку захисника, але не доводить, що він завжди використовуватиме владу саме для захисту клієнтів."
+      },
+      "sentence": {
+        "fr": "Un professionnel peut vouloir sanctionner une seule violation parce que sa réputation auprès de nombreux clients vaut plus que le coût immédiat de cette sanction.",
+        "en": "A professional may want to punish one violation because a reputation maintained across many clients is worth more than the immediate cost of punishment.",
+        "uk": "Професіонал може хотіти покарати одне порушення, тому що збережена репутація серед багатьох клієнтів коштує для нього більше, ніж негайні витрати на це покарання."
+      }
+    },
+    {
+      "ch": 13,
+      "source_ids": [
+        1397,
+        1399,
+        1407,
+        1425,
+        1440,
+        1458
+      ],
+      "concepts": [
+        "Coercion",
+        "Free-riding on others’ contracts",
+        "Extortion",
+        "Centralized authority"
+      ],
+      "gist": {
+        "fr": "En gros, pouvoir imposer une contribution peut protéger un bien collectif quand chacun préfère profiter des efforts des autres. Un accord volontaire ne suffit pas toujours : rester dehors peut être avantageux. Mais la même capacité de sanction peut servir à extorquer des ressources. Il faut donc comparer les bénéfices collectifs, les coûts et les abus possibles du pouvoir qui impose la règle.",
+        "en": "In plain terms, compulsory contributions can protect a public good when everyone prefers benefiting from other people’s efforts. A voluntary agreement may be insufficient because staying outside can be attractive. Yet the same capacity to punish can extract resources through extortion. Assess collective benefits alongside costs and possible abuses by the authority imposing the rule, rather than inferring success from compliance alone.",
+        "uk": "Коротко: примус (coercion) може підтримувати колективне благо, коли кожен воліє користуватися зусиллями інших. Добровільної угоди не завжди достатньо, адже залишатися поза нею може бути вигідно. Проте та сама здатність карати може слугувати вимаганню ресурсів. Тому потрібно зіставляти спільні вигоди, витрати та можливі зловживання того, хто встановлює правило, а не оцінювати результат лише за фактом підкорення."
+      },
+      "use": {
+        "fr": "Mobilise ce chapitre pour comparer participation volontaire et obligatoire, ou analyser des concessions obtenues sous menace. Demande qui bénéficie de la règle et ce que l’autorité peut s’approprier.",
+        "en": "Use this chapter to compare voluntary and compulsory participation, or analyse concessions extracted under threat. Ask who benefits from the rule and what the authority can appropriate for itself.",
+        "uk": "Застосовуй цей розділ для порівняння добровільної та обов’язкової участі або аналізу поступок під загрозою. Запитай, кому вигідне правило та які ресурси влада може привласнити для себе."
+      },
+      "nuance": {
+        "fr": "Reconstruction partielle des supports de cours, sans texte du chapitre. La coercition peut protéger un bien collectif ou soutenir l’extorsion ; obéir ne révèle pas une préférence pour le résultat imposé.",
+        "en": "A partial reconstruction from course materials, without the chapter text. Coercion may protect a public good or sustain extortion; compliance does not reveal a preference for the imposed outcome.",
+        "uk": "Це часткова реконструкція за навчальними матеріалами без тексту розділу. Примус може захищати колективне благо або підтримувати вимагання; підкорення саме по собі не означає переваги нав’язаного результату."
+      },
+      "diagram": [
+        {
+          "fr": "Contribuer ou profiter des autres",
+          "en": "Contribute or benefit from others",
+          "uk": "Зробити внесок чи скористатися іншими"
+        },
+        {
+          "fr": "Menace crédible modifiant les gains",
+          "en": "Credible threat changes payoffs",
+          "uk": "Достовірна погроза змінює виграші"
+        },
+        {
+          "fr": "Contribution imposée ou tribut extorqué",
+          "en": "Compulsory contribution or extorted tribute",
+          "uk": "Обов’язковий внесок або вимагана данина"
+        },
+        {
+          "fr": "Comparer bénéfices, coûts et abus",
+          "en": "Compare benefits, costs and abuses",
+          "uk": "Порівняти вигоди, витрати та зловживання"
+        }
+      ],
+      "exercise_q": {
+        "fr": "Une personne cède des ressources après une menace crédible. Peut-on conclure qu’elle préfère cet accord à l’absence de menace ? Explique les options qu’il faut comparer avant de répondre.",
+        "en": "A person gives up resources after a credible threat. Can you conclude that they prefer this agreement to having no threat? Explain which options must be compared before answering.",
+        "uk": "Людина віддає ресурси після достовірної погрози. Чи означає це, що вона віддає перевагу такій угоді перед відсутністю погрози? Поясни, які варіанти потрібно порівняти, перш ніж відповідати."
+      },
+      "exercise_a": {
+        "fr": "Non. Sous menace, elle compare céder les ressources et subir la sanction : obéir peut être sa meilleure réponse dans ce jeu. Cela ne compare pas l’accord à une situation sans extorqueur. Dans le modèle d’extorsion, le pouvoir de sanction rend le tribut stable sous certaines conditions, tout en laissant la victime moins bien lotie qu’en l’absence de l’extorqueur.",
+        "en": "No. Under the threat, the person compares surrendering resources with suffering punishment: compliance can be the best response in that game. This does not compare the arrangement with a situation without the extorter. In the extortion model, punishment power can sustain tribute under specified conditions while leaving the victim worse off than they would be without the extorter.",
+        "uk": "Ні. Під загрозою людина порівнює передачу ресурсів із покаранням: підкоритися може бути найкращою відповіддю в цій грі. Це не є порівнянням угоди із ситуацією без вимагача. У моделі вимагання здатність карати за певних умов підтримує стабільну сплату данини, хоча становище жертви залишається гіршим, ніж воно було б за відсутності самого вимагача."
+      },
+      "apply_q": {
+        "fr": "Plusieurs pays profitent d’un bien public financé par un accord, mais refusent d’y adhérer. On propose des sanctions contre les non-participants. Quel concept mobiliser et quelle limite discuter ?",
+        "en": "Several countries benefit from a public good funded through an agreement but refuse to join. Sanctions against non-participants are proposed. Which concept applies, and what limitation should you discuss?",
+        "uk": "Кілька країн користуються колективним благом, яке фінансують учасники угоди, але самі не приєднуються. Пропонують санкції проти неучасників. Який концепт застосувати та яке обмеження обговорити у відповіді?"
+      },
+      "apply_a": {
+        "fr": "Mobilise le fait de profiter des contrats d’autrui sans contribuer : respecter les engagements des signataires ne règle pas l’incitation à rester dehors. Des sanctions peuvent modifier les gains et encourager l’adhésion. Vérifie cependant que les pays sanctionneurs veulent les appliquer malgré leurs coûts. Discute aussi qui bénéficie du dispositif : la capacité de contraindre peut soutenir un bien collectif ou servir l’extorsion.",
+        "en": "Use free-riding on others’ contracts: enforcing commitments among signatories does not remove the incentive to stay outside. Sanctions can change payoffs and encourage participation. However, check that sanctioning countries actually want to carry them out despite the costs. Also discuss who benefits from the arrangement: coercive power can support a public good or instead be used for extortion.",
+        "uk": "Використай концепт користування вигодами чужих угод без власного внеску: виконання зобов’язань учасниками не усуває стимулу залишатися осторонь. Санкції можуть змінити виграші й заохотити вступ. Однак перевір, чи хочуть країни справді застосовувати їх попри власні витрати. Також з’ясуй, кому вигідний механізм: здатність примушувати може підтримувати колективне благо або використовуватися для вимагання ресурсів."
+      },
+      "sentence": {
+        "fr": "Une menace crédible peut faire contribuer au bien collectif ou payer un tribut ; je dois examiner ses bénéficiaires, ses coûts et les limites du pouvoir.",
+        "en": "A credible threat can secure public contributions or extract tribute; I must examine who benefits, what it costs and how the coercive authority is constrained.",
+        "uk": "Достовірна погроза може забезпечити внески в колективне благо або сплату данини; я маю перевірити, хто виграє, якими є витрати та чим обмежена влада."
+      }
+    }
+  ],
+  "exams": [
+    {
+      "id": "gc-2025-q2",
+      "ch": 8,
+      "chapters": [
+        4,
+        8,
+        9,
+        11,
+        13
+      ],
+      "ref": "2025 · Q2 · p. 2",
+      "title": {
+        "fr": "Accord tarifaire",
+        "en": "Tariff agreement",
+        "uk": "Тарифна угода"
+      },
+      "prompt": {
+        "fr": "Expliquer l’accord tarifaire asymétrique UE–US.",
+        "en": "Explain the asymmetric EU–US tariff agreement.",
+        "uk": "Пояснити асиметричну тарифну угоду ЄС–США."
+      },
+      "concepts": [
+        "coercion",
+        "credible threats",
+        "repeated social dilemma"
+      ],
+      "steps": [
+        {
+          "q": {
+            "fr": "Quels concepts permettent de distinguer un accord accepté d’une coopération mutuellement avantageuse ?",
+            "en": "Which concepts distinguish an accepted agreement from mutually beneficial cooperation?",
+            "uk": "Які поняття допомагають відрізнити прийняту угоду від взаємовигідної співпраці?"
+          },
+          "a": {
+            "fr": "Commence par les gains et les options extérieures de chaque partie. L’acceptation peut traduire une coercition si l’alternative menacée est encore pire. Un dilemme social répété peut aussi soutenir plusieurs accords durables. Il faut donc expliquer pourquoi cet équilibre est choisi, plutôt que déduire le bénéfice mutuel de la seule signature.",
+            "en": "Start with each side’s payoffs and outside options. Acceptance may reflect coercion if the threatened alternative is even worse. A repeated social dilemma may also sustain several lasting agreements. Explain why this equilibrium is selected rather than inferring mutual benefit merely from a signature.",
+            "uk": "Почни з виграшів і зовнішніх альтернатив кожної сторони. Прийняття угоди може відображати примус (coercion), якщо погроза обіцяє ще гіршу альтернативу. Повторювана соціальна дилема (repeated social dilemma) також може підтримувати різні тривалі угоди. Треба пояснити вибір рівноваги, а не виводити взаємну вигоду лише з підписання."
+          }
+        },
+        {
+          "q": {
+            "fr": "Comment analyser une menace de représailles sans supposer qu’elle sera forcément appliquée ?",
+            "en": "How can you analyse a retaliation threat without assuming it will necessarily be carried out?",
+            "uk": "Як проаналізувати погрозу заходів у відповідь, не припускаючи, що її неодмінно здійснять?"
+          },
+          "a": {
+            "fr": "Compare le coût présent des représailles à leur intérêt futur : défendre la réputation et modifier les concessions ultérieures. Si la sanction coûte trop à son auteur, l’annonce seule ne la rend pas crédible. Précise les hypothèses sur la durée de la relation, les pertes économiques et les liens éventuels avec d’autres négociations.",
+            "en": "Compare the current cost of retaliation with its future value: protecting reputation and influencing later concessions. If punishment is too costly for its sender, announcing it does not make it credible. State your assumptions about the relationship’s horizon, economic losses and possible links with other negotiations.",
+            "uk": "Порівняй нинішню вартість заходів у відповідь з їхньою майбутньою цінністю: захистом репутації та впливом на подальші поступки. Якщо покарання надто дороге для того, хто погрожує, самої заяви недостатньо для достовірності. Укажи припущення щодо тривалості відносин, економічних втрат і зв’язків з іншими переговорами."
+          }
+        },
+        {
+          "q": {
+            "fr": "Quel raccourci faut-il éviter dans cette réponse ?",
+            "en": "Which shortcut should this answer avoid?",
+            "uk": "Якого спрощення слід уникнути у відповіді?"
+          },
+          "a": {
+            "fr": "Ne qualifie pas automatiquement toute négociation de Prisoners’ Dilemma et ne transforme pas une issue possible en prévision certaine. Distingue le jeu de base, sa répétition et la sélection d’un équilibre. N’attribue pas aux parties des préférences ou des coûts que le sujet ne donne pas : présente-les comme des hypothèses à vérifier.",
+            "en": "Do not automatically label every negotiation a Prisoners’ Dilemma or turn a possible outcome into a certain forecast. Distinguish the stage game, repetition and equilibrium selection. Do not attribute preferences or costs to the parties when the question does not provide them: identify these as assumptions to check.",
+            "uk": "Не називай будь-які переговори дилемою в’язня (Prisoners’ Dilemma) і не перетворюй можливий результат на певний прогноз. Розрізняй гру одного періоду, повторення та вибір рівноваги. Не приписуй сторонам уподобань або витрат, яких немає в умові: позначай їх як припущення, що потребують перевірки."
+          }
+        }
+      ],
+      "source": "https://drive.google.com/file/d/156rO7KH2f8ASpbAdS2A53t3iBjktTvzu/view",
+      "collection": "GCExams · October 2026"
+    },
+    {
+      "id": "gc-2025-q3",
+      "ch": 8,
+      "chapters": [
+        6,
+        8,
+        10,
+        11
+      ],
+      "ref": "2025 · Q3 · pp. 2–3",
+      "title": {
+        "fr": "Promesse de sécurité",
+        "en": "Security promise",
+        "uk": "Обіцянка безпеки"
+      },
+      "prompt": {
+        "fr": "Analyser la crédibilité des assurances de Budapest.",
+        "en": "Analyse the credibility of the Budapest assurances.",
+        "uk": "Проаналізувати достовірність Будапештських запевнень."
+      },
+      "concepts": [
+        "credible commitment",
+        "subgame-perfect equilibrium",
+        "reputation"
+      ],
+      "steps": [
+        {
+          "q": {
+            "fr": "Quel concept du livre mobiliser pour analyser une promesse écrite ?",
+            "en": "Which book concept helps analyse a written promise?",
+            "uk": "Яке поняття з книжки допомагає проаналізувати письмову обіцянку?"
+          },
+          "a": {
+            "fr": "Mobilise l’engagement crédible : demande ce qui incitera le promettant à agir lorsque l’événement prévu se produira. L’induction à rebours oblige à regarder cette décision future. Un texte peut avoir des effets par les normes, la réputation ou les relations futures ; il ne crée pas, à lui seul, une volonté automatique de supporter tous les coûts.",
+            "en": "Use credible commitment: ask what will motivate the promisor to act if the relevant event occurs. Backward induction requires examining that future decision. A text can matter through norms, reputation or future relationships; by itself, it does not automatically create willingness to bear every cost.",
+            "uk": "Використай поняття достовірного зобов’язання (credible commitment): що спонукатиме того, хто обіцяє, діяти після настання відповідної події? Зворотна індукція (backward induction) вимагає розглянути саме це майбутнє рішення. Текст може впливати через норми, репутацію або майбутні відносини, але сам по собі не створює автоматичної готовності нести будь-які витрати."
+          }
+        },
+        {
+          "q": {
+            "fr": "Une clause de représailles suffirait-elle à rendre la promesse crédible ?",
+            "en": "Would a retaliation clause alone make the promise credible?",
+            "uk": "Чи достатньо самої умови про заходи у відповідь для достовірності обіцянки?"
+          },
+          "a": {
+            "fr": "Pas nécessairement. Distingue une sanction annoncée d’une sanction que son auteur voudra effectivement appliquer. Une clause peut clarifier les attentes et accroître un coût réputationnel, mais elle doit être reliée à des incitations, à des contraintes ou à des motifs moraux. Compare aussi les conséquences possibles de l’exécution et de la non-exécution.",
+            "en": "Not necessarily. Distinguish an announced punishment from one its sender will actually want to carry out. A clause may clarify expectations and increase reputational costs, but connect it to incentives, constraints or moral motives. Also compare the possible consequences of carrying it out and of failing to do so.",
+            "uk": "Не обов’язково. Відрізняй оголошене покарання від того, яке його автор справді захоче застосувати. Умова може прояснити очікування та підвищити репутаційні втрати, але її слід пов’язати зі стимулами, обмеженнями або моральними мотивами. Порівняй також можливі наслідки виконання та невиконання обіцянки."
+          }
+        },
+        {
+          "q": {
+            "fr": "Quelle limite garder lorsqu’on passe du modèle à ce cas historique ?",
+            "en": "What limitation matters when applying the model to this historical case?",
+            "uk": "Яке обмеження важливе при застосуванні моделі до цього історичного випадку?"
+          },
+          "a": {
+            "fr": "Le modèle aide à formuler des mécanismes ; il ne révèle pas les intentions historiques ni toutes les informations disponibles à l’époque. Distingue les faits donnés dans l’énoncé de tes hypothèses. Une analyse des incitations n’est ni une justification morale d’une violation ni une interprétation juridique du document.",
+            "en": "The model helps formulate mechanisms; it does not reveal historical intentions or all information available at the time. Separate the facts in the question from your assumptions. An incentives analysis is neither a moral justification for a violation nor a legal interpretation of the document.",
+            "uk": "Модель допомагає сформулювати механізми, але не розкриває історичних намірів або всієї інформації, доступної тоді. Відділяй факти умови від власних припущень. Аналіз стимулів не є ні моральним виправданням порушення, ні юридичним тлумаченням документа."
+          }
+        }
+      ],
+      "source": "https://drive.google.com/file/d/156rO7KH2f8ASpbAdS2A53t3iBjktTvzu/view",
+      "collection": "GCExams · October 2026"
+    },
+    {
+      "id": "gc-2024-q3",
+      "ch": 3,
+      "chapters": [
+        3,
+        4,
+        6,
+        9
+      ],
+      "ref": "2024 · Q3 · p. 4",
+      "title": {
+        "fr": "Réseaux sociaux",
+        "en": "Social media",
+        "uk": "Соціальні мережі"
+      },
+      "prompt": {
+        "fr": "Usage rationnel des plateformes et bien-être.",
+        "en": "Rational platform use and well-being.",
+        "uk": "Раціональне користування платформами та добробут."
+      },
+      "concepts": [
+        "rationality",
+        "externalities",
+        "coordination"
+      ],
+      "steps": [
+        {
+          "q": {
+            "fr": "Une personne choisit d’utiliser une plateforme : cela prouve-t-il que son existence lui profite ?",
+            "en": "Someone chooses to use a platform: does that prove its existence benefits them?",
+            "uk": "Людина вирішує користуватися платформою: чи доводить це користь від її існування?"
+          },
+          "a": {
+            "fr": "Non. Un choix rationnel compare les options disponibles dans une situation donnée. Si les amis utilisent la plateforme, ne pas la rejoindre peut être coûteux. Cela n’implique pas que la personne préfère ce monde à un monde où personne ne l’utilise. Distingue meilleure réponse individuelle et comparaison entre deux situations collectives.",
+            "en": "No. A rational choice compares available options within a given situation. If friends use the platform, staying out may be costly. This does not imply that the person prefers this world to one where nobody uses it. Distinguish an individual best response from a comparison between two collective situations.",
+            "uk": "Ні. Раціональний вибір (rational choice) порівнює доступні варіанти в певній ситуації. Якщо друзі користуються платформою, відмова від участі може бути дорогою. Це не означає, що людина віддає перевагу такому світові порівняно зі світом, де платформою не користується ніхто. Відрізняй індивідуальну найкращу відповідь від порівняння двох колективних ситуацій."
+          }
+        },
+        {
+          "q": {
+            "fr": "Comment présenter le mécanisme sans inventer une matrice de gains ?",
+            "en": "How can you present the mechanism without inventing a payoff matrix?",
+            "uk": "Як пояснити механізм, не вигадуючи матрицю виграшів?"
+          },
+          "a": {
+            "fr": "Décris une complémentarité possible : l’intérêt de rejoindre dépend de la participation des autres. Puis distingue les gains de connexion et les coûts d’attention ou d’exclusion, s’ils sont pertinents. Tu peux discuter un problème de coordination ou des externalités sans affirmer que le cas correspond forcément à un jeu précis du catalogue.",
+            "en": "Describe a possible complementarity: the attraction of joining depends on other people’s participation. Then distinguish connection benefits from attention or exclusion costs, where relevant. You can discuss coordination or externalities without claiming that the case necessarily matches one particular game in the catalogue.",
+            "uk": "Опиши можливу взаємодоповнюваність: привабливість участі залежить від участі інших. Далі розрізни вигоди від зв’язків і витрати уваги чи виключення, якщо вони доречні. Можна обговорювати координацію (coordination) або зовнішні ефекти (externalities), не стверджуючи, що випадок неодмінно відповідає конкретній грі з каталогу."
+          }
+        },
+        {
+          "q": {
+            "fr": "Quelle distinction rend la conclusion plus rigoureuse ?",
+            "en": "Which distinction makes the conclusion more rigorous?",
+            "uk": "Яке розрізнення робить висновок точнішим?"
+          },
+          "a": {
+            "fr": "Distingue rationalité, efficacité de Pareto et justice. Une meilleure réponse peut appartenir à une mauvaise issue collective, mais les préférences et options doivent être précisées avant de conclure à l’inefficacité. Le simple fait d’utiliser une plateforme ne mesure donc pas son effet global sur le bien-être.",
+            "en": "Distinguish rationality, Pareto efficiency and fairness. A best response may belong to a poor collective outcome, but specify preferences and options before concluding that the outcome is inefficient. Platform use alone therefore does not measure its overall welfare effect.",
+            "uk": "Розрізняй раціональність (rationality), ефективність за Парето (Pareto efficiency) і справедливість. Найкраща відповідь може належати до поганого колективного результату, але перед висновком про неефективність треба уточнити уподобання та альтернативи. Саме користування платформою не вимірює її загального впливу на добробут."
+          }
+        }
+      ],
+      "source": "https://drive.google.com/file/d/156rO7KH2f8ASpbAdS2A53t3iBjktTvzu/view",
+      "collection": "GCExams · October 2026"
+    },
+    {
+      "id": "gc-2025-q1",
+      "ch": 3,
+      "chapters": [
+        2,
+        3,
+        4,
+        5,
+        9,
+        13
+      ],
+      "ref": "2025 · Q1 · p. 2",
+      "title": {
+        "fr": "Négociations climatiques",
+        "en": "Climate negotiations",
+        "uk": "Кліматичні переговори"
+      },
+      "prompt": {
+        "fr": "Nouvelles estimations des dommages et négociation climatique.",
+        "en": "New damage estimates and climate negotiations.",
+        "uk": "Нові оцінки збитків і кліматичні переговори."
+      },
+      "concepts": [
+        "social dilemma",
+        "preferences",
+        "coordination"
+      ],
+      "steps": [
+        {
+          "q": {
+            "fr": "Que faut-il comparer avant d’annoncer que le dilemme social disparaît ?",
+            "en": "What should you compare before claiming that the social dilemma disappears?",
+            "uk": "Що слід порівняти, перш ніж стверджувати, що соціальна дилема зникає?"
+          },
+          "a": {
+            "fr": "Compare le coût individuel de réduire les émissions au bénéfice individuel de cette réduction, puis au bénéfice collectif. De nouvelles estimations peuvent modifier le classement des options et donc la structure du jeu. Un bénéfice mondial élevé ne suffit pas, à lui seul, à prouver que chaque pays a individuellement intérêt à toute mesure proposée.",
+            "en": "Compare the individual cost of cutting emissions with the individual benefit, then with the collective benefit. New estimates may change the ranking of options and therefore the game’s structure. A large global benefit alone does not prove that every country individually benefits from every proposed measure.",
+            "uk": "Порівняй індивідуальну вартість скорочення викидів з індивідуальною, а потім із колективною вигодою. Нові оцінки можуть змінити ранжування альтернатив, а отже й структуру гри. Висока світова вигода сама по собі не доводить, що кожній країні вигідний будь-який запропонований захід."
+          }
+        },
+        {
+          "q": {
+            "fr": "Quels obstacles peuvent subsister même si davantage de pays souhaitent agir ?",
+            "en": "Which obstacles may remain even if more countries want to act?",
+            "uk": "Які перешкоди можуть залишитися, навіть якщо більше країн прагне діяти?"
+          },
+          "a": {
+            "fr": "Les parties peuvent encore être en désaccord sur la répartition des efforts, douter de l’exécution des engagements ou avoir des représentations différentes des dommages. Mobilise alors la coordination, les engagements crédibles et les valeurs partagées. Explique lequel de ces mécanismes correspond à une difficulté précise, au lieu de dresser une liste de concepts.",
+            "en": "Parties may still disagree about burden sharing, doubt whether commitments will be honoured or hold different views of the damages. Use coordination, credible commitments and shared values where appropriate. Explain which mechanism addresses a particular difficulty rather than listing concepts.",
+            "uk": "Сторони можуть і далі не погоджуватися щодо розподілу зусиль, сумніватися у виконанні зобов’язань або по-різному оцінювати збитки. Доречно використати координацію (coordination), достовірні зобов’язання (credible commitments) і спільні цінності. Пояснюй, який механізм відповідає конкретній перешкоді, замість простого переліку понять."
+          }
+        },
+        {
+          "q": {
+            "fr": "Comment éviter de transformer les données du sujet en certitude politique ?",
+            "en": "How can you avoid turning the question’s data into political certainty?",
+            "uk": "Як не перетворити дані умови на політичну певність?"
+          },
+          "a": {
+            "fr": "Raisonne sous les hypothèses de l’énoncé : acceptation des estimations, coûts et bénéfices pertinents pour chaque acteur. Une information nouvelle peut changer le jeu sans garantir l’accord, son application ou une répartition jugée juste. Précise aussi ce qu’il faudrait savoir sur les pays et leurs contraintes pour aller plus loin.",
+            "en": "Reason under the question’s assumptions about acceptance of the estimates and the costs and benefits relevant to each actor. New information can change the game without guaranteeing agreement, enforcement or a distribution considered fair. State what else you would need to know about countries and their constraints.",
+            "uk": "Міркуй за припущеннями умови: чи прийняті оцінки та які витрати й вигоди важливі для кожного учасника. Нова інформація може змінити гру, не гарантуючи угоди, виконання або справедливого, на думку сторін, розподілу. Укажи, що ще потрібно знати про країни та їхні обмеження."
+          }
+        }
+      ],
+      "source": "https://drive.google.com/file/d/156rO7KH2f8ASpbAdS2A53t3iBjktTvzu/view",
+      "collection": "GCExams · October 2026"
+    },
+    {
+      "id": "gc-2022-q2",
+      "ch": 9,
+      "chapters": [
+        5,
+        6,
+        9
+      ],
+      "ref": "2022 · Q2 · p. 8",
+      "title": {
+        "fr": "Protestation collective",
+        "en": "Collective protest",
+        "uk": "Колективний протест"
+      },
+      "prompt": {
+        "fr": "Participation aux manifestations et restrictions d’internet.",
+        "en": "Protest participation and internet restrictions.",
+        "uk": "Участь у протестах та обмеження інтернету."
+      },
+      "concepts": [
+        "coordination",
+        "common awareness",
+        "multiple equilibria"
+      ],
+      "steps": [
+        {
+          "q": {
+            "fr": "Une faible participation révèle-t-elle nécessairement une faible opposition à une politique ?",
+            "en": "Does low participation necessarily reveal little opposition to a policy?",
+            "uk": "Чи обов’язково низька участь означає слабку незгоду з політикою?"
+          },
+          "a": {
+            "fr": "Non. Une personne peut s’opposer à la politique mais craindre d’agir seule. Sa décision dépend alors de ce qu’elle pense que les autres feront. Un problème de coordination peut soutenir une faible participation même lorsque beaucoup préfèrent une mobilisation collective. Cette possibilité n’autorise cependant pas à déduire les préférences réelles de toute une population.",
+            "en": "No. Someone may oppose a policy yet fear acting alone. Their decision then depends on what they expect others to do. A coordination problem may sustain low participation even when many prefer collective mobilisation. This possibility does not, however, reveal the actual preferences of an entire population.",
+            "uk": "Ні. Людина може виступати проти політики, але боятися діяти наодинці. Тоді її рішення залежить від очікуваних дій інших. Проблема координації (coordination) може підтримувати низьку участь, навіть якщо багато людей віддають перевагу спільній мобілізації. Проте сама ця можливість не розкриває фактичних уподобань усього населення."
+          }
+        },
+        {
+          "q": {
+            "fr": "Pourquoi l’information publique peut-elle jouer un rôle différent d’informations privées identiques ?",
+            "en": "Why can public information play a different role from identical private information?",
+            "uk": "Чому публічна інформація може діяти інакше, ніж однакова приватна інформація?"
+          },
+          "a": {
+            "fr": "La conscience commune ne signifie pas seulement que chacun sait quelque chose : chacun doit aussi savoir que les autres le savent. Une information publique peut donc modifier les attentes réciproques et faciliter la coordination. Restreindre les communications peut empêcher ce mécanisme, même si les opinions individuelles ne changent pas.",
+            "en": "Common awareness is not merely that each person knows something: each must also know that others know it. Public information can therefore change mutual expectations and facilitate coordination. Restricting communication may obstruct this mechanism even if individual opinions do not change.",
+            "uk": "Спільна обізнаність (common awareness) означає не лише те, що кожен щось знає: кожен також має знати, що це знають інші. Публічна інформація може змінювати взаємні очікування й полегшувати координацію. Обмеження комунікації може заважати цьому механізму, навіть якщо індивідуальні погляди не змінюються."
+          }
+        },
+        {
+          "q": {
+            "fr": "Quelle conclusion serait trop forte à partir de ce seul modèle ?",
+            "en": "Which conclusion would be too strong on the basis of this model alone?",
+            "uk": "Який висновок був би надто сильним на підставі лише цієї моделі?"
+          },
+          "a": {
+            "fr": "Ni la mobilisation ni son succès ne sont garantis par une meilleure communication. Les risques, les coûts, les préférences et les croyances peuvent différer entre personnes. Présente la conscience commune comme un mécanisme possible de coordination, pas comme une explication exclusive ni une prévision certaine d’un événement politique.",
+            "en": "Better communication guarantees neither mobilisation nor its success. Risks, costs, preferences and beliefs may differ across people. Present common awareness as a possible coordination mechanism, not an exclusive explanation or a certain forecast of a political event.",
+            "uk": "Краща комунікація не гарантує ані мобілізації, ані її успіху. Ризики, витрати, уподобання й переконання людей можуть відрізнятися. Подавай спільну обізнаність як можливий механізм координації, а не як єдине пояснення або певний прогноз політичної події."
+          }
+        }
+      ],
+      "source": "https://drive.google.com/file/d/156rO7KH2f8ASpbAdS2A53t3iBjktTvzu/view",
+      "collection": "GCExams · October 2026"
+    }
+  ]
+}
