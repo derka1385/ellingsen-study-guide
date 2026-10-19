@@ -70,7 +70,7 @@ nav='<!-- CONCEPTS:NAV:START -->\n<ul><li>'+ui('a','Concepts','href="#concepts"'
 # Visible beside the book map, before the chapter list, rather than buried after the tools.
 anchor='    <h2 data-i="3">';assert anchor in s
 s=s.replace(anchor,nav+anchor,1)
-code='Object.assign(window.IOE_TEXT_IDS, '+json.dumps(added,ensure_ascii=False)+');\nconst CONCEPT_GUIDES = '+json.dumps(records,ensure_ascii=False)+';'
+code='Object.assign(window.IOE_TEXT_IDS, '+json.dumps(added,ensure_ascii=False)+');\nObject.assign(window.IOE_FR_TEXT, '+json.dumps({ident:source for source,ident in added.items()},ensure_ascii=False)+');\nconst CONCEPT_GUIDES = '+json.dumps(records,ensure_ascii=False)+';'
 s=s.replace('(() => {','/* CONCEPTS:REGISTRY:START */\n'+code.replace('</script','<\\/script')+'\n/* CONCEPTS:REGISTRY:END */\n(() => {',1)
 css=(ROOT/'authoring/concepts.css').read_text()
 s=s.replace('</style>','/* CONCEPTS:CSS:START */\n'+css+'/* CONCEPTS:CSS:END */\n</style>',1)
