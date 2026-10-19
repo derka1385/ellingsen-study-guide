@@ -154,3 +154,7 @@ La recherche accepte le français, l’anglais et l’ukrainien ; un filtre limi
 Sources de maintenance : `authoring/concepts.json`, `concepts.css`, `concepts_runtime.js`. L’intégration facultative `python3 authoring/build_concepts.py` est idempotente et ne remplace que les marqueurs `CONCEPTS`. Elle ajoute 200 entrées aux deux catalogues classiques et conserve les identifiants existants. Si les ajouts pédagogiques précédents sont régénérés avec `build_learning.py`, exécuter ensuite `build_concepts.py` pour recalculer les nouveaux identifiants sans collision. Aucun build n’est nécessaire pour consulter le site.
 
 Vérification : syntaxe JS/catalogues, comparaison stricte des 1 974 blocs d’origine, recherche et filtres, états vide/réinitialisation, réponse masquée, liens directs, trois langues à 320/390/768/1440 px sans débordement. Les essais utilisent un aperçu temporaire où Firebase est désactivé ; les préférences du compte et sa progression ne sont pas modifiées. Aucune nouvelle écriture de stockage n’est introduite par cette section.
+
+## English by default — 19 October 2026
+
+English is now the default language for new visitors, account creation and study content. The login page also starts in English before JavaScript runs. Explicit French and Ukrainian preferences remain available and are remembered. Language changes affect presentation only; chapter completion and flashcard ratings are preserved. French remains the internal source language for translation keys and the original numbered blocks.
