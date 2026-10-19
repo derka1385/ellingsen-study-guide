@@ -1,0 +1,1046 @@
+[
+  {
+    "ch": 1,
+    "id": "sacrifice",
+    "title": {
+      "fr": "Sacrifice",
+      "en": "Sacrifice",
+      "uk": "Жертва (Sacrifice)"
+    },
+    "idea": {
+      "fr": "Accepter volontairement un coût pour apporter un bénéfice à autrui.",
+      "en": "Voluntarily bearing a cost to benefit someone else.",
+      "uk": "Добровільно нести витрати заради користі для іншої людини."
+    },
+    "question": {
+      "fr": "Exemple inventé : tu perds une heure pour aider un camarade. Est-ce encore un sacrifice si cela te fait plaisir ?",
+      "en": "Invented example: you give up an hour to help a classmate. Is it still a sacrifice if you enjoy helping?",
+      "uk": "Навчальний приклад: ти витрачаєш годину, допомагаючи одногрупнику. Чи залишається це жертвою, якщо допомагати приємно?"
+    },
+    "answer": {
+      "fr": "Oui, un coût matériel ou en temps peut coexister avec une satisfaction morale. Distingue les conséquences matérielles de leur évaluation dans l’utilité.",
+      "en": "Yes. A material or time cost can coexist with moral satisfaction. Distinguish material consequences from how utility evaluates them.",
+      "uk": "Так. Витрати часу чи матеріальних ресурсів можуть поєднуватися з моральним задоволенням. Розрізняй матеріальні наслідки та їхню оцінку через корисність."
+    },
+    "pitfall": {
+      "fr": "Sacrifice matériel ne veut pas nécessairement dire perte d’utilité.",
+      "en": "A material sacrifice need not reduce utility.",
+      "uk": "Матеріальна жертва не обов’язково зменшує корисність."
+    }
+  },
+  {
+    "ch": 1,
+    "id": "cooperation",
+    "title": {
+      "fr": "Coopération",
+      "en": "Cooperation",
+      "uk": "Співпраця (Cooperation)"
+    },
+    "idea": {
+      "fr": "Chacun agit au bénéfice des autres, compte tenu de ce qu’ils font, sans être assuré d’y gagner.",
+      "en": "Each acts for the benefit of others, given what they do, without being certain of benefiting personally.",
+      "uk": "Кожен діє на користь інших з огляду на їхні дії, не маючи гарантії власної вигоди."
+    },
+    "question": {
+      "fr": "Exemple inventé : deux personnes se mettent d’accord pour se croiser du même côté d’un couloir. Doivent-elles se sacrifier pour coopérer ?",
+      "en": "Invented example: two people agree which side of a corridor to pass on. Must cooperation involve sacrifice?",
+      "uk": "Навчальний приклад: двоє домовляються, з якого боку розминутися в коридорі. Чи потребує співпраця жертви?"
+    },
+    "answer": {
+      "fr": "Non. Coordonner leurs actions peut profiter aux deux sans coût matériel pour aucun. Coopération et sacrifice sont deux notions distinctes.",
+      "en": "No. Coordinating their actions can benefit both without a material cost to either. Cooperation and sacrifice are distinct concepts.",
+      "uk": "Ні. Узгодження дій може допомогти обом без матеріальних втрат для будь-кого. Співпраця та жертва — різні поняття."
+    },
+    "pitfall": {
+      "fr": "Une coopération peut nuire à des tiers ; elle n’est pas automatiquement socialement souhaitable.",
+      "en": "Cooperation may harm outsiders; it is not automatically socially desirable.",
+      "uk": "Співпраця може шкодити стороннім людям; вона не завжди суспільно бажана."
+    }
+  },
+  {
+    "ch": 1,
+    "id": "coercion",
+    "title": {
+      "fr": "Coercition",
+      "en": "Coercion",
+      "uk": "Примус (Coercion)"
+    },
+    "idea": {
+      "fr": "Obtenir une action par une menace ou une sanction, plutôt que par la seule volonté de celui qui agit.",
+      "en": "Inducing an action through a threat or sanction rather than solely through the actor’s willingness.",
+      "uk": "Спонукати до дії погрозою чи санкцією, а не лише власним бажанням того, хто діє."
+    },
+    "question": {
+      "fr": "Exemple inventé : quelqu’un contribue à un projet pour éviter une amende. Son obéissance prouve-t-elle qu’il approuve la règle ?",
+      "en": "Invented example: someone contributes to a project to avoid a fine. Does compliance prove approval of the rule?",
+      "uk": "Навчальний приклад: людина робить внесок у проєкт, щоб уникнути штрафу. Чи доводить виконання правила її схвалення?"
+    },
+    "answer": {
+      "fr": "Non. Elle peut préférer contribuer plutôt que subir la sanction tout en rejetant la règle. Analyse aussi qui bénéficie de la contribution.",
+      "en": "No. Contributing may be preferable to punishment even while the person rejects the rule. Also examine who benefits from the contribution.",
+      "uk": "Ні. Внесок може бути кращим за покарання, навіть якщо людина відкидає правило. Також з’ясуй, кому дістається користь."
+    },
+    "pitfall": {
+      "fr": "Obéir ne signifie ni consentir ni améliorer le bien-être collectif.",
+      "en": "Compliance implies neither consent nor improved collective welfare.",
+      "uk": "Виконання вимоги не означає ні згоди, ні зростання загального добробуту."
+    }
+  },
+  {
+    "ch": 2,
+    "id": "social-dilemma",
+    "title": {
+      "fr": "Dilemme social",
+      "en": "Social dilemma",
+      "uk": "Соціальна дилема (Social dilemma)"
+    },
+    "idea": {
+      "fr": "Contribuer coûte à chacun, mais tous gagnent si tous contribuent. Les intérêts individuels et collectifs se séparent.",
+      "en": "Contributing costs each individual, yet everyone gains if all contribute. Individual and collective incentives diverge.",
+      "uk": "Внесок коштує кожному, але всі виграють, якщо роблять його всі. Індивідуальні та спільні стимули розходяться."
+    },
+    "question": {
+      "fr": "Exemple inventé : une contribution coûte 4 à son auteur et rapporte 3 à chacun des deux membres. Pourquoi peut-elle ne pas avoir lieu ?",
+      "en": "Invented example: contributing costs its author 4 and gives each of two members 3. Why might neither contribute?",
+      "uk": "Навчальний приклад: внесок коштує автору 4 й приносить по 3 кожному з двох учасників. Чому ніхто може не зробити внеску?"
+    },
+    "answer": {
+      "fr": "Contribuer réduit son gain matériel de 1, quelle que soit l’autre action. Mais si tous contribuent, chacun reçoit 6 − 4 = 2 plutôt que 0.",
+      "en": "Contributing reduces one’s material payoff by 1 regardless of the other’s action. Yet if both contribute, each gets 6 − 4 = 2 rather than 0.",
+      "uk": "Внесок зменшує власний матеріальний виграш на 1 незалежно від дій іншого. Проте за двох внесків кожен отримує 6 − 4 = 2 замість 0."
+    },
+    "pitfall": {
+      "fr": "Le calcul concerne les gains matériels ; d’autres motivations peuvent modifier le jeu.",
+      "en": "This calculation concerns material payoffs; other motivations can change the game.",
+      "uk": "Розрахунок стосується матеріальних виграшів; інші мотиви можуть змінити гру."
+    }
+  },
+  {
+    "ch": 2,
+    "id": "free-rider",
+    "title": {
+      "fr": "Passager clandestin",
+      "en": "Free rider",
+      "uk": "Безбілетник (Free rider)"
+    },
+    "idea": {
+      "fr": "Profiter des contributions des autres sans contribuer soi-même. Ce terme usuel complète le vocabulaire du livre.",
+      "en": "Benefiting from others’ contributions without contributing oneself. This common term supplements the book’s vocabulary.",
+      "uk": "Користуватися внесками інших, не роблячи власного внеску. Цей поширений термін доповнює лексику книги."
+    },
+    "question": {
+      "fr": "Exemple inventé : un étudiant profite d’un document collectif sans participer à sa rédaction. Que faut-il vérifier avant de parler de passager clandestin ?",
+      "en": "Invented example: a student uses shared notes without helping write them. What should you check before calling this free riding?",
+      "uk": "Навчальний приклад: студент користується спільними нотатками, не допомагаючи їх писати. Що слід перевірити, перш ніж говорити про безбілетництво?"
+    },
+    "answer": {
+      "fr": "Vérifie le bénéfice reçu, le coût d’une contribution et la possibilité de contribuer. Le mécanisme stratégique n’est pas un diagnostic moral automatique.",
+      "en": "Check the benefit received, the cost of contributing and the opportunity to contribute. The strategic mechanism is not an automatic moral diagnosis.",
+      "uk": "Перевір отриману користь, ціну внеску та можливість його зробити. Стратегічний механізм не є автоматичним моральним вироком."
+    },
+    "pitfall": {
+      "fr": "Le terme « free rider » n’est pas employé tel quel dans le livre.",
+      "en": "The book does not use the exact term “free rider”.",
+      "uk": "У книзі сам термін «free rider» не використовується."
+    }
+  },
+  {
+    "ch": 3,
+    "id": "rationality",
+    "title": {
+      "fr": "Rationalité",
+      "en": "Rationality",
+      "uk": "Раціональність (Rationality)"
+    },
+    "idea": {
+      "fr": "Choisir en fonction de ses préférences et de ses croyances. La rationalité ne fixe pas des objectifs égoïstes.",
+      "en": "Choosing in accordance with preferences and beliefs. Rationality does not require selfish objectives.",
+      "uk": "Обирати відповідно до власних уподобань і переконань. Раціональність не вимагає егоїстичних цілей."
+    },
+    "question": {
+      "fr": "Exemple inventé : Léa choisit de recevoir 6 et de donner 6 plutôt que de recevoir 8 et de donner 2. Est-elle irrationnelle ?",
+      "en": "Invented example: Lea chooses to receive 6 and give 6 rather than receive 8 and give 2. Is she irrational?",
+      "uk": "Навчальний приклад: Леа обирає отримати 6 й дати 6 замість отримати 8 й дати 2. Чи вона нераціональна?"
+    },
+    "answer": {
+      "fr": "Pas nécessairement. Si elle valorise aussi ce que reçoit l’autre, le premier choix peut maximiser son utilité. Il faut connaître ses préférences.",
+      "en": "Not necessarily. If she also values the other person’s consumption, the first choice may maximise her utility. Her preferences matter.",
+      "uk": "Не обов’язково. Якщо вона цінує й те, що отримує інша людина, перший вибір може максимізувати її корисність. Потрібно знати її вподобання."
+    },
+    "pitfall": {
+      "fr": "Rationnel ne veut pas dire parfaitement informé, moralement juste ou égoïste.",
+      "en": "Rational does not mean perfectly informed, morally right or selfish.",
+      "uk": "Раціональний не означає всезнаючий, морально правий чи егоїстичний."
+    }
+  },
+  {
+    "ch": 3,
+    "id": "expected-utility",
+    "title": {
+      "fr": "Utilité espérée",
+      "en": "Expected utility",
+      "uk": "Очікувана корисність (Expected utility)"
+    },
+    "idea": {
+      "fr": "Évaluer une option incertaine en pondérant l’utilité de chaque conséquence par sa probabilité.",
+      "en": "Evaluating an uncertain option by weighting the utility of each consequence by its probability.",
+      "uk": "Оцінювати непевний варіант, зважуючи корисність кожного наслідку за його ймовірністю."
+    },
+    "question": {
+      "fr": "Exemple inventé : une option donne une utilité de 10 avec probabilité 1/2, et 0 sinon. Une autre donne 4 avec certitude. Laquelle maximise l’utilité espérée ?",
+      "en": "Invented example: one option gives utility 10 with probability 1/2 and 0 otherwise. Another gives utility 4 for certain. Which maximises expected utility?",
+      "uk": "Навчальний приклад: один варіант дає корисність 10 з імовірністю 1/2 і 0 інакше. Інший напевно дає 4. Який максимізує очікувану корисність?"
+    },
+    "answer": {
+      "fr": "La première : (1/2) × 10 + (1/2) × 0 = 5, contre 4. Les nombres sont ici des utilités, pas nécessairement des euros.",
+      "en": "The first: (1/2) × 10 + (1/2) × 0 = 5 rather than 4. These numbers are utilities, not necessarily euros.",
+      "uk": "Перший: (1/2) × 10 + (1/2) × 0 = 5 проти 4. Тут числа позначають корисність, а не обов’язково євро."
+    },
+    "pitfall": {
+      "fr": "Ne remplace pas l’utilité espérée par le gain monétaire moyen sans hypothèse supplémentaire.",
+      "en": "Do not substitute expected money for expected utility without an additional assumption.",
+      "uk": "Не підміняй очікувану корисність середнім грошовим виграшем без додаткового припущення."
+    }
+  },
+  {
+    "ch": 3,
+    "id": "externality",
+    "title": {
+      "fr": "Externalité",
+      "en": "Externality",
+      "uk": "Зовнішній ефект (Externality)"
+    },
+    "idea": {
+      "fr": "L’action d’une personne modifie l’utilité d’une autre. Il faut identifier l’effet et la personne touchée.",
+      "en": "One person’s action changes another person’s utility. Identify both the effect and who experiences it.",
+      "uk": "Дія однієї людини змінює корисність іншої. Визнач і сам ефект, і того, кого він стосується."
+    },
+    "question": {
+      "fr": "Exemple inventé : faire du bruit te divertit mais empêche ton voisin de dormir. Où se trouve l’externalité ?",
+      "en": "Invented example: making noise entertains you but keeps your neighbour awake. Where is the externality?",
+      "uk": "Навчальний приклад: шум тебе розважає, але заважає сусіду спати. У чому зовнішній ефект?"
+    },
+    "answer": {
+      "fr": "La perte d’utilité du voisin est l’externalité négative. Ton plaisir personnel n’est pas cette externalité. Une action peut aussi avoir des effets positifs sur autrui.",
+      "en": "The neighbour’s utility loss is the negative externality. Your own enjoyment is not that externality. Actions can also have positive effects on others.",
+      "uk": "Втрата корисності сусіда — негативний зовнішній ефект. Твоє власне задоволення не є цим ефектом. Дії можуть також позитивно впливати на інших."
+    },
+    "pitfall": {
+      "fr": "Identifie les préférences : un même effet matériel n’affecte pas forcément chacun de la même façon.",
+      "en": "Identify preferences: the same material effect need not affect everyone alike.",
+      "uk": "Враховуй уподобання: однаковий матеріальний наслідок не обов’язково однаково впливає на всіх."
+    }
+  },
+  {
+    "ch": 3,
+    "id": "pareto",
+    "title": {
+      "fr": "Efficacité de Pareto",
+      "en": "Pareto efficiency",
+      "uk": "Ефективність за Парето (Pareto efficiency)"
+    },
+    "idea": {
+      "fr": "Une issue est efficace s’il n’existe aucune autre possibilité qui améliore quelqu’un sans détériorer personne.",
+      "en": "An outcome is efficient if no feasible alternative makes someone better off without making anyone worse off.",
+      "uk": "Результат ефективний, якщо немає іншого можливого варіанта, який покращив би становище когось, не погіршивши нічиє."
+    },
+    "question": {
+      "fr": "Exemple inventé : dix unités sont entièrement réparties (9, 1). Chacun ne valorise que sa part. L’inégalité suffit-elle à prouver l’inefficacité ?",
+      "en": "Invented example: ten units are fully allocated as (9, 1). Each person values only their own share. Does inequality prove inefficiency?",
+      "uk": "Навчальний приклад: десять одиниць повністю розподілено як (9, 1). Кожен цінує лише свою частку. Чи нерівність доводить неефективність?"
+    },
+    "answer": {
+      "fr": "Non. Avec ces possibilités et préférences, augmenter une part réduit l’autre. Le partage peut être efficace au sens de Pareto tout en étant jugé injuste.",
+      "en": "No. Given these possibilities and preferences, increasing one share reduces the other. The allocation can be Pareto-efficient yet judged unfair.",
+      "uk": "Ні. За цих можливостей і вподобань збільшення однієї частки зменшує іншу. Розподіл може бути ефективним за Парето й водночас вважатися несправедливим."
+    },
+    "pitfall": {
+      "fr": "Efficacité, égalité et justice ne sont pas interchangeables.",
+      "en": "Efficiency, equality and fairness are not interchangeable.",
+      "uk": "Ефективність, рівність і справедливість — не взаємозамінні поняття."
+    }
+  },
+  {
+    "ch": 4,
+    "id": "situation-game",
+    "title": {
+      "fr": "Situation et jeu",
+      "en": "Situation and game",
+      "uk": "Ситуація та гра (Situation and game)"
+    },
+    "idea": {
+      "fr": "La situation décrit joueurs, actions, informations et conséquences. Le jeu ajoute leurs préférences, donc les utilités.",
+      "en": "A situation specifies players, actions, information and consequences. A game adds preferences and hence utilities.",
+      "uk": "Ситуація визначає гравців, дії, інформацію й наслідки. Гра додає вподобання, а отже, корисності."
+    },
+    "question": {
+      "fr": "Exemple inventé : les mêmes paiements sont proposés à une personne égoïste puis à une personne altruiste. A-t-on nécessairement le même jeu ?",
+      "en": "Invented example: identical payments are offered to a selfish person and then to an altruistic person. Must the game be the same?",
+      "uk": "Навчальний приклад: егоїсту та альтруїсту пропонують однакові платежі. Чи обов’язково це одна й та сама гра?"
+    },
+    "answer": {
+      "fr": "Non. La situation matérielle peut être identique, mais des préférences différentes changent les utilités et parfois les meilleures réponses.",
+      "en": "No. The material situation may be identical, but different preferences change utilities and may change best responses.",
+      "uk": "Ні. Матеріальна ситуація може бути однаковою, але різні вподобання змінюють корисності, а іноді й найкращі відповіді."
+    },
+    "pitfall": {
+      "fr": "Avant de résoudre une matrice, demande si ses nombres sont des euros ou des utilités.",
+      "en": "Before solving a matrix, ask whether its numbers are euros or utilities.",
+      "uk": "Перед розв’язанням матриці з’ясуй, що означають числа: євро чи корисності."
+    }
+  },
+  {
+    "ch": 4,
+    "id": "altruism",
+    "title": {
+      "fr": "Altruisme",
+      "en": "Altruism",
+      "uk": "Альтруїзм (Altruism)"
+    },
+    "idea": {
+      "fr": "Valoriser la consommation d’autrui dans sa propre utilité : par exemple Uᵢ = cᵢ + αcⱼ.",
+      "en": "Valuing another person’s consumption in one’s utility: for example Uᵢ = cᵢ + αcⱼ.",
+      "uk": "Цінувати споживання іншої людини у власній корисності: наприклад Uᵢ = cᵢ + αcⱼ."
+    },
+    "question": {
+      "fr": "Exemple inventé : avec α = 1/2, compare (6, 0) et (5, 4) pour la première personne.",
+      "en": "Invented example: with α = 1/2, compare (6, 0) and (5, 4) for the first person.",
+      "uk": "Навчальний приклад: за α = 1/2 порівняй (6, 0) та (5, 4) для першої людини."
+    },
+    "answer": {
+      "fr": "Les utilités sont 6 et 5 + (1/2) × 4 = 7. Elle préfère donc (5, 4), même avec une consommation personnelle plus faible.",
+      "en": "Utilities are 6 and 5 + (1/2) × 4 = 7. She therefore prefers (5, 4), despite lower personal consumption.",
+      "uk": "Корисності дорівнюють 6 та 5 + (1/2) × 4 = 7. Тому вона віддає перевагу (5, 4), хоча власне споживання менше."
+    },
+    "pitfall": {
+      "fr": "L’altruisme n’est ni une erreur de calcul ni une garantie que tout problème de coordination disparaît.",
+      "en": "Altruism is neither a calculation error nor a guarantee that coordination problems disappear.",
+      "uk": "Альтруїзм — не помилка розрахунку й не гарантія зникнення проблем координації."
+    }
+  },
+  {
+    "ch": 4,
+    "id": "internalized-norm",
+    "title": {
+      "fr": "Norme intériorisée",
+      "en": "Internalized social norm",
+      "uk": "Інтеріоризована соціальна норма (Internalized social norm)"
+    },
+    "idea": {
+      "fr": "Suivre une règle parce que sa violation pèse sur soi, même sans surveillance extérieure.",
+      "en": "Following a rule because violating it carries an internal cost, even without outside monitoring.",
+      "uk": "Дотримуватися правила, бо його порушення має внутрішню ціну, навіть без зовнішнього нагляду."
+    },
+    "question": {
+      "fr": "Exemple inventé : quelqu’un paie à un étal sans vendeur alors qu’il sait ne pas être observé. Quelle motivation est compatible avec ce geste ?",
+      "en": "Invented example: someone pays at an unattended stall knowing nobody is watching. What motivation is compatible with this?",
+      "uk": "Навчальний приклад: людина платить біля прилавка без продавця, знаючи, що ніхто не спостерігає. Який мотив узгоджується з цим?"
+    },
+    "answer": {
+      "fr": "Une norme d’honnêteté intériorisée peut rendre le vol coûteux en utilité. Ce geste seul ne permet toutefois pas d’isoler sa motivation exacte.",
+      "en": "An internalized honesty norm can make theft costly in utility. This action alone does not identify the person’s exact motivation.",
+      "uk": "Інтеріоризована норма чесності може зробити крадіжку витратною в одиницях корисності. Проте одна дія не виявляє точного мотиву."
+    },
+    "pitfall": {
+      "fr": "Ne confonds pas coût moral intérieur et peur d’une sanction extérieure.",
+      "en": "Distinguish an internal moral cost from fear of external punishment.",
+      "uk": "Розрізняй внутрішню моральну ціну та страх зовнішнього покарання."
+    }
+  },
+  {
+    "ch": 5,
+    "id": "institutions",
+    "title": {
+      "fr": "Institutions",
+      "en": "Institutions",
+      "uk": "Інституції (Institutions)"
+    },
+    "idea": {
+      "fr": "Chez Ellingsen, les institutions sont les normes prescriptives : les règles sur la manière dont les gens doivent se comporter entre eux.",
+      "en": "For Ellingsen, institutions are prescriptive norms: rules about how people ought to behave towards one another.",
+      "uk": "В Еллінгсена інституції — це приписові норми: правила того, як люди повинні поводитися одне з одним."
+    },
+    "question": {
+      "fr": "Exemple inventé : distingue une université et la règle interdisant d’y tricher. Laquelle est une institution au sens précis utilisé ici ?",
+      "en": "Invented example: distinguish a university from its rule against cheating. Which is an institution in the precise sense used here?",
+      "uk": "Навчальний приклад: розрізни університет і його правило, що забороняє списувати. Що є інституцією в цьому точному значенні?"
+    },
+    "answer": {
+      "fr": "La règle. L’université est une organisation qui porte et applique des règles. Ce choix de vocabulaire est essentiel pour lire le livre.",
+      "en": "The rule. The university is an organisation that carries and enforces rules. This terminology matters when reading the book.",
+      "uk": "Правило. Університет — організація, що підтримує й застосовує правила. Ця термінологічна відмінність важлива для читання книги."
+    },
+    "pitfall": {
+      "fr": "Ne transpose pas automatiquement le sens courant du mot « institution ».",
+      "en": "Do not automatically import the everyday meaning of “institution”.",
+      "uk": "Не перенось автоматично повсякденне значення слова «інституція»."
+    }
+  },
+  {
+    "ch": 5,
+    "id": "descriptive-prescriptive",
+    "title": {
+      "fr": "Normes descriptives et prescriptives",
+      "en": "Descriptive and prescriptive norms",
+      "uk": "Описові та приписові норми (Descriptive and prescriptive norms)"
+    },
+    "idea": {
+      "fr": "Descriptif : ce qui se fait habituellement. Prescriptif : ce qui est permis, interdit ou requis.",
+      "en": "Descriptive: what people usually do. Prescriptive: what is permitted, forbidden or required.",
+      "uk": "Описове: як люди зазвичай діють. Приписове: що дозволено, заборонено чи обов’язково."
+    },
+    "question": {
+      "fr": "Exemple inventé : tout le monde arrive en retard alors que le règlement exige la ponctualité. Quelle norme décrit chacune des deux phrases ?",
+      "en": "Invented example: everyone arrives late although the rules require punctuality. What kind of norm does each statement describe?",
+      "uk": "Навчальний приклад: усі запізнюються, хоча правила вимагають пунктуальності. Який тип норми описує кожна частина?"
+    },
+    "answer": {
+      "fr": "Le retard habituel est descriptif ; l’obligation de ponctualité est prescriptive. La règle peut exister sans être respectée.",
+      "en": "Habitual lateness is descriptive; the requirement to be punctual is prescriptive. A rule can exist without being followed.",
+      "uk": "Звичне запізнення — описова норма; вимога пунктуальності — приписова. Правило може існувати, навіть якщо його не виконують."
+    },
+    "pitfall": {
+      "fr": "Fréquent ne signifie ni permis ni approuvé.",
+      "en": "Frequent does not mean permitted or approved.",
+      "uk": "Поширене не означає дозволене чи схвалене."
+    }
+  },
+  {
+    "ch": 5,
+    "id": "formal-real",
+    "title": {
+      "fr": "Règle formelle et règle effective",
+      "en": "Formal rules and effective rules",
+      "uk": "Формальні та дієві правила (Formal rules and effective rules)"
+    },
+    "idea": {
+      "fr": "Formel désigne la codification d’une règle. Forte ou effective signifie qu’elle est réellement suivie : ce sont deux dimensions distinctes.",
+      "en": "Formal refers to a rule’s codification. Strong or effective means it is actually followed: these are distinct dimensions.",
+      "uk": "Формальність означає кодифікацію правила. Сила чи дієвість означає його фактичне виконання: це різні виміри."
+    },
+    "question": {
+      "fr": "Exemple inventé : une loi écrite est ignorée ; une coutume non écrite est toujours respectée. Laquelle est formelle ? Laquelle est forte ?",
+      "en": "Invented example: a written law is ignored; an unwritten custom is always followed. Which is formal? Which is strong?",
+      "uk": "Навчальний приклад: писаний закон ігнорують, а неписаного звичаю завжди дотримуються. Що є формальним? Що є сильним?"
+    },
+    "answer": {
+      "fr": "La loi est formelle mais faible. La coutume est informelle mais forte. Écrire une règle ne suffit pas à changer les comportements.",
+      "en": "The law is formal but weak. The custom is informal but strong. Writing down a rule does not by itself change behaviour.",
+      "uk": "Закон формальний, але слабкий. Звичай неформальний, але сильний. Самого запису правила недостатньо для зміни поведінки."
+    },
+    "pitfall": {
+      "fr": "Informel ne veut pas dire inefficace ; formel ne veut pas dire respecté.",
+      "en": "Informal does not mean ineffective; formal does not mean obeyed.",
+      "uk": "Неформальне не означає недієве; формальне не означає виконуване."
+    }
+  },
+  {
+    "ch": 6,
+    "id": "dominance",
+    "title": {
+      "fr": "Stratégie dominante",
+      "en": "Dominant strategy",
+      "uk": "Домінантна стратегія (Dominant strategy)"
+    },
+    "idea": {
+      "fr": "Une stratégie strictement dominante est meilleure que toute autre, pour chaque choix possible des autres joueurs.",
+      "en": "A strictly dominant strategy is better than every alternative for every possible choice of the other players.",
+      "uk": "Строго домінантна стратегія краща за кожну альтернативу за будь-якого можливого вибору інших гравців."
+    },
+    "question": {
+      "fr": "Exemple inventé : A rapporte 4 si l’autre joue X et 2 s’il joue Y ; B rapporte respectivement 3 et 1. Quelle stratégie domine ?",
+      "en": "Invented example: A pays 4 against X and 2 against Y; B pays 3 and 1 respectively. Which strategy dominates?",
+      "uk": "Навчальний приклад: A дає 4 проти X і 2 проти Y; B дає відповідно 3 та 1. Яка стратегія домінує?"
+    },
+    "answer": {
+      "fr": "A domine strictement B : 4 > 3 et 2 > 1. Compare tes propres gains en gardant chaque choix de l’autre fixé.",
+      "en": "A strictly dominates B: 4 > 3 and 2 > 1. Compare your own payoffs while holding each choice of the other player fixed.",
+      "uk": "A строго домінує B: 4 > 3 та 2 > 1. Порівнюй власні виграші за кожного незмінного вибору іншого гравця."
+    },
+    "pitfall": {
+      "fr": "Une meilleure réponse à un seul choix adverse n’est pas nécessairement dominante.",
+      "en": "A best response to one opponent’s choice need not be dominant.",
+      "uk": "Найкраща відповідь на один вибір суперника не обов’язково домінує."
+    }
+  },
+  {
+    "ch": 6,
+    "id": "best-response",
+    "title": {
+      "fr": "Meilleure réponse",
+      "en": "Best response",
+      "uk": "Найкраща відповідь (Best response)"
+    },
+    "idea": {
+      "fr": "Le meilleur choix pour toi étant donné la stratégie des autres. Il peut changer quand leur stratégie change.",
+      "en": "Your best choice given the others’ strategies. It may change when their strategies change.",
+      "uk": "Найкращий для тебе вибір за заданих стратегій інших. Він може змінитися, якщо зміняться їхні стратегії."
+    },
+    "question": {
+      "fr": "Exemple inventé : contre X, A donne 5 et B donne 2 ; contre Y, A donne 0 et B donne 3. Quelle est ta meilleure réponse ?",
+      "en": "Invented example: against X, A pays 5 and B pays 2; against Y, A pays 0 and B pays 3. What is your best response?",
+      "uk": "Навчальний приклад: проти X дія A дає 5, а B — 2; проти Y дія A дає 0, а B — 3. Яка твоя найкраща відповідь?"
+    },
+    "answer": {
+      "fr": "A contre X ; B contre Y. Il n’y a ici aucune stratégie strictement dominante, puisque le classement dépend du choix adverse.",
+      "en": "A against X; B against Y. Neither strategy is strictly dominant because their ranking depends on the opponent’s choice.",
+      "uk": "A проти X; B проти Y. Строго домінантної стратегії тут немає, бо їхній порядок залежить від вибору суперника."
+    },
+    "pitfall": {
+      "fr": "Compare les gains d’un même joueur, jamais les gains des deux joueurs entre eux.",
+      "en": "Compare one player’s own payoffs, not one player’s payoffs with the other’s.",
+      "uk": "Порівнюй виграші одного гравця, а не виграші різних гравців між собою."
+    }
+  },
+  {
+    "ch": 6,
+    "id": "nash",
+    "title": {
+      "fr": "Équilibre de Nash",
+      "en": "Nash equilibrium",
+      "uk": "Рівновага Неша (Nash equilibrium)"
+    },
+    "idea": {
+      "fr": "Un profil de stratégies où personne n’améliore son utilité en changeant seul de stratégie, les autres restant inchangés.",
+      "en": "A strategy profile where no one can improve their utility by changing strategy alone while the others stay unchanged.",
+      "uk": "Профіль стратегій, у якому ніхто не може збільшити корисність, одноосібно змінивши стратегію за незмінних стратегій інших."
+    },
+    "question": {
+      "fr": "Exemple inventé : à une case, Rowena reçoit 3 mais pourrait obtenir 4 en changeant seule de ligne. Cette case est-elle un équilibre de Nash ?",
+      "en": "Invented example: at a cell, Rowena receives 3 but could get 4 by changing row alone. Is the cell a Nash equilibrium?",
+      "uk": "Навчальний приклад: у клітинці Ровена отримує 3, але могла б отримати 4, одноосібно змінивши рядок. Чи це рівновага Неша?"
+    },
+    "answer": {
+      "fr": "Non. Une seule déviation profitable suffit à l’exclure. Pour confirmer un équilibre, il faut vérifier chaque joueur en maintenant les autres choix fixes.",
+      "en": "No. One profitable unilateral deviation is enough to rule it out. To confirm equilibrium, check every player while holding the others’ choices fixed.",
+      "uk": "Ні. Одного вигідного одностороннього відхилення досить, щоб її виключити. Для підтвердження перевір кожного гравця за незмінних виборів інших."
+    },
+    "pitfall": {
+      "fr": "Nash ne signifie ni efficacité collective, ni justice, ni résultat nécessairement observé.",
+      "en": "Nash implies neither collective efficiency, fairness nor an outcome necessarily observed.",
+      "uk": "Рівновага Неша не означає ні загальної ефективності, ні справедливості, ні неминучого спостережуваного результату."
+    }
+  },
+  {
+    "ch": 6,
+    "id": "subgame-perfect",
+    "title": {
+      "fr": "Équilibre parfait en sous-jeux",
+      "en": "Subgame-perfect equilibrium",
+      "uk": "Досконала рівновага в підіграх (Subgame-perfect equilibrium)"
+    },
+    "idea": {
+      "fr": "Un équilibre de Nash dont les stratégies forment aussi un équilibre dans chaque sous-jeu, y compris hors du chemin effectivement suivi.",
+      "en": "A Nash equilibrium whose strategies also form an equilibrium in every subgame, including those off the realised path.",
+      "uk": "Рівновага Неша, стратегії якої утворюють рівновагу в кожній підгрі, зокрема поза фактичним шляхом гри."
+    },
+    "question": {
+      "fr": "Exemple inventé : un joueur menace de punir, mais punir lui coûterait 2 et ne rien faire lui rapporterait 0. Peut-on utiliser cette menace à la dernière étape ?",
+      "en": "Invented example: a player threatens punishment, but punishing would cost 2 while doing nothing pays 0. Can this threat support the final stage?",
+      "uk": "Навчальний приклад: гравець погрожує покарати, але покарання коштуватиме йому 2, а бездіяльність дасть 0. Чи працює ця погроза на останньому етапі?"
+    },
+    "answer": {
+      "fr": "Pas avec ces seuls gains. À cette étape, il préfère ne pas punir. L’induction à rebours élimine la menace ; un autre mécanisme doit la rendre crédible.",
+      "en": "Not with these payoffs alone. At that stage, he prefers not to punish. Backward induction removes the threat; another mechanism must make it credible.",
+      "uk": "Не за цих виграшів самих по собі. На цьому етапі він воліє не карати. Зворотна індукція усуває погрозу; потрібен інший механізм її достовірності."
+    },
+    "pitfall": {
+      "fr": "Vérifie aussi les décisions prévues après un événement qui n’arrive pas à l’équilibre.",
+      "en": "Also check decisions following events that do not occur in equilibrium.",
+      "uk": "Перевіряй також рішення після подій, які в рівновазі не відбуваються."
+    }
+  },
+  {
+    "ch": 7,
+    "id": "anarchy",
+    "title": {
+      "fr": "Anarchie",
+      "en": "Anarchy",
+      "uk": "Анархія (Anarchy)"
+    },
+    "idea": {
+      "fr": "Dans le modèle, aucune autorité ne protège la propriété : chacun peut consacrer des ressources à produire ou à s’armer.",
+      "en": "In the model, no authority protects property: each person can devote resources to production or arms.",
+      "uk": "У моделі немає влади, яка захищає власність: кожен може витрачати ресурси на виробництво або озброєння."
+    },
+    "question": {
+      "fr": "Exemple inventé : deux producteurs préfèrent investir dans des armes pour préserver leur récolte. Pourquoi le résultat peut-il être collectivement mauvais ?",
+      "en": "Invented example: two producers invest in arms to preserve their crops. Why can the result be collectively poor?",
+      "uk": "Навчальний приклад: двоє виробників озброюються, щоб захистити врожай. Чому спільний результат може бути поганим?"
+    },
+    "answer": {
+      "fr": "Chaque investissement peut être individuellement utile contre l’autre, tout en détournant des ressources de la production. Une amélioration exige de modifier les incitations.",
+      "en": "Each investment can be individually useful against the other while diverting resources from production. Improvement requires changing incentives.",
+      "uk": "Кожне вкладення може бути особисто корисним проти іншого, водночас відволікаючи ресурси від виробництва. Покращення потребує зміни стимулів."
+    },
+    "pitfall": {
+      "fr": "C’est un modèle stylisé, pas une description exhaustive de toutes les sociétés sans État.",
+      "en": "This is a stylized model, not an exhaustive account of all stateless societies.",
+      "uk": "Це стилізована модель, а не вичерпний опис усіх бездержавних суспільств."
+    }
+  },
+  {
+    "ch": 7,
+    "id": "property-rights",
+    "title": {
+      "fr": "Droits de propriété",
+      "en": "Property rights",
+      "uk": "Права власності (Property rights)"
+    },
+    "idea": {
+      "fr": "Des droits reconnus sur un bien. Leur effet économique dépend aussi de la protection effective de ces droits.",
+      "en": "Recognised rights over an asset. Their economic effect also depends on whether those rights are effectively protected.",
+      "uk": "Визнані права на актив. Їхній економічний ефект залежить також від фактичного захисту цих прав."
+    },
+    "question": {
+      "fr": "Exemple inventé : une personne possède légalement un champ, mais sa récolte est saisie chaque année. Le titre suffit-il pour encourager l’investissement ?",
+      "en": "Invented example: someone legally owns a field, but the crop is seized every year. Is the title alone enough to encourage investment?",
+      "uk": "Навчальний приклад: людина законно володіє полем, але щороку її врожай забирають. Чи достатньо самого титулу для заохочення інвестицій?"
+    },
+    "answer": {
+      "fr": "Non. Si elle ne peut pas conserver le produit de son effort, le rendement attendu de l’investissement baisse. Il faut distinguer droit écrit et protection effective.",
+      "en": "No. If she cannot retain the product of her effort, investment’s expected return falls. Distinguish written rights from effective protection.",
+      "uk": "Ні. Якщо вона не може зберегти результат своєї праці, очікувана віддача від інвестицій падає. Розрізняй записане право та фактичний захист."
+    },
+    "pitfall": {
+      "fr": "Nommer un propriétaire ne résout pas à lui seul le problème de l’application des règles.",
+      "en": "Naming an owner does not by itself solve rule enforcement.",
+      "uk": "Саме визначення власника не розв’язує проблеми виконання правил."
+    }
+  },
+  {
+    "ch": 8,
+    "id": "reciprocity",
+    "title": {
+      "fr": "Réciprocité",
+      "en": "Reciprocity",
+      "uk": "Взаємність (Reciprocity)"
+    },
+    "idea": {
+      "fr": "Récompenser les bonnes actions et sanctionner les mauvaises. Distingue le comportement réciproque du désir de réciprocité.",
+      "en": "Rewarding good actions and punishing bad ones. Distinguish reciprocal behaviour from a desire for reciprocity.",
+      "uk": "Винагороджувати добрі вчинки й карати погані. Розрізняй взаємну поведінку та бажання взаємності."
+    },
+    "question": {
+      "fr": "Exemple inventé : un vendeur rembourse un client pour préserver leur relation future. Cela prouve-t-il une motivation morale de réciprocité ?",
+      "en": "Invented example: a seller refunds a customer to preserve their future relationship. Does this prove a moral desire for reciprocity?",
+      "uk": "Навчальний приклад: продавець повертає гроші клієнту, щоб зберегти майбутні відносини. Чи доводить це моральний мотив взаємності?"
+    },
+    "answer": {
+      "fr": "Non. Le comportement peut être motivé par les gains futurs. Une préférence pour récompenser autrui est un mécanisme différent, même si l’action observée se ressemble.",
+      "en": "No. Future gains can motivate the behaviour. A preference for rewarding someone is a different mechanism, even if the observed action is similar.",
+      "uk": "Ні. Поведінку можуть мотивувати майбутні виграші. Уподобання винагороджувати іншого — інший механізм, навіть якщо спостережувана дія схожа."
+    },
+    "pitfall": {
+      "fr": "Une sanction coûteuse demande d’expliquer pourquoi celui qui sanctionne veut réellement la mettre en œuvre.",
+      "en": "Costly punishment requires explaining why the punisher actually wants to carry it out.",
+      "uk": "Для витратного покарання треба пояснити, чому той, хто карає, справді хоче його здійснити."
+    }
+  },
+  {
+    "ch": 8,
+    "id": "hold-up",
+    "title": {
+      "fr": "Problème de hold-up",
+      "en": "Hold-up problem",
+      "uk": "Проблема вимагання після інвестиції (Hold-up problem)"
+    },
+    "idea": {
+      "fr": "Un investissement ou une aide n’a pas lieu parce que la récompense promise ne sera plus intéressante à payer une fois l’effort fourni.",
+      "en": "Investment or help fails because paying the promised reward will no longer be attractive once the effort has been made.",
+      "uk": "Інвестиція чи допомога не відбувається, бо після зусилля іншого сплачувати обіцяну винагороду вже невигідно."
+    },
+    "question": {
+      "fr": "Exemple inventé : après ton aide irréversible, payer me coûte 2 et renier ma promesse ne me coûte rien. Pourquoi hésites-tu à aider ?",
+      "en": "Invented example: after your irreversible help, paying costs me 2 and breaking my promise costs nothing. Why might you hesitate to help?",
+      "uk": "Навчальний приклад: після твоєї незворотної допомоги платіж коштує мені 2, а порушення обіцянки — нічого. Чому ти вагаєшся допомогти?"
+    },
+    "answer": {
+      "fr": "Tu anticipes que je ne paierai pas. Une contrainte applicable ou un coût moral suffisant de la rupture peut rendre la promesse crédible.",
+      "en": "You anticipate that I will not pay. An enforceable constraint or a sufficient moral cost of breaking the promise can make it credible.",
+      "uk": "Ти очікуєш, що я не заплачу. Дієве обмеження або достатня моральна ціна порушення можуть зробити обіцянку достовірною."
+    },
+    "pitfall": {
+      "fr": "Le problème apparaît dans les incitations après l’investissement, pas seulement dans le manque de confiance comme sentiment.",
+      "en": "The problem lies in incentives after investment, not merely in trust as a feeling.",
+      "uk": "Проблема полягає у стимулах після інвестиції, а не лише в недовірі як почутті."
+    }
+  },
+  {
+    "ch": 8,
+    "id": "commitment",
+    "title": {
+      "fr": "Engagement",
+      "en": "Commitment",
+      "uk": "Зобов’язання (Commitment)"
+    },
+    "idea": {
+      "fr": "Modifier ses possibilités ou les conséquences de ses choix futurs pour rendre une annonce crédible.",
+      "en": "Changing future options or their consequences to make an announcement credible.",
+      "uk": "Змінювати майбутні можливості чи наслідки вибору, щоб зробити заяву достовірною."
+    },
+    "question": {
+      "fr": "Exemple inventé : dire « je paierai » ne change aucun gain futur. Ajouter une pénalité effectivement appliquée change-t-il quelque chose ?",
+      "en": "Invented example: saying “I will pay” changes no future payoffs. Does adding an effectively enforced penalty change anything?",
+      "uk": "Навчальний приклад: слова «я заплачу» не змінюють майбутніх виграшів. Чи змінює щось додавання реально застосовуваного штрафу?"
+    },
+    "answer": {
+      "fr": "Oui. Si rompre coûte davantage que tenir parole, payer peut devenir optimal. L’engagement fonctionne par ses conséquences, pas par la force de la formule.",
+      "en": "Yes. If breaking the promise costs more than keeping it, paying can become optimal. Commitment works through consequences, not emphatic wording.",
+      "uk": "Так. Якщо порушення дорожче за виконання, платіж може стати оптимальним. Зобов’язання працює через наслідки, а не силу формулювання."
+    },
+    "pitfall": {
+      "fr": "Vérifie aussi qui applique la pénalité et pourquoi il a intérêt à le faire.",
+      "en": "Also check who enforces the penalty and why doing so is in their interest.",
+      "uk": "Також перевір, хто застосовує штраф і чому йому це вигідно."
+    }
+  },
+  {
+    "ch": 9,
+    "id": "coordination",
+    "title": {
+      "fr": "Coordination et Stag Hunt",
+      "en": "Coordination and Stag Hunt",
+      "uk": "Координація та полювання на оленя (Coordination and Stag Hunt)"
+    },
+    "idea": {
+      "fr": "Quand le meilleur choix dépend de celui des autres, les anticipations peuvent sélectionner un équilibre prudent ou un équilibre plus avantageux.",
+      "en": "When the best choice depends on what others do, expectations can select a cautious equilibrium or a more rewarding one.",
+      "uk": "Коли найкращий вибір залежить від дій інших, очікування можуть привести до обережної або вигіднішої рівноваги."
+    },
+    "question": {
+      "fr": "Exemple inventé : H donne 9 si l’autre joue H, sinon 0 ; L donne 8 contre H et 7 contre L. Si l’autre joue H avec probabilité q = 0,8, que choisis-tu ?",
+      "en": "Invented example: H pays 9 against H and 0 otherwise; L pays 8 against H and 7 against L. If the other plays H with probability q = 0.8, what do you choose?",
+      "uk": "Навчальний приклад: H дає 9 проти H та 0 інакше; L дає 8 проти H та 7 проти L. Якщо інший обирає H з імовірністю q = 0,8, що ти обираєш?"
+    },
+    "answer": {
+      "fr": "H vaut 9q = 7,2 ; L vaut 8q + 7(1 − q) = 7,8. Tu préfères L malgré le gain supérieur de (H,H). H exige q ≥ 7/8.",
+      "en": "H gives 9q = 7.2; L gives 8q + 7(1 − q) = 7.8. You prefer L despite the higher payoff at (H,H). H requires q ≥ 7/8.",
+      "uk": "H дає 9q = 7,2; L дає 8q + 7(1 − q) = 7,8. Ти віддаєш перевагу L попри вищий виграш у (H,H). Для H потрібно q ≥ 7/8."
+    },
+    "pitfall": {
+      "fr": "Ici, les nombres sont déjà des utilités ; ne déduis pas automatiquement les préférences de gains monétaires.",
+      "en": "Here the numbers are already utilities; do not automatically infer preferences from monetary payoffs.",
+      "uk": "Тут числа вже є корисностями; не виводь автоматично вподобання з грошових виграшів."
+    }
+  },
+  {
+    "ch": 9,
+    "id": "cheap-talk",
+    "title": {
+      "fr": "Cheap talk",
+      "en": "Cheap talk",
+      "uk": "Необов’язкові повідомлення (Cheap talk)"
+    },
+    "idea": {
+      "fr": "Une communication qui n’a pas de coût direct ni de force d’engagement, mais peut modifier les anticipations.",
+      "en": "Communication with no direct cost or binding force, but which may change expectations.",
+      "uk": "Комунікація без прямих витрат і зобов’язувальної сили, яка все ж може змінювати очікування."
+    },
+    "question": {
+      "fr": "Exemple inventé : avant un jeu de coordination, j’annonce que je choisirai H. Suis-je obligé de le faire ? Le message peut-il néanmoins aider ?",
+      "en": "Invented example: before a coordination game, I announce H. Am I bound to choose it? Can the message still help?",
+      "uk": "Навчальний приклад: перед координаційною грою я оголошую H. Чи зобов’язаний я його обрати? Чи може повідомлення все одно допомогти?"
+    },
+    "answer": {
+      "fr": "Je ne suis pas obligé. Mais si le message rend nos anticipations compatibles et que H devient une meilleure réponse, il peut faciliter la coordination.",
+      "en": "I am not bound. Yet if the message aligns expectations and H becomes a best response, it can facilitate coordination.",
+      "uk": "Я не зобов’язаний. Однак якщо повідомлення узгодить очікування й H стане найкращою відповіддю, воно може полегшити координацію."
+    },
+    "pitfall": {
+      "fr": "Sans coût ne signifie pas sans effet ; annoncer ne signifie pas s’engager.",
+      "en": "Costless does not mean ineffective; announcing does not mean committing.",
+      "uk": "Без витрат не означає без ефекту; оголосити не означає взяти зобов’язання."
+    }
+  },
+  {
+    "ch": 9,
+    "id": "common-awareness",
+    "title": {
+      "fr": "Conscience commune",
+      "en": "Common awareness",
+      "uk": "Спільна обізнаність (Common awareness)"
+    },
+    "idea": {
+      "fr": "Chacun sait, sait que les autres savent, sait qu’ils savent qu’il sait, et ainsi de suite.",
+      "en": "Everyone knows, knows that others know, knows that they know that everyone knows, and so on.",
+      "uk": "Кожен знає, знає, що інші знають, знає, що вони знають про це знання, і так далі."
+    },
+    "question": {
+      "fr": "Exemple inventé : chaque membre reçoit séparément une nouvelle consigne, sans savoir qui l’a reçue. Est-ce identique à une annonce publique entendue de tous ?",
+      "en": "Invented example: each member privately receives a new instruction without knowing who else received it. Is this equivalent to a public announcement heard by all?",
+      "uk": "Навчальний приклад: кожен приватно отримав нову вказівку, не знаючи, хто ще її отримав. Чи це те саме, що публічне оголошення перед усіма?"
+    },
+    "answer": {
+      "fr": "Non. Les messages privés peuvent informer tous les individus sans établir leurs connaissances réciproques. Une annonce manifestement publique peut créer ces anticipations partagées.",
+      "en": "No. Private messages can inform everyone without establishing mutual knowledge. A visibly public announcement can create these shared expectations.",
+      "uk": "Ні. Приватні повідомлення можуть поінформувати всіх, не встановивши взаємного знання. Очевидно публічне оголошення може створити такі спільні очікування."
+    },
+    "pitfall": {
+      "fr": "L’information commune doit porter aussi sur le fait que les autres sont informés.",
+      "en": "Shared information must also concern the fact that others are informed.",
+      "uk": "Спільна інформація має стосуватися й того, що інші поінформовані."
+    }
+  },
+  {
+    "ch": 10,
+    "id": "nominal-real-authority",
+    "title": {
+      "fr": "Autorité nominale et réelle",
+      "en": "Nominal and real authority",
+      "uk": "Номінальна та реальна влада (Nominal and real authority)"
+    },
+    "idea": {
+      "fr": "Le titre donne une autorité nominale ; être effectivement suivi donne une autorité réelle, compatible avec les incitations et anticipations.",
+      "en": "A title provides nominal authority; actually being followed provides real authority, consistent with incentives and expectations.",
+      "uk": "Посада дає номінальну владу; фактичне виконання вказівок — реальну, сумісну зі стимулами й очікуваннями."
+    },
+    "question": {
+      "fr": "Exemple inventé : le directeur donne un ordre, mais tous suivent les recommandations d’une collègue sans titre. Qui possède quelle autorité ?",
+      "en": "Invented example: a director gives orders, but everyone follows an untitled colleague’s recommendations. Who has which authority?",
+      "uk": "Навчальний приклад: директор наказує, але всі дотримуються порад колеги без посади. Хто яку владу має?"
+    },
+    "answer": {
+      "fr": "Le directeur a l’autorité nominale. La collègue exerce une autorité réelle dans cette situation. Il faut expliquer pourquoi les autres s’attendent à être suivis mutuellement.",
+      "en": "The director has nominal authority. The colleague exercises real authority here. Explain why people expect others to follow her too.",
+      "uk": "Директор має номінальну владу. Колега тут здійснює реальну владу. Поясни, чому люди очікують, що інші також її послухають."
+    },
+    "pitfall": {
+      "fr": "Un organigramme ne suffit pas à expliquer l’obéissance.",
+      "en": "An organisation chart alone does not explain compliance.",
+      "uk": "Самої організаційної схеми недостатньо для пояснення виконання вказівок."
+    }
+  },
+  {
+    "ch": 10,
+    "id": "limited-authority",
+    "title": {
+      "fr": "Limites du pouvoir et promesse crédible",
+      "en": "Limits on power and credible promises",
+      "uk": "Обмеження влади та достовірні обіцянки (Limits on power and credible promises)"
+    },
+    "idea": {
+      "fr": "Pouvoir tout changer demain peut empêcher de promettre aujourd’hui. Une limite effective au pouvoir peut rendre une promesse crédible.",
+      "en": "Being able to change everything tomorrow can undermine today’s promises. An effective limit on power can make a promise credible.",
+      "uk": "Можливість усе змінити завтра може підривати сьогоднішні обіцянки. Дієве обмеження влади може зробити їх достовірними."
+    },
+    "question": {
+      "fr": "Exemple inventé : un dirigeant promet de ne pas saisir un investissement, mais pourra revenir seul sur sa décision après sa réalisation. Quel est le problème ?",
+      "en": "Invented example: a leader promises not to seize an investment but can reverse the decision alone once it is made. What is the problem?",
+      "uk": "Навчальний приклад: керівник обіцяє не вилучати інвестицію, але після її здійснення може одноосібно передумати. У чому проблема?"
+    },
+    "answer": {
+      "fr": "L’investisseur anticipe les incitations futures du dirigeant. Une contrainte indépendante et réellement applicable peut protéger l’engagement et encourager l’investissement.",
+      "en": "The investor anticipates the leader’s future incentives. An independent, genuinely enforceable constraint can protect the commitment and encourage investment.",
+      "uk": "Інвестор передбачає майбутні стимули керівника. Незалежне й реально застосовуване обмеження може захистити зобов’язання та заохотити інвестування."
+    },
+    "pitfall": {
+      "fr": "Une limite écrite mais contournable ne suffit pas.",
+      "en": "A written limit that can be bypassed is not enough.",
+      "uk": "Записаного обмеження, яке можна обійти, недостатньо."
+    }
+  },
+  {
+    "ch": 11,
+    "id": "repeated-game",
+    "title": {
+      "fr": "Relation répétée",
+      "en": "Repeated relationship",
+      "uk": "Повторювані відносини (Repeated relationship)"
+    },
+    "idea": {
+      "fr": "Les actions présentes influencent le traitement futur. La valeur de la relation peut soutenir la coopération entre personnes égoïstes.",
+      "en": "Present actions influence future treatment. The relationship’s value can sustain cooperation between selfish people.",
+      "uk": "Сьогоднішні дії впливають на майбутнє ставлення. Цінність відносин може підтримувати співпрацю між егоїстичними людьми."
+    },
+    "question": {
+      "fr": "Exemple inventé : une triche donne 2 de plus aujourd’hui mais fait perdre 5 de bénéfices futurs. Pourquoi respecter l’accord ?",
+      "en": "Invented example: cheating adds 2 today but loses 5 in future benefits. Why honour the agreement?",
+      "uk": "Навчальний приклад: обман додає 2 сьогодні, але позбавляє 5 майбутніх вигод. Чому виконувати домовленість?"
+    },
+    "answer": {
+      "fr": "À évaluation comparable, la perte future dépasse le gain immédiat. Il faut toutefois que la triche soit observée et que la réaction future soit crédible.",
+      "en": "On a comparable valuation, the future loss exceeds the immediate gain. Cheating must nevertheless be observed and the future response must be credible.",
+      "uk": "За порівнянної оцінки майбутня втрата перевищує негайний виграш. Проте обман мають помітити, а майбутня реакція повинна бути достовірною."
+    },
+    "pitfall": {
+      "fr": "La répétition permet parfois la coopération ; elle ne la sélectionne pas automatiquement.",
+      "en": "Repetition can enable cooperation; it does not automatically select it.",
+      "uk": "Повторення може уможливити співпрацю, але не обирає її автоматично."
+    }
+  },
+  {
+    "ch": 11,
+    "id": "delta",
+    "title": {
+      "fr": "Poids de l’avenir : δ",
+      "en": "Weight of the future: δ",
+      "uk": "Вага майбутнього: δ (Weight of the future: δ)"
+    },
+    "idea": {
+      "fr": "Dans le modèle de continuation, δ est la probabilité de jouer encore un tour. Une valeur élevée augmente le poids des gains futurs.",
+      "en": "In the continuation model, δ is the probability of another round. A higher value increases the weight of future payoffs.",
+      "uk": "У моделі продовження δ — імовірність наступного раунду. Вище значення збільшує вагу майбутніх виграшів."
+    },
+    "question": {
+      "fr": "Exemple inventé : recevoir 1 à chaque tour vaut 1/(1 − δ). Compare δ = 1/2 et δ = 3/4.",
+      "en": "Invented example: receiving 1 each round is worth 1/(1 − δ). Compare δ = 1/2 and δ = 3/4.",
+      "uk": "Навчальний приклад: отримувати 1 кожного раунду має цінність 1/(1 − δ). Порівняй δ = 1/2 та δ = 3/4."
+    },
+    "answer": {
+      "fr": "Les valeurs sont 2 et 4. Une relation qui a davantage de chances de durer offre un enjeu futur plus élevé ; la perdre devient plus coûteux.",
+      "en": "The values are 2 and 4. A relationship more likely to continue offers a larger future stake; losing it becomes costlier.",
+      "uk": "Значення дорівнюють 2 та 4. Відносини з більшою ймовірністю продовження створюють більшу майбутню цінність; втратити їх дорожче."
+    },
+    "pitfall": {
+      "fr": "Un horizon fini connu n’est pas la même hypothèse qu’une continuation indéfinie.",
+      "en": "A known finite horizon is not the same assumption as indefinite continuation.",
+      "uk": "Відомий скінченний горизонт — не те саме припущення, що невизначене продовження."
+    }
+  },
+  {
+    "ch": 11,
+    "id": "renegotiation",
+    "title": {
+      "fr": "Renégociation des sanctions",
+      "en": "Renegotiation of punishment",
+      "uk": "Перегляд покарання (Renegotiation of punishment)"
+    },
+    "idea": {
+      "fr": "Une punition annoncée peut être abandonnée si, une fois déclenchée, les deux joueurs préfèrent reprendre immédiatement la coopération.",
+      "en": "An announced punishment may be abandoned if, once triggered, both players prefer immediately resuming cooperation.",
+      "uk": "Від оголошеного покарання можуть відмовитися, якщо після його запуску обидва гравці воліють одразу відновити співпрацю."
+    },
+    "question": {
+      "fr": "Exemple inventé : après une triche, une rupture définitive pénalise aussi la victime. Pourquoi une réparation temporaire peut-elle mieux tenir ?",
+      "en": "Invented example: after cheating, permanent breakdown also harms the victim. Why might temporary atonement hold up better?",
+      "uk": "Навчальний приклад: після обману остаточний розрив шкодить і жертві. Чому тимчасове відшкодування може виявитися стійкішим?"
+    },
+    "answer": {
+      "fr": "Si la victime bénéficie de la phase de réparation, elle n’a plus nécessairement intérêt à la supprimer. Il faut vérifier les incitations pendant cette phase aussi.",
+      "en": "If the victim benefits during atonement, she need not want to cancel it. Incentives during that phase must also be checked.",
+      "uk": "Якщо жертва виграє під час відшкодування, вона не обов’язково захоче його скасувати. Треба перевірити стимули й у цій фазі."
+    },
+    "pitfall": {
+      "fr": "Une sanction dissuasive sur le papier n’est pas forcément résistante à la renégociation.",
+      "en": "A punishment that deters on paper need not be renegotiation-proof.",
+      "uk": "Покарання, що стримує на папері, не обов’язково стійке до перегляду."
+    }
+  },
+  {
+    "ch": 12,
+    "id": "professional-enforcement",
+    "title": {
+      "fr": "Sanction professionnelle",
+      "en": "Professional enforcement",
+      "uk": "Професійне забезпечення виконання правил (Professional enforcement)"
+    },
+    "idea": {
+      "fr": "Un tiers peut accepter de sanctionner parce qu’un défaut ferait disparaître les paiements futurs de nombreux clients.",
+      "en": "A third party may be willing to punish because failing to do so would destroy future payments from many clients.",
+      "uk": "Третя сторона може погоджуватися карати, бо відмова позбавила б її майбутніх платежів багатьох клієнтів."
+    },
+    "question": {
+      "fr": "Exemple inventé : sanctionner coûte 4. Ne pas sanctionner ferait perdre une valeur future de 10 provenant de tous les clients. Quelle incitation existe ?",
+      "en": "Invented example: punishment costs 4. Failing to punish would lose future value 10 from all clients. What incentive exists?",
+      "uk": "Навчальний приклад: покарання коштує 4. Відмова карати позбавила б майбутньої цінності 10 від усіх клієнтів. Який є стимул?"
+    },
+    "answer": {
+      "fr": "Préserver 10 en payant 4 peut rendre la sanction intéressante. La crédibilité vient de l’activité à protéger, sous réserve d’une perte de clientèle effectivement déclenchée.",
+      "en": "Preserving 10 by paying 4 can make punishment worthwhile. Credibility comes from protecting the business, provided the loss of clients really follows non-enforcement.",
+      "uk": "Збереження 10 ціною 4 може зробити покарання вигідним. Достовірність походить із захисту діяльності, якщо відмова карати справді веде до втрати клієнтів."
+    },
+    "pitfall": {
+      "fr": "Ne suppose pas que le tiers agit par indignation morale : le modèle peut être entièrement égoïste.",
+      "en": "Do not assume the third party acts from moral outrage: the model can be entirely selfish.",
+      "uk": "Не припускай, що третя сторона діє з морального обурення: модель може бути цілком егоїстичною."
+    }
+  },
+  {
+    "ch": 12,
+    "id": "public-reputation",
+    "title": {
+      "fr": "Réputation publique du protecteur",
+      "en": "Public reputation of the enforcer",
+      "uk": "Публічна репутація того, хто забезпечує виконання правил (Public reputation of the enforcer)"
+    },
+    "idea": {
+      "fr": "La menace disciplinaire dépend de ce que clients et tricheurs potentiels savent de la protection et des manquements passés.",
+      "en": "Discipline depends on what clients and potential cheaters know about protection and past failures to enforce.",
+      "uk": "Дисципліна залежить від того, що клієнти й потенційні порушники знають про захист і минулі відмови карати."
+    },
+    "question": {
+      "fr": "Exemple inventé : seul le client lésé sait qu’un protecteur n’a pas sanctionné. Peut-on supposer que tous les autres cessent aussitôt de payer ?",
+      "en": "Invented example: only the harmed client knows that an enforcer failed to punish. Can we assume all other clients immediately stop paying?",
+      "uk": "Навчальний приклад: лише постраждалий клієнт знає, що захисник не покарав порушника. Чи можна припустити, що решта одразу перестане платити?"
+    },
+    "answer": {
+      "fr": "Non sans expliquer la circulation de l’information. La perte de tous les clients exige que le manquement soit connu et que leurs réactions attendues soient cohérentes.",
+      "en": "Not without explaining information transmission. Losing all clients requires the failure to be known and their expected responses to be consistent.",
+      "uk": "Ні, якщо не пояснити поширення інформації. Для втрати всіх клієнтів порушення має стати відомим, а їхні очікувані реакції — бути узгодженими."
+    },
+    "pitfall": {
+      "fr": "La réputation n’est pas un mot magique : précise l’information et les réactions.",
+      "en": "Reputation is not a magic word: specify information and responses.",
+      "uk": "Репутація — не чарівне слово: визнач інформацію та реакції."
+    }
+  },
+  {
+    "ch": 13,
+    "id": "extortion",
+    "title": {
+      "fr": "Extorsion",
+      "en": "Extortion",
+      "uk": "Вимагання (Extortion)"
+    },
+    "idea": {
+      "fr": "La capacité de sanctionner peut servir à extraire un avantage privé, plutôt qu’à faire respecter une coopération bénéfique.",
+      "en": "The capacity to punish can extract a private benefit rather than enforce beneficial cooperation.",
+      "uk": "Здатність карати може слугувати отриманню приватної вигоди, а не підтримці корисної співпраці."
+    },
+    "question": {
+      "fr": "Exemple inventé : une personne paie chaque mois pour éviter une sanction. La stabilité de l’accord suffit-elle à montrer qu’il est bénéfique ?",
+      "en": "Invented example: someone pays monthly to avoid punishment. Does the arrangement’s stability prove that it is beneficial?",
+      "uk": "Навчальний приклад: людина щомісяця платить, щоб уникнути покарання. Чи сама стабільність домовленості доводить її корисність?"
+    },
+    "answer": {
+      "fr": "Non. Un équilibre répété peut soutenir l’extorsion. Analyse le bénéficiaire du paiement, l’option extérieure de la victime et la crédibilité de la menace.",
+      "en": "No. A repeated equilibrium can sustain extortion. Examine who receives the payment, the victim’s outside option and the threat’s credibility.",
+      "uk": "Ні. Повторювана рівновага може підтримувати вимагання. З’ясуй, хто отримує платіж, яка зовнішня альтернатива жертви та чи достовірна погроза."
+    },
+    "pitfall": {
+      "fr": "Un équilibre stable ne prouve ni consentement libre ni efficacité sociale.",
+      "en": "A stable equilibrium proves neither free consent nor social efficiency.",
+      "uk": "Стабільна рівновага не доводить ні вільної згоди, ні суспільної ефективності."
+    }
+  },
+  {
+    "ch": 13,
+    "id": "multilateral-agreement",
+    "title": {
+      "fr": "Accord multilatéral et non-participants",
+      "en": "Multilateral agreement and outsiders",
+      "uk": "Багатостороння угода та сторонні учасники (Multilateral agreement and outsiders)"
+    },
+    "idea": {
+      "fr": "Une coalition peut fournir un bénéfice dont profitent aussi ceux qui restent dehors. L’adhésion volontaire peut donc être limitée.",
+      "en": "A coalition can provide benefits enjoyed by outsiders too. Voluntary participation may therefore remain limited.",
+      "uk": "Коаліція може створювати користь і для тих, хто залишається поза нею. Тому добровільна участь може бути обмеженою."
+    },
+    "question": {
+      "fr": "Exemple inventé : quitter un accord ne modifie pas la contribution des autres, mais évite ton coût. Pourquoi voudrais-tu partir ?",
+      "en": "Invented example: leaving an agreement does not change others’ contributions but saves your own cost. Why would you leave?",
+      "uk": "Навчальний приклад: вихід з угоди не змінює внесків інших, але заощаджує твої витрати. Чому ти захочеш вийти?"
+    },
+    "answer": {
+      "fr": "Tu conserves les bénéfices extérieurs en économisant ta contribution. Si ton départ faisait s’effondrer toute la coopération, le calcul serait différent : tu serais décisif.",
+      "en": "You retain outside benefits while saving your contribution. If leaving made all cooperation collapse, the calculation would differ: you would be pivotal.",
+      "uk": "Ти зберігаєш зовнішні вигоди, заощаджуючи власний внесок. Якби твій вихід зруйнував усю співпрацю, розрахунок був би іншим: ти був би вирішальним учасником."
+    },
+    "pitfall": {
+      "fr": "Une obligation peut élargir la contribution, mais il faut aussi examiner les coûts et abus du pouvoir de sanction.",
+      "en": "Compulsion can broaden contributions, but the costs and abuses of enforcement power must also be considered.",
+      "uk": "Примус може розширити внески, але треба також враховувати витрати та зловживання владою покарання."
+    }
+  }
+]
