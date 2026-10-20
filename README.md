@@ -160,3 +160,11 @@ Vérification : syntaxe JS/catalogues, comparaison stricte des 1 974 blocs d’o
 La barre de recherche des 36 fiches accepte les termes en EN/FR/UK, des formulations courantes (par exemple « promesse non tenue » → hold-up) et les fautes légères, y compris des lettres inversées (« Nahs » → Nash). Elle classe les correspondances par pertinence, tient compte du chapitre choisi et ouvre une fiche lorsqu’un seul résultat reste. Échap efface la recherche ; la réponse de l’exercice reste masquée.
 
 Le moteur est local et déterministe : vocabulaire multilingue, alias pédagogiques et distance entre les mots. Il ne génère pas de réponses, n’envoie aucune requête à une API et n’ajoute aucune donnée à la progression. Source : `authoring/smart_search.js`, intégrée inline par `build_concepts.py`. Les tests de recherche font partie de `npm test`.
+
+## Checklist des concepts — 20 octobre 2026
+
+Chaque notion possède une case « Got it », un compteur global et une barre de progression. « To review only » masque les notions cochées ; ce filtre se combine avec la recherche et le chapitre. Un lien direct vers une notion masquée la rend de nouveau visible. « Clear filters » ne supprime pas les coches.
+
+Les coches utilisent des identifiants distincts `concept:<slug>` dans la table `cards` existante : 2 pour coché, 1 pour décoché. Aucun nouvel attribut Firestore ni nouvelle règle n’est nécessaire. Hors connexion au compte, elles passent par `ioe-cards` avec les accès localStorage protégés ; connecté, elles utilisent la synchronisation Firestore existante. Les 340 flashcards conservent leurs identifiants, leurs notes et leur compteur, calculé uniquement sur le paquet de cartes.
+
+Vérifications : sauvegarde locale et reconnexion simulée, delta Firestore et préservation des anciennes notes, désactivation du stockage local, compteur, filtre, liens directs et absence de chevauchement/débordement à 320/390/768/1440 px. Les essais de compte utilisent un profil fictif ; aucune coche de test n’a été écrite dans le compte réel.

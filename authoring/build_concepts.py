@@ -62,6 +62,7 @@ def ui(tag,source,attrs=''):
  return f'<{tag} data-ui="{esc(source)}"{(" "+attrs) if attrs else ""}>{html.escape(source)}</{tag}>'
 body='<section class="view tool-view no-help" id="concepts" aria-labelledby="concepts-title">\n<header class="hero">'+ui('h1','Une notion à la fois','id="concepts-title"')+ui('p','Choisis une notion, comprends son idée, puis essaie le mini-cas avant de lire la réponse.','class="sub"')+'</header>\n'
 body+=ui('p','36 fiches courtes sur les notions essentielles des chapitres 1 à 13. Les exemples sont inventés pour apprendre : ce ne sont ni des citations du livre ni des corrigés officiels.','class="concept-intro"')
+body+='<div class="concept-checklist"><p id="concept-progress-label" role="status" aria-live="polite">0 / 36 understood</p><progress id="concept-progress" max="36" value="0" aria-labelledby="concept-progress-label"></progress><button id="concept-review-only" class="btn ghost" type="button" aria-pressed="false">To review only</button></div>'
 body+='<p id="concept-search-hint" class="muted">Ideas, questions or typos · EN / FR / UK</p>'
 body+='<div class="bar filters concept-filters"><div class="filter-field grow">'+ui('label','Chercher une notion','for="concept-q"')+'<input type="search" id="concept-q" autocomplete="off" spellcheck="false" aria-describedby="concept-search-hint" maxlength="200" placeholder="ex. Nash, sacrifice, engagement…" data-ui-attr=\''+json.dumps({'placeholder':'ex. Nash, sacrifice, engagement…'},ensure_ascii=False)+'\'></div><div class="filter-field">'+ui('label','Chapitre','for="concept-ch"')+'<select id="concept-ch">'+ui('option','Tous les chapitres','value="all"')+'</select></div>'+ui('button','Effacer les filtres','type="button" class="btn ghost" id="concept-reset"')+'</div>\n<p id="concept-count" role="status" aria-live="polite" aria-atomic="true"></p>\n<div id="concept-list"></div>\n'+ui('p','Aucune fiche ne correspond. Essaie un autre terme ou efface les filtres.','id="concept-empty" hidden')
 body+='<div class="concept-footer">'+ui('h2','Tu cherches un autre terme ?')+ui('p','Le lexique rassemble les 213 termes de la fiche, avec leurs définitions et traductions. Les chapitres développent les raisonnements complets.')+ui('a','Ouvrir le lexique','href="#lexique" class="btn ghost"')+'</div></section>'
@@ -82,6 +83,12 @@ s=s.replace("['#lex-ch', '#fc-ch', '#qz-ch']", "['#lex-ch', '#fc-ch', '#qz-ch', 
 if 'renderLex(); renderConcepts(); renderTL();' not in s:s=s.replace('renderLex(); renderTL();','renderLex(); renderConcepts(); renderTL();')
 route="  let target = document.getElementById(id);"
 if '  prepareConceptRoute(id);\n'+route not in s:s=s.replace(route,'  prepareConceptRoute(id);\n'+route)
+old='  fc.ratings = clone(data.cards); fc.build(); paintDone();'
+new=old+'\n  if (conceptReviewOnly) renderConcepts(); else paintConceptChecklist();'
+if new not in s:
+ assert old in s
+ s=s.replace(old,new)
+s=s.replace("$$('.study, #fc-no, #fc-yes, #language-switch button')", "$$('.study, #fc-no, #fc-yes, #language-switch button, [data-concept-check]')")
 path.write_text(s)
 for lang in translations:
  p=ROOT/'i18n'/f'{lang}.js';catalog=p.read_text()
