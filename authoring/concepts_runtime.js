@@ -1,9 +1,14 @@
 /* CONCEPTS:RUNTIME:START */
-function conceptMatches(item, query, chapter) {
-  return (chapter === 'all' || item.ch === +chapter) && (!query || norm([
-    item.en, item.title, item.idea, item.question, item.answer, item.pitfall,
-    ...['en','uk'].flatMap(lang => [item.title,item.idea,item.question].map(text => tr(text, lang)))
-  ].join(' ')).includes(query));
+var conceptSearchIndex;
+function searchConcepts(query, chapter) {
+  if (!conceptSearchIndex) conceptSearchIndex = CONCEPT_GUIDES.map(item => makeSearchDocument(
+    item,
+    [item.en,item.title,tr(item.title,'uk')].join(' '),
+    (CONCEPT_ALIASES[item.id] || []).join(' '),
+    ['idea','question','answer','pitfall'].flatMap(key => [item[key],tr(item[key],'en'),tr(item[key],'uk')]).join(' ')
+  ));
+  const documents = conceptSearchIndex.filter(doc => chapter === 'all' || doc.item.ch === +chapter);
+  return searchNormal(query).length < 2 ? documents.map(doc => doc.item) : smartSearch(query, documents);
 }
 function renderConcepts() {
   const container = $('#concept-list');
@@ -11,7 +16,7 @@ function renderConcepts() {
   const open = new Set($$('details.concept-sheet[open]').map(el => el.id));
   const answers = new Set($$('details.concept-sheet').filter(el => el.querySelector('.concept-answer[open]')).map(el => el.id));
   const query = norm($('#concept-q').value.trim()), chapter = $('#concept-ch').value;
-  const matching = CONCEPT_GUIDES.filter(item => conceptMatches(item, query, chapter));
+  const matching = searchConcepts(query, chapter);
   // Concepts follow the book's language, independently of the reader's page preference.
   const titleLang = 'en';
   const conceptRoot = $('#concepts'); conceptRoot.lang = 'en';
@@ -23,7 +28,7 @@ function renderConcepts() {
   container.innerHTML = matching.map(item => {
     const id = 'concept-' + item.id;
     const title = item.en;
-    return `<details class="concept-sheet" id="${id}"${open.has(id) ? ' open' : ''}>
+    return `<details class="concept-sheet" id="${id}"${open.has(id) || (searchNormal(query).length >= 2 && matching.length === 1) ? ' open' : ''}>
       <summary><span class="concept-name" lang="${titleLang}">${esc(title)}</span><span class="concept-ch">${esc(tr('Chapitre', 'en'))} ${item.ch}</span></summary>
       <div class="concept-body">
         ${item.ch > 10 ? `<p class="muted" lang="en">${esc(tr('Source partielle : fiche fondée sur les supports de cours, pas sur le texte intégral du chapitre.', 'en'))} <a href="#sources">${esc(tr('Sources', 'en'))}</a></p>` : ''}
@@ -37,10 +42,12 @@ function renderConcepts() {
   $('#concept-count').textContent = tr('{0} / {1} notions', 'en').replace('{0}', matching.length).replace('{1}', CONCEPT_GUIDES.length);
   $('#concept-empty').hidden = matching.length > 0;
 }
-$('#concept-q').addEventListener('input',renderConcepts);
+let conceptSearchTimer;
+$('#concept-q').addEventListener('input',() => { clearTimeout(conceptSearchTimer); conceptSearchTimer = setTimeout(renderConcepts, 120); });
+$('#concept-q').addEventListener('keydown',e => { if (e.key === 'Escape') { clearTimeout(conceptSearchTimer); e.currentTarget.value = ''; renderConcepts(); } });
 $('#concept-ch').addEventListener('change',renderConcepts);
 $('#concept-reset').addEventListener('click',() => {
-  $('#concept-q').value = ''; $('#concept-ch').value = 'all'; renderConcepts(); $('#concept-q').focus();
+  clearTimeout(conceptSearchTimer); $('#concept-q').value = ''; $('#concept-ch').value = 'all'; renderConcepts(); $('#concept-q').focus();
 });
 function prepareConceptRoute(id) {
   if (!id.startsWith('concept-') || !CONCEPT_GUIDES.some(item => 'concept-' + item.id === id)) return;

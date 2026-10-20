@@ -154,3 +154,9 @@ La recherche accepte le français, l’anglais et l’ukrainien ; un filtre limi
 Sources de maintenance : `authoring/concepts.json`, `concepts.css`, `concepts_runtime.js`. L’intégration facultative `python3 authoring/build_concepts.py` est idempotente et ne remplace que les marqueurs `CONCEPTS`. Elle ajoute 200 entrées aux deux catalogues classiques et conserve les identifiants existants. Si les ajouts pédagogiques précédents sont régénérés avec `build_learning.py`, exécuter ensuite `build_concepts.py` pour recalculer les nouveaux identifiants sans collision. Aucun build n’est nécessaire pour consulter le site.
 
 Vérification : syntaxe JS/catalogues, comparaison stricte des 1 974 blocs d’origine, recherche et filtres, états vide/réinitialisation, réponse masquée, liens directs, trois langues à 320/390/768/1440 px sans débordement. Les essais utilisent un aperçu temporaire où Firebase est désactivé ; les préférences du compte et sa progression ne sont pas modifiées. Aucune nouvelle écriture de stockage n’est introduite par cette section.
+
+## Recherche intelligente dans Concepts — 20 octobre 2026
+
+La barre de recherche des 36 fiches accepte les termes en EN/FR/UK, des formulations courantes (par exemple « promesse non tenue » → hold-up) et les fautes légères, y compris des lettres inversées (« Nahs » → Nash). Elle classe les correspondances par pertinence, tient compte du chapitre choisi et ouvre une fiche lorsqu’un seul résultat reste. Échap efface la recherche ; la réponse de l’exercice reste masquée.
+
+Le moteur est local et déterministe : vocabulaire multilingue, alias pédagogiques et distance entre les mots. Il ne génère pas de réponses, n’envoie aucune requête à une API et n’ajoute aucune donnée à la progression. Source : `authoring/smart_search.js`, intégrée inline par `build_concepts.py`. Les tests de recherche font partie de `npm test`.
